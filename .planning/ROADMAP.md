@@ -34,13 +34,13 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. Page loads in under 2 seconds (LCP) on a standard connection
   5. SPF/DKIM/DMARC are configured on the sending domain, and domain warm-up has been initiated
   6. Privacy policy and terms of service pages are live
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
-- [ ] 01-01: Next.js project setup, Supabase schema, and deployment pipeline
-- [ ] 01-02: Landing page design with F/G/E copy framework and responsive implementation
-- [ ] 01-03: Domain configuration, email authentication, and warm-up initiation
-- [ ] 01-04: Privacy policy, terms of service, and legal pages
+- [ ] 01-01-PLAN.md — Next.js project scaffold, Tailwind v4, Supabase clients, subscriber schema
+- [ ] 01-02-PLAN.md — Landing page with hero, example cards, how-it-works, trust strip, sticky CTA, footer
+- [ ] 01-03-PLAN.md — Email capture Server Action wired to Supabase with validation and UX states
+- [ ] 01-04-PLAN.md — Privacy policy and terms of service pages with data retention rules
 
 ### Phase 2: Subscriber Onboarding
 **Goal**: A visitor can complete the full signup flow and become a subscriber with stored preferences
