@@ -37,7 +37,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 4 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Next.js project scaffold, Tailwind v4, Supabase clients, subscriber schema
+- [x] 01-01-PLAN.md — Next.js project scaffold, Tailwind v4, Supabase clients, subscriber schema
 - [ ] 01-02-PLAN.md — Landing page with hero, example cards, how-it-works, trust strip, sticky CTA, footer
 - [ ] 01-03-PLAN.md — Email capture Server Action wired to Supabase with validation and UX states
 - [ ] 01-04-PLAN.md — Privacy policy and terms of service pages with data retention rules
@@ -177,7 +177,7 @@ Note: Phase 3 (AI Research Engine) and Phase 8 (Consulting Funnel) both depend o
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Landing Page | 0/4 | Not started | - |
+| 1. Foundation & Landing Page | 1/4 | In Progress | - |
 | 2. Subscriber Onboarding | 0/3 | Not started | - |
 | 3. AI Research Engine | 0/6 | Not started | - |
 | 4. Content Generation | 0/2 | Not started | - |

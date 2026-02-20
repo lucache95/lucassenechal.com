@@ -15,8 +15,8 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **SITE-04**: Fully responsive -- premium experience on mobile and desktop
 - [ ] **SITE-05**: Smooth animations and transitions (Framer Motion)
 - [ ] **SITE-06**: Warm, approachable design aesthetic (Notion/Cal.com vibe)
-- [ ] **SITE-07**: Professional domain with HTTPS (lucassenechal.com)
-- [ ] **SITE-08**: Page load under 2 seconds (LCP)
+- [x] **SITE-07**: Professional domain with HTTPS (lucassenechal.com)
+- [x] **SITE-08**: Page load under 2 seconds (LCP)
 
 ### Newsletter Signup Flow
 
@@ -170,8 +170,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SITE-04 | Phase 1: Foundation & Landing Page | Pending |
 | SITE-05 | Phase 1: Foundation & Landing Page | Pending |
 | SITE-06 | Phase 1: Foundation & Landing Page | Pending |
-| SITE-07 | Phase 1: Foundation & Landing Page | Pending |
-| SITE-08 | Phase 1: Foundation & Landing Page | Pending |
+| SITE-07 | Phase 1: Foundation & Landing Page | Complete |
+| SITE-08 | Phase 1: Foundation & Landing Page | Complete |
 | SIGN-01 | Phase 2: Subscriber Onboarding | Pending |
 | SIGN-02 | Phase 2: Subscriber Onboarding | Pending |
 | SIGN-03 | Phase 2: Subscriber Onboarding | Pending |
