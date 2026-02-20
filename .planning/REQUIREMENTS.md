@@ -118,8 +118,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Legal & Privacy
 
-- [ ] **LEGL-01**: Privacy policy and terms of service pages
-- [ ] **LEGL-02**: Data retention rules documented (especially for phone numbers and SMS consent records)
+- [x] **LEGL-01**: Privacy policy and terms of service pages
+- [x] **LEGL-02**: Data retention rules documented (especially for phone numbers and SMS consent records)
 
 ## v2 Requirements
 
@@ -237,8 +237,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | OPS-03 | Phase 5: Email Delivery & Compliance | Pending |
 | COPY-01 | Phase 1: Foundation & Landing Page | Pending |
 | COPY-02 | Phase 2: Subscriber Onboarding | Pending |
-| LEGL-01 | Phase 1: Foundation & Landing Page | Pending |
-| LEGL-02 | Phase 1: Foundation & Landing Page | Pending |
+| LEGL-01 | Phase 1: Foundation & Landing Page | Complete |
+| LEGL-02 | Phase 1: Foundation & Landing Page | Complete |
 
 **Coverage:**
 - v1 requirements: 75 total

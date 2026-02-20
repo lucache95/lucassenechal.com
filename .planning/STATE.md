@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-19)
 ## Current Position
 
 Phase: 1 of 8 (Foundation & Landing Page)
-Plan: 1 of 4 in current phase
+Plan: 4 of 4 in current phase
 Status: Executing
-Last activity: 2026-02-20 -- Completed 01-01-PLAN.md (project scaffold)
+Last activity: 2026-02-20 -- Completed 01-04-PLAN.md (legal pages)
 
-Progress: [#.........] 3%
+Progress: [##........] 6%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: 5min
-- Total execution time: 0.08 hours
+- Total plans completed: 2
+- Average duration: 4min
+- Total execution time: 0.13 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 1 - Foundation & Landing Page | 1/4 | 5min | 5min |
+| 1 - Foundation & Landing Page | 2/4 | 8min | 4min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (5min)
-- Trend: Starting
+- Last 5 plans: 01-01 (5min), 01-04 (3min)
+- Trend: Accelerating
 
 *Updated after each plan completion*
 
@@ -49,6 +49,9 @@ Recent decisions affecting current work:
 - [01-01]: Chose slate/blue palette inspired by Resend and Linear reference sites
 - [01-01]: Light-only theme (no dark mode) as specified in user constraints
 - [01-01]: Server-side Supabase client is async to support Next.js 15+ cookie API
+- [01-04]: Used custom prose-legal CSS class instead of @tailwindcss/typography plugin to avoid extra dependency
+- [01-04]: Legal pages use (marketing) route group to share future marketing layout
+- [01-04]: Static generation for legal pages (no dynamic data needed)
 
 ### Pending Todos
 
@@ -63,5 +66,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-20
-Stopped at: Completed 01-01-PLAN.md (project scaffold with Next.js, Tailwind v4, Supabase)
+Stopped at: Completed 01-04-PLAN.md (privacy policy and terms of service legal pages)
 Resume file: None
