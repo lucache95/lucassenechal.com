@@ -12,7 +12,7 @@ This roadmap delivers a personalized AI newsletter platform and consulting funne
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation & Landing Page** - Project infrastructure, database, domain setup, and the landing page that captures subscribers
+- [x] **Phase 1: Foundation & Landing Page** - Project infrastructure, database, domain setup, and the landing page that captures subscribers
 - [ ] **Phase 2: Subscriber Onboarding** - Multi-step signup flow that collects topics, preferences, and consent
 - [ ] **Phase 3: AI Research Engine** - The core value engine: parse topics, query sources, synthesize per-subscriber research
 - [ ] **Phase 4: Content Generation** - Transform raw research into polished newsletter content in three formats
@@ -39,8 +39,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 Plans:
 - [x] 01-01-PLAN.md — Next.js project scaffold, Tailwind v4, Supabase clients, subscriber schema
 - [x] 01-02-PLAN.md — Landing page with hero, example cards, how-it-works, trust strip, sticky CTA, footer
-- [ ] 01-03-PLAN.md — Email capture Server Action wired to Supabase with validation and UX states
-- [ ] 01-04-PLAN.md — Privacy policy and terms of service pages with data retention rules
+- [x] 01-03-PLAN.md — Email capture Server Action wired to Supabase with validation and UX states
+- [x] 01-04-PLAN.md — Privacy policy and terms of service pages with data retention rules
 
 ### Phase 2: Subscriber Onboarding
 **Goal**: A visitor can complete the full signup flow and become a subscriber with stored preferences
@@ -177,7 +177,7 @@ Note: Phase 3 (AI Research Engine) and Phase 8 (Consulting Funnel) both depend o
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Landing Page | 3/4 | In Progress | - |
+| 1. Foundation & Landing Page | 4/4 | Complete | 2026-02-20 |
 | 2. Subscriber Onboarding | 0/3 | Not started | - |
 | 3. AI Research Engine | 0/6 | Not started | - |
 | 4. Content Generation | 0/2 | Not started | - |
