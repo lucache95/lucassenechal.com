@@ -53,12 +53,13 @@ Plans:
   4. Every signup step uses F/G/E microcopy (e.g., "What do you want to be ahead on?", identity-framed format options)
   5. After completing signup, subscriber sees a confirmation page with first-delivery expectations and receives a welcome email
   6. All subscriber data (email, topics, format, location, delivery time, SMS consent, custom sources) is persisted in Supabase
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
-- [ ] 02-01: Multi-step signup flow UI (email capture through confirmation)
-- [ ] 02-02: Topic selection, format choice, and preference collection
-- [ ] 02-03: Signup API, Supabase persistence, and welcome email
+- [ ] 02-01-PLAN.md — Dependencies, Supabase preference schema, Zod validation, topic data
+- [ ] 02-02-PLAN.md — Stepper shell, progress bar, Topics step, Format step with F/G/E copy
+- [ ] 02-03-PLAN.md — Delivery Time & Location step, Sources & SMS step with F/G/E copy
+- [ ] 02-04-PLAN.md — Confirmation step, Server Action persistence, welcome email, landing page redirect
 
 ### Phase 3: AI Research Engine
 **Goal**: The system can take a subscriber's topic preferences and produce fresh, sourced research results daily
@@ -178,7 +179,7 @@ Note: Phase 3 (AI Research Engine) and Phase 8 (Consulting Funnel) both depend o
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Landing Page | 4/4 | Complete    | 2026-02-20 |
-| 2. Subscriber Onboarding | 0/3 | Not started | - |
+| 2. Subscriber Onboarding | 0/4 | Planned | - |
 | 3. AI Research Engine | 0/6 | Not started | - |
 | 4. Content Generation | 0/2 | Not started | - |
 | 5. Email Delivery & Compliance | 0/4 | Not started | - |
