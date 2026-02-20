@@ -118,6 +118,8 @@ Every subscriber receives a daily briefing researched and written specifically f
 - **Budget**: ~$14/month operational cost target (Railway $5, GitHub $4, Brave API $5) + Twilio per-message costs + Resend costs
 - **Tech Stack**: Next.js + Framer Motion (frontend), Supabase (auth/DB), Resend (email), Twilio (SMS), Railway (hosting), Brave API (search)
 - **Design**: Warm, approachable, premium feel (Notion/Cal.com aesthetic) — the service is simple, so the experience must feel quality
+- **Copy Framework**: Every touchpoint uses Fear/Greed/Ego microcopy pattern — Fear (risk you avoid: "Don't miss what matters"), Greed (upside you capture: "Get the best opportunities"), Ego (identity you express: "Be the person who's already up to speed"). Headlines, CTAs, signup steps, email subjects, preference pages — all hit this triad.
+- **Custom Sources**: Subscriber-provided sources are RSS/Atom feeds only in v1 (security constraint — prevents SSRF, simpler to validate)
 - **Solo operator**: Lucas runs this alone — everything must be automated, minimal manual intervention
 - **Scale**: Start personal (lucassenechal.com), evaluate product potential based on traction
 
