@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-19)
 ## Current Position
 
 Phase: 1 of 8 (Foundation & Landing Page)
-Plan: 4 of 4 in current phase
+Plan: 3 of 4 in current phase
 Status: Executing
-Last activity: 2026-02-20 -- Completed 01-04-PLAN.md (legal pages)
+Last activity: 2026-02-20 -- Completed 01-02-PLAN.md (landing page)
 
-Progress: [##........] 6%
+Progress: [###.......] 10%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 2
-- Average duration: 4min
-- Total execution time: 0.13 hours
+- Total plans completed: 3
+- Average duration: 5min
+- Total execution time: 0.27 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 1 - Foundation & Landing Page | 2/4 | 8min | 4min |
+| 1 - Foundation & Landing Page | 3/4 | 16min | 5min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (5min), 01-04 (3min)
-- Trend: Accelerating
+- Last 5 plans: 01-01 (5min), 01-04 (3min), 01-02 (8min)
+- Trend: Steady
 
 *Updated after each plan completion*
 
@@ -52,6 +52,10 @@ Recent decisions affecting current work:
 - [01-04]: Used custom prose-legal CSS class instead of @tailwindcss/typography plugin to avoid extra dependency
 - [01-04]: Legal pages use (marketing) route group to share future marketing layout
 - [01-04]: Static generation for legal pages (no dynamic data needed)
+- [01-02]: Stacked email form layout (input above, button below) per user design decision
+- [01-02]: Example cards expand on hover to reveal newsletter snippet previews
+- [01-02]: Trust strip uses text-based badges for data sources (no image assets)
+- [01-02]: User noted spam folder check step needed in funnel (deferred to Plan 01-03)
 
 ### Pending Todos
 
@@ -66,5 +70,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-20
-Stopped at: Completed 01-04-PLAN.md (privacy policy and terms of service legal pages)
+Stopped at: Completed 01-02-PLAN.md (landing page with all sections, user approved)
 Resume file: None

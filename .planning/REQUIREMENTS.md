@@ -9,12 +9,12 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Landing Page & Website
 
-- [ ] **SITE-01**: Landing page with hero headline communicating personalized value prop
-- [ ] **SITE-02**: Example cards showing variety of possible topics (AI tools, local deals, concerts, business leads, etc.)
-- [ ] **SITE-03**: Email capture CTA on landing page
-- [ ] **SITE-04**: Fully responsive -- premium experience on mobile and desktop
-- [ ] **SITE-05**: Smooth animations and transitions (Framer Motion)
-- [ ] **SITE-06**: Warm, approachable design aesthetic (Notion/Cal.com vibe)
+- [x] **SITE-01**: Landing page with hero headline communicating personalized value prop
+- [x] **SITE-02**: Example cards showing variety of possible topics (AI tools, local deals, concerts, business leads, etc.)
+- [x] **SITE-03**: Email capture CTA on landing page
+- [x] **SITE-04**: Fully responsive -- premium experience on mobile and desktop
+- [x] **SITE-05**: Smooth animations and transitions (Framer Motion)
+- [x] **SITE-06**: Warm, approachable design aesthetic (Notion/Cal.com vibe)
 - [x] **SITE-07**: Professional domain with HTTPS (lucassenechal.com)
 - [x] **SITE-08**: Page load under 2 seconds (LCP)
 
@@ -113,7 +113,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Copy & UX
 
-- [ ] **COPY-01**: All touchpoints use Fear/Greed/Ego microcopy framework (landing page, signup steps, CTAs, email subjects, preference pages)
+- [x] **COPY-01**: All touchpoints use Fear/Greed/Ego microcopy framework (landing page, signup steps, CTAs, email subjects, preference pages)
 - [ ] **COPY-02**: Signup flow steps framed with F/G/E: topic step = "What do you want to be ahead on?", format step = identity-framed options, confirmation = confidence-building
 
 ### Legal & Privacy
@@ -164,12 +164,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| SITE-01 | Phase 1: Foundation & Landing Page | Pending |
-| SITE-02 | Phase 1: Foundation & Landing Page | Pending |
-| SITE-03 | Phase 1: Foundation & Landing Page | Pending |
-| SITE-04 | Phase 1: Foundation & Landing Page | Pending |
-| SITE-05 | Phase 1: Foundation & Landing Page | Pending |
-| SITE-06 | Phase 1: Foundation & Landing Page | Pending |
+| SITE-01 | Phase 1: Foundation & Landing Page | Complete |
+| SITE-02 | Phase 1: Foundation & Landing Page | Complete |
+| SITE-03 | Phase 1: Foundation & Landing Page | Complete |
+| SITE-04 | Phase 1: Foundation & Landing Page | Complete |
+| SITE-05 | Phase 1: Foundation & Landing Page | Complete |
+| SITE-06 | Phase 1: Foundation & Landing Page | Complete |
 | SITE-07 | Phase 1: Foundation & Landing Page | Complete |
 | SITE-08 | Phase 1: Foundation & Landing Page | Complete |
 | SIGN-01 | Phase 2: Subscriber Onboarding | Pending |
@@ -235,7 +235,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | OPS-01 | Phase 3: AI Research Engine | Pending |
 | OPS-02 | Phase 3: AI Research Engine | Pending |
 | OPS-03 | Phase 5: Email Delivery & Compliance | Pending |
-| COPY-01 | Phase 1: Foundation & Landing Page | Pending |
+| COPY-01 | Phase 1: Foundation & Landing Page | Complete |
 | COPY-02 | Phase 2: Subscriber Onboarding | Pending |
 | LEGL-01 | Phase 1: Foundation & Landing Page | Complete |
 | LEGL-02 | Phase 1: Foundation & Landing Page | Complete |
