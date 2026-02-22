@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import { Footer } from "@/components/landing/footer";
-import { WorkWithMeCard } from "./work-with-me-card";
+import { WorkWithMeClient } from "./work-with-me-client";
 
 export const metadata: Metadata = {
-  title: "Work With Me | Lucas Senechal",
+  title: "Work With Me — AI Systems That Eliminate Your Busywork | Lucas Senechal",
   description:
-    "AI systems consulting -- automation, process optimization, and ongoing management. Let's talk about what AI can do for your business.",
+    "Stop losing deals to manual follow-ups. I build AI systems that handle admin, follow-ups, and repetitive ops so your team scales revenue without scaling headcount.",
   openGraph: {
-    title: "Work With Me | Lucas Senechal",
+    title: "Work With Me — AI Systems That Eliminate Your Busywork | Lucas Senechal",
     description:
-      "AI systems consulting -- automation, process optimization, and ongoing management. Let's talk about what AI can do for your business.",
+      "Stop losing deals to manual follow-ups. I build AI systems that handle admin, follow-ups, and repetitive ops so your team scales revenue without scaling headcount.",
     url: "https://lucassenechal.com/work-with-me",
     siteName: "Lucas Senechal",
     locale: "en_US",
@@ -17,19 +16,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Work With Me | Lucas Senechal",
+    title: "Work With Me — AI Systems That Eliminate Your Busywork | Lucas Senechal",
     description:
-      "AI systems consulting -- automation, process optimization, and ongoing management. Let's talk about what AI can do for your business.",
+      "Stop losing deals to manual follow-ups. I build AI systems that handle admin, follow-ups, and repetitive ops so your team scales revenue without scaling headcount.",
   },
 };
 
 export default function WorkWithMePage() {
-  return (
-    <>
-      <section className="min-h-[60vh] flex items-center justify-center px-4">
-        <WorkWithMeCard />
-      </section>
-      <Footer />
-    </>
-  );
+  return <WorkWithMeClient />;
 }
