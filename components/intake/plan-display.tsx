@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { experimental_useObject as useObject } from "@ai-sdk/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { businessPlanSchema, type BusinessPlan } from "@/lib/schemas/business-plan";
 import { SERVICES } from "@/lib/data/services";
 import { Button } from "@/components/ui/button";
+import { saveIntakePlan } from "@/app/actions/intake";
 import dynamic from "next/dynamic";
 
 const PlanDownloadButton = dynamic(
@@ -21,6 +22,7 @@ interface IntakeAnswer {
 
 interface PlanDisplayProps {
   answers: IntakeAnswer[];
+  sessionId: string | null;
   onBookCall: () => void;
   onNewAssessment: () => void;
 }
@@ -92,8 +94,9 @@ function SkeletonSection() {
   );
 }
 
-export function PlanDisplay({ answers, onBookCall, onNewAssessment }: PlanDisplayProps) {
+export function PlanDisplay({ answers, sessionId, onBookCall, onNewAssessment }: PlanDisplayProps) {
   const [hasStarted, setHasStarted] = useState(false);
+  const planSavedRef = useRef(false);
 
   const { object, submit, isLoading, error } = useObject({
     api: "/api/intake/generate-plan",
@@ -109,6 +112,16 @@ export function PlanDisplay({ answers, onBookCall, onNewAssessment }: PlanDispla
 
   const plan = object as Partial<BusinessPlan> | undefined;
   const done = hasStarted && !isLoading && plan;
+
+  // Save plan to Supabase when generation completes
+  useEffect(() => {
+    if (done && sessionId && !planSavedRef.current && plan?.recommendedService) {
+      planSavedRef.current = true;
+      saveIntakePlan({ sessionId, plan: plan as BusinessPlan }).catch((err) => {
+        console.error("[PlanDisplay] Failed to save plan:", err);
+      });
+    }
+  }, [done, sessionId, plan]);
 
   const serviceName =
     plan?.recommendedService
