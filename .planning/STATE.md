@@ -11,18 +11,18 @@ See: .planning/PROJECT.md (updated 2026-02-20)
 ## Current Position
 
 Phase: 2 of 8 (Subscriber Onboarding)
-Plan: 1 of 4 in current phase
+Plan: 3 of 4 in current phase
 Status: Executing Phase 2
-Last activity: 2026-02-22 -- Completed 02-01: Data foundation (schema, validation, topics)
+Last activity: 2026-02-22 -- Completed 02-03: Delivery & Sources steps (time selector, RSS feeds, SMS opt-in)
 
-Progress: [###.......] 32%
+Progress: [####......] 40%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 8
+- Total plans completed: 9
 - Average duration: 3min
-- Total execution time: 0.47 hours
+- Total execution time: 0.54 hours
 
 **By Phase:**
 
@@ -30,10 +30,10 @@ Progress: [###.......] 32%
 |-------|-------|-------|----------|
 | 1 - Foundation & Infrastructure | 4/4 | 18min | 5min |
 | 1.1 - Homepage Pivot & IA | 3/3 | 6min | 2min |
-| 2 - Subscriber Onboarding | 1/4 | 4min | 4min |
+| 2 - Subscriber Onboarding | 2/4 | 8min | 4min |
 
 **Recent Trend:**
-- Last 5 plans: 02-01 (4min), 1.1-03 (2min), 1.1-02 (2min), 1.1-01 (2min), 01-01 (5min)
+- Last 5 plans: 02-02 (4min), 02-01 (4min), 1.1-03 (2min), 1.1-02 (2min), 1.1-01 (2min)
 - Trend: Steady
 
 *Updated after each plan completion*
@@ -84,6 +84,9 @@ Recent decisions affecting current work:
 - [02-01]: CROSS JOIN pattern for subtopic seeding to reference category UUIDs by name
 - [02-01]: Shared Zod schema pattern: single source of truth in lib/schemas/ for client/server validation
 - [02-01]: Static data files in lib/data/ matching DB seed data by name
+- [02-02]: Typed ease tuple for Framer Motion v12 TypeScript compatibility in AnimatePresence variants
+- [02-02]: Stepper exports OnboardingFormData type for step components (type sharing via barrel, no separate types file)
+- [02-02]: Progress bar uses numbered dots with animated connecting lines (segmented bar pattern)
 
 ### Pending Todos
 
@@ -102,6 +105,6 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-22
-Stopped at: Completed 02-01-PLAN.md (Data foundation: schema, validation, topics)
+Stopped at: Completed 02-02-PLAN.md (Stepper + Steps 1-2: Topics & Format)
 Resume file: None
-Next action: Execute 02-02-PLAN.md (Stepper + Steps 1-2: Topics & Format)
+Next action: Execute 02-03-PLAN.md (Steps 3-4: Delivery & Sources)

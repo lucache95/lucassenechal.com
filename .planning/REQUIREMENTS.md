@@ -31,9 +31,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Newsletter Signup Flow
 
-- [ ] **SIGN-01**: Multi-step signup flow (email -> customize -> confirmation)
+- [x] **SIGN-01**: Multi-step signup flow (email -> customize -> confirmation)
 - [x] **SIGN-02**: Topic input via multiple choice categories with "(Most Popular)" labels + freeform custom option
-- [ ] **SIGN-03**: Newsletter format choice from 3 options: curated digest, written briefing, mixed -- with "(Most Popular)" default
+- [x] **SIGN-03**: Newsletter format choice from 3 options: curated digest, written briefing, mixed -- with "(Most Popular)" default
 - [x] **SIGN-04**: Optional location input for local content personalization
 - [x] **SIGN-05**: Delivery time preference selector
 - [x] **SIGN-06**: SMS opt-in checkbox with phone number input
@@ -128,7 +128,7 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Copy & UX
 
 - [x] **COPY-01**: All touchpoints use Fear/Greed/Ego microcopy framework (landing page, signup steps, CTAs, email subjects, preference pages)
-- [ ] **COPY-02**: Signup flow steps framed with F/G/E: topic step = "What do you want to be ahead on?", format step = identity-framed options, confirmation = confidence-building
+- [x] **COPY-02**: Signup flow steps framed with F/G/E: topic step = "What do you want to be ahead on?", format step = identity-framed options, confirmation = confidence-building
 - [x] **COPY-03**: Homepage and consulting page use F/G/E with consulting-specific framing (fear of falling behind competitors using AI, greed for operational leverage, ego of being the leader who modernized)
 
 ### Legal & Privacy
@@ -200,9 +200,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SITE-06 | Phase 1: Foundation & Landing Page | Complete |
 | SITE-07 | Phase 1: Foundation & Landing Page | Complete |
 | SITE-08 | Phase 1: Foundation & Landing Page | Complete |
-| SIGN-01 | Phase 2: Subscriber Onboarding | Pending |
+| SIGN-01 | Phase 2: Subscriber Onboarding | Complete |
 | SIGN-02 | Phase 2: Subscriber Onboarding | Complete |
-| SIGN-03 | Phase 2: Subscriber Onboarding | Pending |
+| SIGN-03 | Phase 2: Subscriber Onboarding | Complete |
 | SIGN-04 | Phase 2: Subscriber Onboarding | Complete |
 | SIGN-05 | Phase 2: Subscriber Onboarding | Complete |
 | SIGN-06 | Phase 2: Subscriber Onboarding | Complete |
@@ -267,7 +267,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | OPS-02 | Phase 4: AI Research Engine | Pending |
 | OPS-03 | Phase 6: Email Delivery & Compliance | Pending |
 | COPY-01 | Phase 1: Foundation & Landing Page | Complete |
-| COPY-02 | Phase 2: Subscriber Onboarding | Pending |
+| COPY-02 | Phase 2: Subscriber Onboarding | Complete |
 | COPY-03 | Phase 1.1: Homepage Pivot & IA, Phase 3: Consulting Funnel | Complete |
 | LEGL-01 | Phase 1: Foundation & Landing Page | Complete |
 | LEGL-02 | Phase 1: Foundation & Landing Page | Complete |
