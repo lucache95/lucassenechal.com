@@ -32,12 +32,12 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Newsletter Signup Flow
 
 - [ ] **SIGN-01**: Multi-step signup flow (email -> customize -> confirmation)
-- [ ] **SIGN-02**: Topic input via multiple choice categories with "(Most Popular)" labels + freeform custom option
+- [x] **SIGN-02**: Topic input via multiple choice categories with "(Most Popular)" labels + freeform custom option
 - [ ] **SIGN-03**: Newsletter format choice from 3 options: curated digest, written briefing, mixed -- with "(Most Popular)" default
-- [ ] **SIGN-04**: Optional location input for local content personalization
-- [ ] **SIGN-05**: Delivery time preference selector
-- [ ] **SIGN-06**: SMS opt-in checkbox with phone number input
-- [ ] **SIGN-07**: Custom source input -- subscribers can add RSS/Atom feed URLs to monitor (RSS only in v1 for security)
+- [x] **SIGN-04**: Optional location input for local content personalization
+- [x] **SIGN-05**: Delivery time preference selector
+- [x] **SIGN-06**: SMS opt-in checkbox with phone number input
+- [x] **SIGN-07**: Custom source input -- subscribers can add RSS/Atom feed URLs to monitor (RSS only in v1 for security)
 - [ ] **SIGN-08**: Confirmation page with first-delivery expectation
 - [ ] **SIGN-09**: Welcome/confirmation email with preview of what to expect
 
@@ -201,12 +201,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SITE-07 | Phase 1: Foundation & Landing Page | Complete |
 | SITE-08 | Phase 1: Foundation & Landing Page | Complete |
 | SIGN-01 | Phase 2: Subscriber Onboarding | Pending |
-| SIGN-02 | Phase 2: Subscriber Onboarding | Pending |
+| SIGN-02 | Phase 2: Subscriber Onboarding | Complete |
 | SIGN-03 | Phase 2: Subscriber Onboarding | Pending |
-| SIGN-04 | Phase 2: Subscriber Onboarding | Pending |
-| SIGN-05 | Phase 2: Subscriber Onboarding | Pending |
-| SIGN-06 | Phase 2: Subscriber Onboarding | Pending |
-| SIGN-07 | Phase 2: Subscriber Onboarding | Pending |
+| SIGN-04 | Phase 2: Subscriber Onboarding | Complete |
+| SIGN-05 | Phase 2: Subscriber Onboarding | Complete |
+| SIGN-06 | Phase 2: Subscriber Onboarding | Complete |
+| SIGN-07 | Phase 2: Subscriber Onboarding | Complete |
 | SIGN-08 | Phase 2: Subscriber Onboarding | Pending |
 | SIGN-09 | Phase 2: Subscriber Onboarding | Pending |
 | RSCH-01 | Phase 4: AI Research Engine | Pending |

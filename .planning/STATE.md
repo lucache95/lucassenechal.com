@@ -6,23 +6,23 @@ See: .planning/PROJECT.md (updated 2026-02-20)
 
 **Core value prop:** AI systems that eliminate repetitive admin and follow-ups so teams scale revenue without scaling headcount.
 **Core value (newsletter):** Every subscriber receives a daily briefing researched and written specifically for them.
-**Current focus:** Phase 1.1: Homepage Pivot & Information Architecture
+**Current focus:** Phase 2: Subscriber Onboarding
 
 ## Current Position
 
-Phase: 1.1 of 8 (Homepage Pivot & IA)
-Plan: 3 of 3 in current phase
-Status: Phase 1.1 complete
-Last activity: 2026-02-22 -- Completed 1.1-03: Work-with-me placeholder + root metadata
+Phase: 2 of 8 (Subscriber Onboarding)
+Plan: 1 of 4 in current phase
+Status: Executing Phase 2
+Last activity: 2026-02-22 -- Completed 02-01: Data foundation (schema, validation, topics)
 
-Progress: [###.......] 28%
+Progress: [###.......] 32%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 7
+- Total plans completed: 8
 - Average duration: 3min
-- Total execution time: 0.40 hours
+- Total execution time: 0.47 hours
 
 **By Phase:**
 
@@ -30,9 +30,10 @@ Progress: [###.......] 28%
 |-------|-------|-------|----------|
 | 1 - Foundation & Infrastructure | 4/4 | 18min | 5min |
 | 1.1 - Homepage Pivot & IA | 3/3 | 6min | 2min |
+| 2 - Subscriber Onboarding | 1/4 | 4min | 4min |
 
 **Recent Trend:**
-- Last 5 plans: 1.1-03 (2min), 1.1-02 (2min), 1.1-01 (2min), 01-01 (5min), 01-04 (3min)
+- Last 5 plans: 02-01 (4min), 1.1-03 (2min), 1.1-02 (2min), 1.1-01 (2min), 01-01 (5min)
 - Trend: Steady
 
 *Updated after each plan completion*
@@ -78,10 +79,16 @@ Recent decisions affecting current work:
 - [1.1-03]: Split work-with-me into Server Component (metadata) + Client Component (Framer Motion) for proper Next.js metadata export
 - [1.1-03]: Warm inviting tone ("Let's Build Something") -- not apologetic "coming soon"
 - [1.1-03]: Cross-link to /newsletter for funnel cross-pollination on placeholder page
+- [02-01]: Zod 4 installed (latest) -- backward compatible with Zod 3 API surface used in schema
+- [02-01]: Slug-based IDs for topics rather than UUIDs -- Server Action resolves slugs to DB UUIDs by name
+- [02-01]: CROSS JOIN pattern for subtopic seeding to reference category UUIDs by name
+- [02-01]: Shared Zod schema pattern: single source of truth in lib/schemas/ for client/server validation
+- [02-01]: Static data files in lib/data/ matching DB seed data by name
 
 ### Pending Todos
 
 - Run Supabase SQL migration (001_subscribers.sql) in SQL Editor
+- Run Supabase SQL migration (002_subscriber_preferences.sql) in SQL Editor
 - Configure DNS (CNAME to Railway, SPF/DKIM/DMARC for Resend)
 - Deploy to Railway
 - Push to GitHub
@@ -95,6 +102,6 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-22
-Stopped at: Completed 1.1-03-PLAN.md (Work-with-me placeholder + root metadata) -- Phase 1.1 complete
+Stopped at: Completed 02-01-PLAN.md (Data foundation: schema, validation, topics)
 Resume file: None
-Next action: Begin Phase 2 (Subscriber Onboarding)
+Next action: Execute 02-02-PLAN.md (Stepper + Steps 1-2: Topics & Format)
