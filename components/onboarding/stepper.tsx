@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ProgressBar } from "./progress-bar";
 import { StepTopics } from "./step-topics";
 import { StepFormat } from "./step-format";
+import { StepDelivery } from "./step-delivery";
 import { Button } from "@/components/ui/button";
 
 // ---------------------------------------------------------------------------
@@ -162,12 +163,13 @@ export function Stepper({ subscriberId }: StepperProps) {
           />
         );
       case 2:
-        // Placeholder for Delivery step (Plan 02-03)
         return (
-          <div className="py-12 text-center text-muted">
-            <p className="text-lg font-medium text-foreground">Delivery Preferences</p>
-            <p className="mt-2 text-sm">Coming in Plan 02-03</p>
-          </div>
+          <StepDelivery
+            deliveryTime={state.data.deliveryTime}
+            timezone={state.data.timezone}
+            city={state.data.city}
+            onUpdate={handleUpdate}
+          />
         );
       case 3:
         // Placeholder for Sources & SMS step (Plan 02-03)
