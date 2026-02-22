@@ -10,19 +10,19 @@ See: .planning/PROJECT.md (updated 2026-02-20)
 
 ## Current Position
 
-Phase: 2 of 8 (Subscriber Onboarding)
-Plan: 3 of 4 in current phase
-Status: Executing Phase 2
-Last activity: 2026-02-22 -- Completed 02-03: Delivery & Sources steps (time selector, RSS feeds, SMS opt-in)
+Phase: 2 of 8 (Subscriber Onboarding) -- COMPLETE
+Plan: 4 of 4 in current phase (all complete)
+Status: Phase 2 Complete
+Last activity: 2026-02-22 -- Completed 02-04: Confirmation, Server Action, welcome email, landing page wiring
 
-Progress: [####......] 40%
+Progress: [#####.....] 50%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 10
+- Total plans completed: 11
 - Average duration: 3min
-- Total execution time: 0.59 hours
+- Total execution time: 0.67 hours
 
 **By Phase:**
 
@@ -30,10 +30,10 @@ Progress: [####......] 40%
 |-------|-------|-------|----------|
 | 1 - Foundation & Infrastructure | 4/4 | 18min | 5min |
 | 1.1 - Homepage Pivot & IA | 3/3 | 6min | 2min |
-| 2 - Subscriber Onboarding | 3/4 | 11min | 4min |
+| 2 - Subscriber Onboarding | 4/4 | 16min | 4min |
 
 **Recent Trend:**
-- Last 5 plans: 02-03 (3min), 02-02 (4min), 02-01 (4min), 1.1-03 (2min), 1.1-02 (2min)
+- Last 5 plans: 02-04 (5min), 02-03 (3min), 02-02 (4min), 02-01 (4min), 1.1-03 (2min)
 - Trend: Steady
 
 *Updated after each plan completion*
@@ -90,6 +90,11 @@ Recent decisions affecting current work:
 - [02-03]: Inline SVG icons for time slot cards rather than icon library -- keeps bundle lean
 - [02-03]: Phone validation strips formatting chars before E.164 check for better UX
 - [02-03]: Benefits-first SMS opt-in pattern: show value card, then reveal input with Framer Motion expand
+- [02-04]: Zod 4 uses .issues instead of .errors for validation error access
+- [02-04]: Upsert on subscriber_preferences for idempotent re-onboarding support
+- [02-04]: Slug-to-UUID topic resolution: match static data names to DB subtopic names
+- [02-04]: Fire-and-forget email: resend.emails.send().catch() without await
+- [02-04]: Existing subscribers get subscriberId returned on duplicate email for re-onboarding
 
 ### Pending Todos
 
@@ -108,6 +113,6 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-22
-Stopped at: Completed 02-03-PLAN.md (Delivery & Sources steps)
+Stopped at: Completed 02-04-PLAN.md (Phase 2 complete)
 Resume file: None
-Next action: Execute 02-04-PLAN.md (Confirmation step, Server Action, welcome email)
+Next action: Begin Phase 3 (Consulting Funnel) or Phase 4 (AI Research Engine)

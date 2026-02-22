@@ -38,8 +38,8 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **SIGN-05**: Delivery time preference selector
 - [x] **SIGN-06**: SMS opt-in checkbox with phone number input
 - [x] **SIGN-07**: Custom source input -- subscribers can add RSS/Atom feed URLs to monitor (RSS only in v1 for security)
-- [ ] **SIGN-08**: Confirmation page with first-delivery expectation
-- [ ] **SIGN-09**: Welcome/confirmation email with preview of what to expect
+- [x] **SIGN-08**: Confirmation page with first-delivery expectation
+- [x] **SIGN-09**: Welcome/confirmation email with preview of what to expect
 
 ### AI Research Engine
 
@@ -207,8 +207,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SIGN-05 | Phase 2: Subscriber Onboarding | Complete |
 | SIGN-06 | Phase 2: Subscriber Onboarding | Complete |
 | SIGN-07 | Phase 2: Subscriber Onboarding | Complete |
-| SIGN-08 | Phase 2: Subscriber Onboarding | Pending |
-| SIGN-09 | Phase 2: Subscriber Onboarding | Pending |
+| SIGN-08 | Phase 2: Subscriber Onboarding | Complete |
+| SIGN-09 | Phase 2: Subscriber Onboarding | Complete |
 | RSCH-01 | Phase 4: AI Research Engine | Pending |
 | RSCH-02 | Phase 4: AI Research Engine | Pending |
 | RSCH-03 | Phase 4: AI Research Engine | Pending |
