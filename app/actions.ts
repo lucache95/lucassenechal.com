@@ -2,7 +2,7 @@
 
 import { createClient } from '@supabase/supabase-js'
 
-type SubscribeResult = { success?: boolean; error?: string }
+type SubscribeResult = { success?: boolean; error?: string; subscriberId?: string }
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -29,23 +29,33 @@ export async function subscribeEmail(
   )
 
   try {
-    const { error } = await supabase.from('subscribers').insert({
-      email,
-      status: 'pending',
-      created_at: new Date().toISOString(),
-    })
+    const { data, error } = await supabase
+      .from('subscribers')
+      .insert({
+        email,
+        status: 'pending',
+        created_at: new Date().toISOString(),
+      })
+      .select('id')
+      .single()
 
     if (error) {
       // Postgres unique violation — email already exists
       if (error.code === '23505') {
-        return { error: 'This email is already subscribed!' }
+        // Retrieve existing subscriber ID so they can still onboard
+        const { data: existing } = await supabase
+          .from('subscribers')
+          .select('id')
+          .eq('email', email)
+          .single()
+        return { error: 'This email is already subscribed!', subscriberId: existing?.id }
       }
 
       console.error('[subscribeEmail] Supabase insert error:', error)
       return { error: 'Something went wrong. Please try again.' }
     }
 
-    return { success: true }
+    return { success: true, subscriberId: data.id }
   } catch (err) {
     console.error('[subscribeEmail] Unexpected error:', err)
     return { error: 'Something went wrong. Please try again.' }

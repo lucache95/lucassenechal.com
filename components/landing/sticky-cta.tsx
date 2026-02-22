@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -13,6 +14,16 @@ export function StickyCTA() {
 
   const [state, formAction, isPending] = useActionState(subscribeEmail, {});
 
+  // Redirect to onboarding after successful email capture
+  useEffect(() => {
+    if (state.success && state.subscriberId) {
+      const timer = setTimeout(() => {
+        window.location.href = `/onboarding?subscriber=${state.subscriberId}`;
+      }, 1500);
+      return () => clearTimeout(timer);
+    }
+  }, [state.success, state.subscriberId]);
+
   if (state.success) {
     return (
       <motion.div
@@ -20,11 +31,12 @@ export function StickyCTA() {
         className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-surface/95 backdrop-blur-md"
       >
         <div className="mx-auto flex max-w-3xl items-center justify-center gap-2 px-4 py-3">
-          <svg className="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+          <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
+            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
           </svg>
           <p className="text-sm font-medium text-green-700">
-            You&apos;re in! Check your inbox (and spam folder).
+            Taking you to customize your briefing...
           </p>
         </div>
       </motion.div>

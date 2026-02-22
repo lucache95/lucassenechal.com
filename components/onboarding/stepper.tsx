@@ -7,6 +7,7 @@ import { StepTopics } from "./step-topics";
 import { StepFormat } from "./step-format";
 import { StepDelivery } from "./step-delivery";
 import { StepSources } from "./step-sources";
+import { StepConfirmation } from "./step-confirmation";
 import { Button } from "@/components/ui/button";
 
 // ---------------------------------------------------------------------------
@@ -182,13 +183,7 @@ export function Stepper({ subscriberId }: StepperProps) {
           />
         );
       case 4:
-        // Placeholder for Confirmation step (Plan 02-04)
-        return (
-          <div className="py-12 text-center text-muted">
-            <p className="text-lg font-medium text-foreground">Confirmation</p>
-            <p className="mt-2 text-sm">Coming in Plan 02-04</p>
-          </div>
-        );
+        return <StepConfirmation data={state.data} />;
       default:
         return null;
     }

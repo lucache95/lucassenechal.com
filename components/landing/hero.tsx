@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -30,8 +31,18 @@ const childVariants = {
 export function HeroSection() {
   const [state, formAction, isPending] = useActionState(subscribeEmail, {});
 
+  // Redirect to onboarding after successful email capture
+  useEffect(() => {
+    if (state.success && state.subscriberId) {
+      const timer = setTimeout(() => {
+        window.location.href = `/onboarding?subscriber=${state.subscriberId}`;
+      }, 1500);
+      return () => clearTimeout(timer);
+    }
+  }, [state.success, state.subscriberId]);
+
   return (
-    <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden px-6">
+    <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden px-6 pt-12 pb-6">
       {/* Subtle background gradient */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-accent/[0.03] via-transparent to-transparent" />
 
@@ -42,7 +53,7 @@ export function HeroSection() {
         className="relative z-10 mx-auto max-w-3xl text-center"
       >
         {/* Badge */}
-        <motion.div variants={childVariants} className="mb-8">
+        <motion.div variants={childVariants} className="mb-6">
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-1.5 text-sm text-muted">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-green-500" />
             Free while in beta
@@ -68,7 +79,7 @@ export function HeroSection() {
         </motion.p>
 
         {/* Email capture form */}
-        <motion.div variants={childVariants} className="mx-auto mt-10 max-w-md">
+        <motion.div variants={childVariants} className="mx-auto mt-8 max-w-md">
           {state.success ? (
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -90,7 +101,7 @@ export function HeroSection() {
                 You&apos;re in!
               </p>
               <p className="mt-1 text-sm text-green-600">
-                Check your inbox (and spam folder) — mark us as &ldquo;not spam&rdquo; so you never miss a briefing.
+                Taking you to customize your briefing...
               </p>
             </motion.div>
           ) : (
