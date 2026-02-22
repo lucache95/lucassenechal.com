@@ -86,7 +86,7 @@ function Card({ card, index }: { card: TopicCard; index: number }) {
       onHoverStart={() => setIsExpanded(true)}
       onHoverEnd={() => setIsExpanded(false)}
       onTouchStart={() => setIsExpanded((prev) => !prev)}
-      className="group cursor-default rounded-xl border border-border bg-surface p-5 transition-shadow duration-300 hover:shadow-lg hover:shadow-accent/5"
+      className="relative group cursor-default rounded-xl border border-border bg-surface p-5 transition-shadow duration-300 hover:shadow-lg hover:shadow-accent/5 hover:z-10"
     >
       {/* Icon + Title */}
       <div className="flex items-start gap-3">
@@ -101,17 +101,17 @@ function Card({ card, index }: { card: TopicCard; index: number }) {
         </div>
       </div>
 
-      {/* Expandable snippet */}
+      {/* Expandable snippet — positioned absolute so it doesn't affect grid row height */}
       <AnimatePresence>
         {isExpanded && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="overflow-hidden"
+            initial={{ opacity: 0, y: -4 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -4 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="absolute left-0 right-0 top-full z-10 rounded-b-xl border border-t-0 border-border bg-surface px-5 pb-5"
           >
-            <div className="mt-4 rounded-lg border border-dashed border-border bg-background p-3">
+            <div className="rounded-lg border border-dashed border-border bg-background p-3">
               <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
                 Sample briefing preview
               </p>

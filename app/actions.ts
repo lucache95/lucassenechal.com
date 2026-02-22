@@ -194,7 +194,7 @@ export async function completeOnboarding(
         .from('subscriber_custom_topics')
         .insert({
           subscriber_id: subscriberId,
-          topic_text: customTopics.trim(),
+          description: customTopics.trim(),
         })
 
       if (customError) {
