@@ -20,19 +20,19 @@ Progress: [###.......] 28%
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 6
-- Average duration: 4min
-- Total execution time: 0.37 hours
+- Total plans completed: 7
+- Average duration: 3min
+- Total execution time: 0.40 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 1 - Foundation & Infrastructure | 4/4 | 18min | 5min |
-| 1.1 - Homepage Pivot & IA | 2/3 | 4min | 2min |
+| 1.1 - Homepage Pivot & IA | 3/3 | 6min | 2min |
 
 **Recent Trend:**
-- Last 5 plans: 1.1-02 (2min), 1.1-01 (2min), 01-01 (5min), 01-04 (3min), 01-02 (8min)
+- Last 5 plans: 1.1-03 (2min), 1.1-02 (2min), 1.1-01 (2min), 01-01 (5min), 01-04 (3min)
 - Trend: Steady
 
 *Updated after each plan completion*
@@ -75,6 +75,9 @@ Recent decisions affecting current work:
 - [1.1-02]: Homepage is a routing page, not a convincing page -- scannable in 10 seconds with clear CTA hierarchy
 - [1.1-02]: No StickyCTA on homepage -- sticky CTAs reserved for newsletter page only
 - [1.1-02]: Newsletter teaser positioned after About section as proof-of-work bridge between credibility and conversion
+- [1.1-03]: Split work-with-me into Server Component (metadata) + Client Component (Framer Motion) for proper Next.js metadata export
+- [1.1-03]: Warm inviting tone ("Let's Build Something") -- not apologetic "coming soon"
+- [1.1-03]: Cross-link to /newsletter for funnel cross-pollination on placeholder page
 
 ### Pending Todos
 
@@ -92,6 +95,6 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-22
-Stopped at: Completed 1.1-02-PLAN.md (Consulting-first homepage)
+Stopped at: Completed 1.1-03-PLAN.md (Work-with-me placeholder + root metadata) -- Phase 1.1 complete
 Resume file: None
-Next action: Execute 1.1-03-PLAN.md (Work With Me placeholder page)
+Next action: Begin Phase 2 (Subscriber Onboarding)

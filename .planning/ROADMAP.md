@@ -15,7 +15,7 @@ This roadmap delivers a consulting-first personal platform with an AI-powered ne
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation & Infrastructure** - Project infrastructure, database, domain setup, and initial landing page (now becomes /newsletter base)
-- [ ] **Phase 1.1: Homepage Pivot & Information Architecture** *(INSERTED)* - Transform homepage to consulting-first, relocate newsletter content to /newsletter
+- [x] **Phase 1.1: Homepage Pivot & Information Architecture** *(INSERTED)* - Transform homepage to consulting-first, relocate newsletter content to /newsletter
 - [ ] **Phase 2: Subscriber Onboarding** - Multi-step signup flow at /newsletter that collects topics, preferences, and consent
 - [ ] **Phase 3: Consulting Funnel** - /work-with-me page with 2-stage AI smart intake, instant business plan output, and Calendly booking
 - [ ] **Phase 4: AI Research Engine** - The core value engine: parse topics, query sources, synthesize per-subscriber research
@@ -61,7 +61,7 @@ Plans:
 Plans:
 - [x] 1.1-01-PLAN.md — Newsletter page migration + shared navigation bar
 - [x] 1.1-02-PLAN.md — Consulting-first homepage (hero, service cards, proof section)
-- [ ] 1.1-03-PLAN.md — Work-with-me placeholder + root metadata update
+- [x] 1.1-03-PLAN.md — Work-with-me placeholder + root metadata update
 
 ### Phase 2: Subscriber Onboarding
 **Goal**: A visitor can complete the full signup flow at /newsletter and become a subscriber with stored preferences
@@ -205,7 +205,7 @@ Note: Phase 2 (Subscriber Onboarding) and Phase 3 (Consulting Funnel) both depen
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Infrastructure | 4/4 | Complete | 2026-02-20 |
-| 1.1. Homepage Pivot & IA | 2/3 | In Progress | - |
+| 1.1. Homepage Pivot & IA | 3/3 | Complete | 2026-02-22 |
 | 2. Subscriber Onboarding | 0/4 | Planned | - |
 | 3. Consulting Funnel | 0/5 | Not started | - |
 | 4. AI Research Engine | 0/6 | Not started | - |
