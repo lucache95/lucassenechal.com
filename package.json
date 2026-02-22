@@ -9,10 +9,14 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ai-sdk/anthropic": "^3.0.46",
+    "@ai-sdk/react": "^3.0.99",
     "@react-email/components": "^1.0.8",
     "@react-email/render": "^2.0.4",
+    "@react-pdf/renderer": "^4.3.2",
     "@supabase/ssr": "^0.8.0",
     "@supabase/supabase-js": "^2.97.0",
+    "ai": "^6.0.97",
     "canvas-confetti": "^1.9.4",
     "framer-motion": "^12.34.3",
     "next": "16.1.6",
