@@ -14,9 +14,9 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **HOME-01**: Consulting-first homepage at / that clearly communicates the value prop: AI systems that eliminate admin/follow-ups for revenue scaling
 - [ ] **HOME-02**: Primary CTA "Work With Me" — direct path for high-intent buyers
 - [ ] **HOME-03**: Secondary CTA "Get the Daily Briefing" — newsletter framed as proof-of-work and lead magnet
-- [ ] **HOME-04**: Dedicated newsletter landing page at /newsletter with existing landing page content (hero, example cards, how-it-works, trust strip, about, footer)
+- [x] **HOME-04**: Dedicated newsletter landing page at /newsletter with existing landing page content (hero, example cards, how-it-works, trust strip, about, footer)
 - [ ] **HOME-05**: Humble but confident tone throughout — "always learning" without sounding junior. Niche by pain, not industry.
-- [ ] **HOME-06**: Fully responsive with premium animations (Framer Motion), consistent with existing site quality
+- [x] **HOME-06**: Fully responsive with premium animations (Framer Motion), consistent with existing site quality
 
 ### Landing Page & Website (Phase 1 — Newsletter Page)
 
@@ -189,9 +189,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | HOME-01 | Phase 1.1: Homepage Pivot & IA | Pending |
 | HOME-02 | Phase 1.1: Homepage Pivot & IA | Pending |
 | HOME-03 | Phase 1.1: Homepage Pivot & IA | Pending |
-| HOME-04 | Phase 1.1: Homepage Pivot & IA | Pending |
+| HOME-04 | Phase 1.1: Homepage Pivot & IA | Complete |
 | HOME-05 | Phase 1.1: Homepage Pivot & IA | Pending |
-| HOME-06 | Phase 1.1: Homepage Pivot & IA | Pending |
+| HOME-06 | Phase 1.1: Homepage Pivot & IA | Complete |
 | SITE-01 | Phase 1: Foundation & Landing Page | Complete |
 | SITE-02 | Phase 1: Foundation & Landing Page | Complete |
 | SITE-03 | Phase 1: Foundation & Landing Page | Complete |
