@@ -13,13 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lucas Senechal — Your Daily Edge",
+  title: "Lucas Senechal — AI Systems That Scale Revenue Without Scaling Headcount",
   description:
-    "A personalized AI newsletter that researches and writes a daily briefing just for you. Not a generic blast — content tailored to exactly what you asked for.",
+    "I build AI systems that eliminate repetitive admin and follow-ups so teams scale revenue without scaling headcount. Consulting, automation, and ongoing management.",
   openGraph: {
-    title: "Lucas Senechal — Your Daily Edge",
+    title: "Lucas Senechal — AI Systems Consulting",
     description:
-      "Every morning, get a briefing researched and written just for you. Powered by AI. Sourced from real sites. Links included.",
+      "AI automation, process consulting, and ongoing management. I build systems that do your busywork so you can focus on growth.",
     url: "https://lucassenechal.com",
     siteName: "Lucas Senechal",
     locale: "en_US",
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lucas Senechal — Your Daily Edge",
+    title: "Lucas Senechal — AI Systems Consulting",
     description:
-      "A personalized AI newsletter that researches and writes a daily briefing just for you.",
+      "I build AI systems that eliminate repetitive admin and follow-ups so teams scale revenue without scaling headcount.",
   },
 };
 
