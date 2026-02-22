@@ -20,9 +20,9 @@ Progress: [####......] 40%
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 9
+- Total plans completed: 10
 - Average duration: 3min
-- Total execution time: 0.54 hours
+- Total execution time: 0.59 hours
 
 **By Phase:**
 
@@ -30,10 +30,10 @@ Progress: [####......] 40%
 |-------|-------|-------|----------|
 | 1 - Foundation & Infrastructure | 4/4 | 18min | 5min |
 | 1.1 - Homepage Pivot & IA | 3/3 | 6min | 2min |
-| 2 - Subscriber Onboarding | 2/4 | 8min | 4min |
+| 2 - Subscriber Onboarding | 3/4 | 11min | 4min |
 
 **Recent Trend:**
-- Last 5 plans: 02-02 (4min), 02-01 (4min), 1.1-03 (2min), 1.1-02 (2min), 1.1-01 (2min)
+- Last 5 plans: 02-03 (3min), 02-02 (4min), 02-01 (4min), 1.1-03 (2min), 1.1-02 (2min)
 - Trend: Steady
 
 *Updated after each plan completion*
@@ -87,6 +87,9 @@ Recent decisions affecting current work:
 - [02-02]: Typed ease tuple for Framer Motion v12 TypeScript compatibility in AnimatePresence variants
 - [02-02]: Stepper exports OnboardingFormData type for step components (type sharing via barrel, no separate types file)
 - [02-02]: Progress bar uses numbered dots with animated connecting lines (segmented bar pattern)
+- [02-03]: Inline SVG icons for time slot cards rather than icon library -- keeps bundle lean
+- [02-03]: Phone validation strips formatting chars before E.164 check for better UX
+- [02-03]: Benefits-first SMS opt-in pattern: show value card, then reveal input with Framer Motion expand
 
 ### Pending Todos
 
@@ -105,6 +108,6 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-22
-Stopped at: Completed 02-02-PLAN.md (Stepper + Steps 1-2: Topics & Format)
+Stopped at: Completed 02-03-PLAN.md (Delivery & Sources steps)
 Resume file: None
-Next action: Execute 02-03-PLAN.md (Steps 3-4: Delivery & Sources)
+Next action: Execute 02-04-PLAN.md (Confirmation step, Server Action, welcome email)
