@@ -94,14 +94,14 @@ Plans:
   5. After seeing the plan, visitor can book a 15-minute discovery call via Calendly, and all intake data is stored for Lucas to review
   6. Optional Stage 2 (5-8 deeper questions) is available post-submit for more accuracy, framed as "Answer 5 more for a more exact plan"
   7. Real-time feel: < 2 second latency between questions
-**Plans**: TBD
+**Plans**: 5 plans
 
 Plans:
-- [ ] 03-01: Work With Me page, service descriptions, and consulting value prop
-- [ ] 03-02: Curated question library and Stage 1 smart intake UI (one-question-at-a-time with streaming)
-- [ ] 03-03: AI question selection engine (selects from library based on previous answers)
-- [ ] 03-04: Instant business plan generation and output page
-- [ ] 03-05: Stage 2 optional deep intake + Calendly integration + data persistence
+- [ ] 03-01-PLAN.md — Dependencies, question library, Zod schemas, Supabase migration, service data
+- [ ] 03-02-PLAN.md — Consulting landing page: hero, service grid, how-it-works, FAQ, trust strip, state machine
+- [ ] 03-03-PLAN.md — AI question selection API + intake UI (smart inputs, progress, back/skip)
+- [ ] 03-04-PLAN.md — Streaming business plan generation API + plan display + PDF download
+- [ ] 03-05-PLAN.md — Lead capture, Cal.com booking, data persistence, email notification, full wiring
 
 ### Phase 4: AI Research Engine
 **Goal**: The system can take a subscriber's topic preferences and produce fresh, sourced research results daily
@@ -207,7 +207,7 @@ Note: Phase 2 (Subscriber Onboarding) and Phase 3 (Consulting Funnel) both depen
 | 1. Foundation & Infrastructure | 4/4 | Complete | 2026-02-20 |
 | 1.1. Homepage Pivot & IA | 3/3 | Complete | 2026-02-22 |
 | 2. Subscriber Onboarding | 0/4 | Planned | - |
-| 3. Consulting Funnel | 0/5 | Not started | - |
+| 3. Consulting Funnel | 0/5 | Planned | - |
 | 4. AI Research Engine | 0/6 | Not started | - |
 | 5. Content Generation | 0/2 | Not started | - |
 | 6. Email Delivery & Compliance | 0/4 | Not started | - |
