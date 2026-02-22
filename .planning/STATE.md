@@ -31,10 +31,10 @@ Progress: [######....] 55%
 | 1 - Foundation & Infrastructure | 4/4 | 18min | 5min |
 | 1.1 - Homepage Pivot & IA | 3/3 | 6min | 2min |
 | 2 - Subscriber Onboarding | 4/4 | 16min | 4min |
-| 3 - Consulting Funnel | 2/5 | 2min | 1min |
+| 3 - Consulting Funnel | 2/5 | 5min | 3min |
 
 **Recent Trend:**
-- Last 5 plans: 03-02 (2min), 02-04 (5min), 02-03 (3min), 02-02 (4min), 02-01 (4min)
+- Last 5 plans: 03-01 (3min), 03-02 (2min), 02-04 (5min), 02-03 (3min), 02-02 (4min)
 - Trend: Improving
 
 *Updated after each plan completion*
@@ -96,6 +96,9 @@ Recent decisions affecting current work:
 - [02-04]: Slug-to-UUID topic resolution: match static data names to DB subtopic names
 - [02-04]: Fire-and-forget email: resend.emails.send().catch() without await
 - [02-04]: Existing subscribers get subscriberId returned on duplicate email for re-onboarding
+- [03-01]: Curated question library: separate core (13) and deep-dive (7) arrays for clarity, combined into INTAKE_QUESTIONS export
+- [03-01]: Business plan schema uses .optional() on non-critical nested fields (tools in proposedSystemSteps) per research pitfall #6
+- [03-01]: Service data extracted to lib/data/services.ts as single source of truth for 4 service offerings
 - [03-02]: F/G/E headline: "Stop Losing Deals to Manual Follow-Ups" -- fear of revenue loss, greed for efficiency, ego of modernizing
 - [03-02]: FunnelStage state machine with AnimatePresence mode="wait" for same-URL transitions
 - [03-02]: Footer and TrustStrip rendered inside landing stage (client component owns full layout)
@@ -106,6 +109,7 @@ Recent decisions affecting current work:
 
 - Run Supabase SQL migration (001_subscribers.sql) in SQL Editor
 - Run Supabase SQL migration (002_subscriber_preferences.sql) in SQL Editor
+- Run Supabase SQL migration (003_intake_sessions.sql) in SQL Editor
 - Configure DNS (CNAME to Railway, SPF/DKIM/DMARC for Resend)
 - Deploy to Railway
 - Push to GitHub
@@ -119,6 +123,6 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-22
-Stopped at: Completed 03-02-PLAN.md
+Stopped at: Completed 03-01-PLAN.md
 Resume file: None
-Next action: Continue Phase 3 Plan 03 (Intake Form)
+Next action: Continue Phase 3 Plan 03 (AI question selection API + intake UI)

@@ -89,14 +89,14 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **WORK-01**: Dedicated /work-with-me consulting conversion page
 - [x] **WORK-02**: Service descriptions (AI automation, process consulting, ongoing management, training)
 - [ ] **WORK-03**: Stage 1 smart intake — one-question-at-a-time, AI selects next question from curated library (not freeform invention), 8-12 questions max, 2-4 minutes
-- [ ] **WORK-04**: Stage 1 collects: business + team size, which workflow, current stack, data sources, volume, main pain, timeline, optional budget band. Progressive probing into AI/automation needs.
+- [x] **WORK-04**: Stage 1 collects: business + team size, which workflow, current stack, data sources, volume, main pain, timeline, optional budget band. Progressive probing into AI/automation needs.
 - [x] **WORK-05**: Subtle exit option always available but non-dominant. Show progress. Always allow skip.
 - [ ] **WORK-06**: Instant 1-page business plan output after Stage 1 — mirrors their goal in their words, bottleneck diagnosis, proposed system steps (simple diagram), tools/integrations needed, implementation phases (MVP → hardening → reporting), risks/dependencies, estimate tier (S/M/L) + timeline + assumptions, clear next steps
 - [ ] **WORK-07**: Calendly embed to book 15-min discovery call after seeing plan
 - [ ] **WORK-08**: All intake data stored for Lucas to review before the call
 - [ ] **WORK-09**: Real-time feel -- < 2 second latency between questions
 - [ ] **WORK-10**: Stage 2 optional deep intake (5-8 additional questions, post-submit or post-booking) framed as "Answer 5 more for a more exact plan" — does not block conversion
-- [ ] **WORK-11**: Curated question library with hard caps (Stage 1 ~12, Stage 2 ~5-8) — AI selects from pool, never invents freely
+- [x] **WORK-11**: Curated question library with hard caps (Stage 1 ~12, Stage 2 ~5-8) — AI selects from pool, never invents freely
 
 ### Preference Management
 
@@ -243,14 +243,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 | WORK-01 | Phase 3: Consulting Funnel | Complete |
 | WORK-02 | Phase 3: Consulting Funnel | Complete |
 | WORK-03 | Phase 3: Consulting Funnel | Pending |
-| WORK-04 | Phase 3: Consulting Funnel | Pending |
+| WORK-04 | Phase 3: Consulting Funnel | Complete |
 | WORK-05 | Phase 3: Consulting Funnel | Complete |
 | WORK-06 | Phase 3: Consulting Funnel | Pending |
 | WORK-07 | Phase 3: Consulting Funnel | Pending |
 | WORK-08 | Phase 3: Consulting Funnel | Pending |
 | WORK-09 | Phase 3: Consulting Funnel | Pending |
 | WORK-10 | Phase 3: Consulting Funnel | Pending |
-| WORK-11 | Phase 3: Consulting Funnel | Pending |
+| WORK-11 | Phase 3: Consulting Funnel | Complete |
 | PREF-01 | Phase 7: Preference Management | Pending |
 | PREF-02 | Phase 7: Preference Management | Pending |
 | PREF-03 | Phase 7: Preference Management | Pending |
