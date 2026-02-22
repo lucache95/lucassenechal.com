@@ -1,21 +1,32 @@
-import { HeroSection } from "@/components/landing/hero";
-import { ExampleCards } from "@/components/landing/example-cards";
-import { HowItWorks } from "@/components/landing/how-it-works";
+import { ConsultingHero } from "@/components/homepage/consulting-hero";
+import { WhatIBuild } from "@/components/homepage/what-i-build";
+import { NewsletterTeaser } from "@/components/homepage/newsletter-teaser";
 import { TrustStrip } from "@/components/landing/trust-strip";
 import { About } from "@/components/landing/about";
 import { Footer } from "@/components/landing/footer";
-import { StickyCTA } from "@/components/landing/sticky-cta";
+import type { Metadata } from "next";
 
-export default function MarketingPage() {
+export const metadata: Metadata = {
+  title: "Lucas Senechal — AI Systems That Scale Revenue Without Scaling Headcount",
+  description:
+    "I build AI systems that eliminate repetitive admin and follow-ups so your team scales revenue without scaling headcount. Custom automation, process consulting, and ongoing management.",
+  openGraph: {
+    title: "Lucas Senechal — AI Systems That Scale Revenue Without Scaling Headcount",
+    description:
+      "I build AI systems that eliminate repetitive admin and follow-ups so your team scales revenue without scaling headcount.",
+    url: "https://lucassenechal.com",
+  },
+};
+
+export default function HomePage() {
   return (
     <main>
-      <HeroSection />
+      <ConsultingHero />
+      <WhatIBuild />
       <TrustStrip />
-      <ExampleCards />
-      <HowItWorks />
       <About />
+      <NewsletterTeaser />
       <Footer />
-      <StickyCTA />
     </main>
   );
 }
