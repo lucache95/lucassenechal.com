@@ -11,18 +11,18 @@ See: .planning/PROJECT.md (updated 2026-02-20)
 ## Current Position
 
 Phase: 3 of 8 (Consulting Funnel)
-Plan: 2 of 5 in current phase
+Plan: 5 of 5 in current phase
 Status: Executing
-Last activity: 2026-02-22 -- Completed 03-01: Foundation data, schemas, and AI SDK dependencies
+Last activity: 2026-02-22 -- Completed 03-04: AI business plan generation pipeline
 
-Progress: [######....] 55%
+Progress: [#######...] 70%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 13
+- Total plans completed: 15
 - Average duration: 3min
-- Total execution time: 0.75 hours
+- Total execution time: 0.89 hours
 
 **By Phase:**
 
@@ -31,10 +31,10 @@ Progress: [######....] 55%
 | 1 - Foundation & Infrastructure | 4/4 | 18min | 5min |
 | 1.1 - Homepage Pivot & IA | 3/3 | 6min | 2min |
 | 2 - Subscriber Onboarding | 4/4 | 16min | 4min |
-| 3 - Consulting Funnel | 2/5 | 5min | 3min |
+| 3 - Consulting Funnel | 4/5 | 13min | 3min |
 
 **Recent Trend:**
-- Last 5 plans: 03-01 (3min), 03-02 (2min), 02-04 (5min), 02-03 (3min), 02-02 (4min)
+- Last 5 plans: 03-04 (4min), 03-03 (4min), 03-01 (3min), 03-02 (2min), 02-04 (5min)
 - Trend: Improving
 
 *Updated after each plan completion*
@@ -104,6 +104,17 @@ Recent decisions affecting current work:
 - [03-02]: Footer and TrustStrip rendered inside landing stage (client component owns full layout)
 - [03-02]: FAQ accordion uses plus-to-cross rotation with AnimatePresence height animation
 - [03-02]: Consulting components in components/consulting/* mirroring homepage patterns
+- [03-03]: AI SDK v6 generateText + Output.object pattern for structured question selection (not generateObject)
+- [03-03]: 1500ms AbortController timeout with deterministic priority-based fallback for guaranteed <2s response
+- [03-03]: useReducer state machine in IntakeContainer for predictable multi-step form state transitions
+- [03-03]: Session storage backup after each answer for intake recovery on page refresh
+- [03-03]: Auto-advance on button click (150ms delay for visual feedback) for Typeform-like UX
+- [03-03]: Intake components in components/intake/* mirroring consulting component pattern
+- [03-04]: Used streamText + Output.object pattern (AI SDK v6) for structured streaming rather than streamObject standalone
+- [03-04]: PlanDisplay manages own loading/complete states internally via useObject hook isLoading flag
+- [03-04]: PDF uses Helvetica (built-in) with blue accent matching site palette -- zero custom font overhead
+- [03-04]: PlanDownloadButton dynamically imported with ssr:false to prevent react-pdf SSR hydration crashes
+- [03-04]: System prompt enforces paraphrased mirroring, specific tool recs, and phase-by-phase estimates
 
 ### Pending Todos
 
@@ -123,6 +134,6 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-22
-Stopped at: Completed 03-01-PLAN.md
+Stopped at: Completed 03-04-PLAN.md
 Resume file: None
-Next action: Continue Phase 3 Plan 03 (AI question selection API + intake UI)
+Next action: Continue Phase 3 Plan 05 (Lead capture + booking)
