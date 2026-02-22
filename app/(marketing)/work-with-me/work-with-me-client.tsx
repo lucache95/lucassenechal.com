@@ -8,6 +8,8 @@ import { HowItWorks } from "@/components/consulting/how-it-works";
 import { FAQSection } from "@/components/consulting/faq-section";
 import { TrustStrip } from "@/components/landing/trust-strip";
 import { Footer } from "@/components/landing/footer";
+import { IntakeContainer } from "@/components/intake/intake-container";
+import type { IntakeAnswer } from "@/lib/schemas/intake";
 
 export type FunnelStage =
   | "landing"
@@ -39,10 +41,7 @@ const stageVariants = {
 
 export function WorkWithMeClient() {
   const [stage, setStage] = useState<FunnelStage>("landing");
-  const [intakeAnswers, setIntakeAnswers] = useState<Record<string, string>[]>(
-    []
-  );
-  const [sessionData, setSessionData] = useState<Record<string, unknown>>({});
+  const [answers, setAnswers] = useState<IntakeAnswer[]>([]);
 
   // Scroll to top when stage changes
   useEffect(() => {
@@ -77,22 +76,14 @@ export function WorkWithMeClient() {
           initial="initial"
           animate="animate"
           exit="exit"
-          className="flex min-h-[60vh] items-center justify-center px-6 py-24"
         >
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-2xl font-bold text-foreground md:text-3xl">
-              Intake Coming in Plan 03
-            </h2>
-            <p className="mt-4 text-muted">
-              The guided intake form will appear here.
-            </p>
-            <button
-              onClick={() => setStage("landing")}
-              className="mt-8 text-sm text-accent hover:text-accent-hover transition-colors duration-200 underline underline-offset-2"
-            >
-              Back to landing
-            </button>
-          </div>
+          <IntakeContainer
+            onComplete={(intakeAnswers) => {
+              setAnswers(intakeAnswers);
+              setStage("generating");
+            }}
+            onBack={() => setStage("landing")}
+          />
         </motion.div>
       )}
 
