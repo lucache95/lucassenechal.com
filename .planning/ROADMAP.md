@@ -56,12 +56,12 @@ Plans:
   4. /work-with-me route exists (placeholder or full page depending on Phase 3 timing)
   5. All three pages are fully responsive with smooth Framer Motion animations
   6. Tone is humble but confident — not junior, not corporate
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 1.1-01: New consulting-first homepage design and implementation
-- [ ] 1.1-02: Relocate existing landing page content to /newsletter route
-- [ ] 1.1-03: Navigation and routing updates (header nav, CTAs, internal links)
+- [ ] 1.1-01-PLAN.md — Newsletter page migration + shared navigation bar
+- [ ] 1.1-02-PLAN.md — Consulting-first homepage (hero, service cards, proof section)
+- [ ] 1.1-03-PLAN.md — Work-with-me placeholder + root metadata update
 
 ### Phase 2: Subscriber Onboarding
 **Goal**: A visitor can complete the full signup flow at /newsletter and become a subscriber with stored preferences
@@ -205,7 +205,7 @@ Note: Phase 2 (Subscriber Onboarding) and Phase 3 (Consulting Funnel) both depen
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Infrastructure | 4/4 | Complete | 2026-02-20 |
-| 1.1. Homepage Pivot & IA | 0/3 | Not started | - |
+| 1.1. Homepage Pivot & IA | 0/3 | Planned | - |
 | 2. Subscriber Onboarding | 0/4 | Planned | - |
 | 3. Consulting Funnel | 0/5 | Not started | - |
 | 4. AI Research Engine | 0/6 | Not started | - |
