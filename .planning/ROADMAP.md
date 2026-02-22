@@ -60,7 +60,7 @@ Plans:
 
 Plans:
 - [x] 1.1-01-PLAN.md — Newsletter page migration + shared navigation bar
-- [ ] 1.1-02-PLAN.md — Consulting-first homepage (hero, service cards, proof section)
+- [x] 1.1-02-PLAN.md — Consulting-first homepage (hero, service cards, proof section)
 - [ ] 1.1-03-PLAN.md — Work-with-me placeholder + root metadata update
 
 ### Phase 2: Subscriber Onboarding
@@ -205,7 +205,7 @@ Note: Phase 2 (Subscriber Onboarding) and Phase 3 (Consulting Funnel) both depen
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Infrastructure | 4/4 | Complete | 2026-02-20 |
-| 1.1. Homepage Pivot & IA | 1/3 | In Progress | - |
+| 1.1. Homepage Pivot & IA | 2/3 | In Progress | - |
 | 2. Subscriber Onboarding | 0/4 | Planned | - |
 | 3. Consulting Funnel | 0/5 | Not started | - |
 | 4. AI Research Engine | 0/6 | Not started | - |

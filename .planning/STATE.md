@@ -11,28 +11,28 @@ See: .planning/PROJECT.md (updated 2026-02-20)
 ## Current Position
 
 Phase: 1.1 of 8 (Homepage Pivot & IA)
-Plan: 1 of 3 in current phase
-Status: In progress
-Last activity: 2026-02-22 -- Completed 1.1-01: Newsletter page migration + shared navigation bar
+Plan: 3 of 3 in current phase
+Status: Phase 1.1 complete
+Last activity: 2026-02-22 -- Completed 1.1-03: Work-with-me placeholder + root metadata
 
-Progress: [###.......] 17%
+Progress: [###.......] 28%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 5
+- Total plans completed: 6
 - Average duration: 4min
-- Total execution time: 0.33 hours
+- Total execution time: 0.37 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 1 - Foundation & Infrastructure | 4/4 | 18min | 5min |
-| 1.1 - Homepage Pivot & IA | 1/3 | 2min | 2min |
+| 1.1 - Homepage Pivot & IA | 2/3 | 4min | 2min |
 
 **Recent Trend:**
-- Last 5 plans: 1.1-01 (2min), 01-01 (5min), 01-04 (3min), 01-02 (8min), 01-03 (2min)
+- Last 5 plans: 1.1-02 (2min), 1.1-01 (2min), 01-01 (5min), 01-04 (3min), 01-02 (8min)
 - Trend: Steady
 
 *Updated after each plan completion*
@@ -71,6 +71,10 @@ Recent decisions affecting current work:
 - [1.1-01]: NavBar uses sticky positioning with glassmorphism (bg-background/80 backdrop-blur-sm) for persistent navigation
 - [1.1-01]: No hamburger menu -- only 2 nav links inline on all screen sizes per research recommendation
 - [1.1-01]: Newsletter page is a straight content migration with zero modifications to landing/* components
+- [1.1-02]: Headline uses F/G/E framework: "I Build AI Systems That Do Your Busywork" -- fear of falling behind, greed for leverage, ego of modernizing
+- [1.1-02]: Homepage is a routing page, not a convincing page -- scannable in 10 seconds with clear CTA hierarchy
+- [1.1-02]: No StickyCTA on homepage -- sticky CTAs reserved for newsletter page only
+- [1.1-02]: Newsletter teaser positioned after About section as proof-of-work bridge between credibility and conversion
 
 ### Pending Todos
 
@@ -88,6 +92,6 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-22
-Stopped at: Completed 1.1-01-PLAN.md (Newsletter page migration + shared navigation bar)
+Stopped at: Completed 1.1-02-PLAN.md (Consulting-first homepage)
 Resume file: None
-Next action: Execute 1.1-02-PLAN.md (Consulting-first homepage)
+Next action: Execute 1.1-03-PLAN.md (Work With Me placeholder page)

@@ -11,11 +11,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Homepage (Consulting-First) — NEW
 
-- [ ] **HOME-01**: Consulting-first homepage at / that clearly communicates the value prop: AI systems that eliminate admin/follow-ups for revenue scaling
-- [ ] **HOME-02**: Primary CTA "Work With Me" — direct path for high-intent buyers
-- [ ] **HOME-03**: Secondary CTA "Get the Daily Briefing" — newsletter framed as proof-of-work and lead magnet
+- [x] **HOME-01**: Consulting-first homepage at / that clearly communicates the value prop: AI systems that eliminate admin/follow-ups for revenue scaling
+- [x] **HOME-02**: Primary CTA "Work With Me" — direct path for high-intent buyers
+- [x] **HOME-03**: Secondary CTA "Get the Daily Briefing" — newsletter framed as proof-of-work and lead magnet
 - [x] **HOME-04**: Dedicated newsletter landing page at /newsletter with existing landing page content (hero, example cards, how-it-works, trust strip, about, footer)
-- [ ] **HOME-05**: Humble but confident tone throughout — "always learning" without sounding junior. Niche by pain, not industry.
+- [x] **HOME-05**: Humble but confident tone throughout — "always learning" without sounding junior. Niche by pain, not industry.
 - [x] **HOME-06**: Fully responsive with premium animations (Framer Motion), consistent with existing site quality
 
 ### Landing Page & Website (Phase 1 — Newsletter Page)
@@ -129,7 +129,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **COPY-01**: All touchpoints use Fear/Greed/Ego microcopy framework (landing page, signup steps, CTAs, email subjects, preference pages)
 - [ ] **COPY-02**: Signup flow steps framed with F/G/E: topic step = "What do you want to be ahead on?", format step = identity-framed options, confirmation = confidence-building
-- [ ] **COPY-03**: Homepage and consulting page use F/G/E with consulting-specific framing (fear of falling behind competitors using AI, greed for operational leverage, ego of being the leader who modernized)
+- [x] **COPY-03**: Homepage and consulting page use F/G/E with consulting-specific framing (fear of falling behind competitors using AI, greed for operational leverage, ego of being the leader who modernized)
 
 ### Legal & Privacy
 
@@ -186,11 +186,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| HOME-01 | Phase 1.1: Homepage Pivot & IA | Pending |
-| HOME-02 | Phase 1.1: Homepage Pivot & IA | Pending |
-| HOME-03 | Phase 1.1: Homepage Pivot & IA | Pending |
+| HOME-01 | Phase 1.1: Homepage Pivot & IA | Complete |
+| HOME-02 | Phase 1.1: Homepage Pivot & IA | Complete |
+| HOME-03 | Phase 1.1: Homepage Pivot & IA | Complete |
 | HOME-04 | Phase 1.1: Homepage Pivot & IA | Complete |
-| HOME-05 | Phase 1.1: Homepage Pivot & IA | Pending |
+| HOME-05 | Phase 1.1: Homepage Pivot & IA | Complete |
 | HOME-06 | Phase 1.1: Homepage Pivot & IA | Complete |
 | SITE-01 | Phase 1: Foundation & Landing Page | Complete |
 | SITE-02 | Phase 1: Foundation & Landing Page | Complete |
@@ -268,7 +268,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | OPS-03 | Phase 6: Email Delivery & Compliance | Pending |
 | COPY-01 | Phase 1: Foundation & Landing Page | Complete |
 | COPY-02 | Phase 2: Subscriber Onboarding | Pending |
-| COPY-03 | Phase 1.1: Homepage Pivot & IA, Phase 3: Consulting Funnel | Pending |
+| COPY-03 | Phase 1.1: Homepage Pivot & IA, Phase 3: Consulting Funnel | Complete |
 | LEGL-01 | Phase 1: Foundation & Landing Page | Complete |
 | LEGL-02 | Phase 1: Foundation & Landing Page | Complete |
 
