@@ -6,6 +6,7 @@ import { ProgressBar } from "./progress-bar";
 import { StepTopics } from "./step-topics";
 import { StepFormat } from "./step-format";
 import { StepDelivery } from "./step-delivery";
+import { StepSources } from "./step-sources";
 import { Button } from "@/components/ui/button";
 
 // ---------------------------------------------------------------------------
@@ -172,12 +173,13 @@ export function Stepper({ subscriberId }: StepperProps) {
           />
         );
       case 3:
-        // Placeholder for Sources & SMS step (Plan 02-03)
         return (
-          <div className="py-12 text-center text-muted">
-            <p className="text-lg font-medium text-foreground">Sources & SMS</p>
-            <p className="mt-2 text-sm">Coming in Plan 02-03</p>
-          </div>
+          <StepSources
+            feedUrls={state.data.feedUrls}
+            smsOptIn={state.data.smsOptIn}
+            phone={state.data.phone}
+            onUpdate={handleUpdate}
+          />
         );
       case 4:
         // Placeholder for Confirmation step (Plan 02-04)
