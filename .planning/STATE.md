@@ -6,23 +6,23 @@ See: .planning/PROJECT.md (updated 2026-02-20)
 
 **Core value prop:** AI systems that eliminate repetitive admin and follow-ups so teams scale revenue without scaling headcount.
 **Core value (newsletter):** Every subscriber receives a daily briefing researched and written specifically for them.
-**Current focus:** Phase 2: Subscriber Onboarding
+**Current focus:** Phase 3: Consulting Funnel
 
 ## Current Position
 
-Phase: 2 of 8 (Subscriber Onboarding) -- COMPLETE
-Plan: 4 of 4 in current phase (all complete)
-Status: Phase 2 Complete
-Last activity: 2026-02-22 -- Completed 02-04: Confirmation, Server Action, welcome email, landing page wiring
+Phase: 3 of 8 (Consulting Funnel)
+Plan: 2 of 5 in current phase
+Status: Executing
+Last activity: 2026-02-22 -- Completed 03-01: Foundation data, schemas, and AI SDK dependencies
 
-Progress: [#####.....] 50%
+Progress: [######....] 55%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 11
+- Total plans completed: 13
 - Average duration: 3min
-- Total execution time: 0.67 hours
+- Total execution time: 0.75 hours
 
 **By Phase:**
 
@@ -31,10 +31,11 @@ Progress: [#####.....] 50%
 | 1 - Foundation & Infrastructure | 4/4 | 18min | 5min |
 | 1.1 - Homepage Pivot & IA | 3/3 | 6min | 2min |
 | 2 - Subscriber Onboarding | 4/4 | 16min | 4min |
+| 3 - Consulting Funnel | 2/5 | 2min | 1min |
 
 **Recent Trend:**
-- Last 5 plans: 02-04 (5min), 02-03 (3min), 02-02 (4min), 02-01 (4min), 1.1-03 (2min)
-- Trend: Steady
+- Last 5 plans: 03-02 (2min), 02-04 (5min), 02-03 (3min), 02-02 (4min), 02-01 (4min)
+- Trend: Improving
 
 *Updated after each plan completion*
 
@@ -95,6 +96,11 @@ Recent decisions affecting current work:
 - [02-04]: Slug-to-UUID topic resolution: match static data names to DB subtopic names
 - [02-04]: Fire-and-forget email: resend.emails.send().catch() without await
 - [02-04]: Existing subscribers get subscriberId returned on duplicate email for re-onboarding
+- [03-02]: F/G/E headline: "Stop Losing Deals to Manual Follow-Ups" -- fear of revenue loss, greed for efficiency, ego of modernizing
+- [03-02]: FunnelStage state machine with AnimatePresence mode="wait" for same-URL transitions
+- [03-02]: Footer and TrustStrip rendered inside landing stage (client component owns full layout)
+- [03-02]: FAQ accordion uses plus-to-cross rotation with AnimatePresence height animation
+- [03-02]: Consulting components in components/consulting/* mirroring homepage patterns
 
 ### Pending Todos
 
@@ -113,6 +119,6 @@ Recent decisions affecting current work:
 ## Session Continuity
 
 Last session: 2026-02-22
-Stopped at: Completed 02-04-PLAN.md (Phase 2 complete)
+Stopped at: Completed 03-02-PLAN.md
 Resume file: None
-Next action: Begin Phase 3 (Consulting Funnel) or Phase 4 (AI Research Engine)
+Next action: Continue Phase 3 Plan 03 (Intake Form)
