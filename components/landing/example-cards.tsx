@@ -69,11 +69,21 @@ const topics: TopicCard[] = [
   },
 ];
 
-function Card({ card, index }: { card: TopicCard; index: number }) {
-  const [isExpanded, setIsExpanded] = useState(false);
-
+function Card({
+  card,
+  index,
+  isSelected,
+  onSelect,
+}: {
+  card: TopicCard;
+  index: number;
+  isSelected: boolean;
+  onSelect: () => void;
+}) {
   return (
-    <motion.div
+    <motion.button
+      type="button"
+      onClick={onSelect}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
@@ -82,15 +92,20 @@ function Card({ card, index }: { card: TopicCard; index: number }) {
         delay: index * 0.08,
         ease: [0.25, 0.4, 0.25, 1] as [number, number, number, number],
       }}
-      whileHover={{ scale: 1.02 }}
-      onHoverStart={() => setIsExpanded(true)}
-      onHoverEnd={() => setIsExpanded(false)}
-      onTouchStart={() => setIsExpanded((prev) => !prev)}
-      className="relative group cursor-default rounded-xl border border-border bg-surface p-5 transition-shadow duration-300 hover:shadow-lg hover:shadow-accent/5 hover:z-10"
+      className={`relative cursor-pointer rounded-xl border p-5 text-left transition-all duration-200 ${
+        isSelected
+          ? "border-accent bg-accent/5 shadow-md shadow-accent/10"
+          : "border-border bg-surface hover:border-accent/40 hover:shadow-sm"
+      }`}
     >
-      {/* Icon + Title */}
       <div className="flex items-start gap-3">
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent/10 font-mono text-sm font-bold text-accent">
+        <span
+          className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg font-mono text-sm font-bold transition-colors duration-200 ${
+            isSelected
+              ? "bg-accent text-white"
+              : "bg-accent/10 text-accent"
+          }`}
+        >
           {card.icon}
         </span>
         <div className="min-w-0">
@@ -100,33 +115,13 @@ function Card({ card, index }: { card: TopicCard; index: number }) {
           <p className="mt-0.5 text-sm text-muted">{card.description}</p>
         </div>
       </div>
-
-      {/* Expandable snippet — positioned absolute so it doesn't affect grid row height */}
-      <AnimatePresence>
-        {isExpanded && (
-          <motion.div
-            initial={{ opacity: 0, y: -4 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -4 }}
-            transition={{ duration: 0.2, ease: "easeOut" }}
-            className="absolute left-0 right-0 top-full z-10 rounded-b-xl border border-t-0 border-border bg-surface px-5 pb-5"
-          >
-            <div className="rounded-lg border border-dashed border-border bg-background p-3">
-              <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-                Sample briefing preview
-              </p>
-              <p className="mt-1.5 text-sm leading-relaxed text-muted">
-                {card.snippet}
-              </p>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.div>
+    </motion.button>
   );
 }
 
 export function ExampleCards() {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
   return (
     <section className="px-6 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl">
@@ -142,17 +137,42 @@ export function ExampleCards() {
             See what your briefing could look like
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base text-muted sm:text-lg">
-            Pick any combination of topics. Your AI researches them overnight and delivers a
-            personalized briefing by morning.
+            Pick any combination of topics. Your AI researches them overnight
+            and delivers a personalized briefing by morning.
           </p>
         </motion.div>
 
         {/* Card grid */}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {topics.map((card, index) => (
-            <Card key={card.title} card={card} index={index} />
+            <Card
+              key={card.title}
+              card={card}
+              index={index}
+              isSelected={selectedIndex === index}
+              onSelect={() => setSelectedIndex(index)}
+            />
           ))}
         </div>
+
+        {/* Preview area */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={selectedIndex}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="mx-auto mt-8 max-w-2xl rounded-xl border border-dashed border-accent/30 bg-accent/[0.03] p-6"
+          >
+            <p className="text-xs font-medium uppercase tracking-wider text-accent">
+              Sample briefing preview — {topics[selectedIndex].title}
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-muted sm:text-base">
+              {topics[selectedIndex].snippet}
+            </p>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   );
