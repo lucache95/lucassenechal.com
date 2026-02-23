@@ -54,6 +54,25 @@ const SPOTS_REMAINING = parseInt(
 const SPOTS_MONTH =
   process.env.NEXT_PUBLIC_CAL_SPOTS_MONTH ?? new Intl.DateTimeFormat("en-US", { month: "long" }).format(new Date());
 
+const STORAGE_KEY = "wwm-funnel-state";
+
+interface PersistedState {
+  stage: FunnelStage;
+  answers: IntakeAnswer[];
+  leadInfo: { email: string; name: string } | null;
+  sessionId: string | null;
+}
+
+function loadPersistedState(): PersistedState | null {
+  try {
+    const raw = sessionStorage.getItem(STORAGE_KEY);
+    if (!raw) return null;
+    return JSON.parse(raw) as PersistedState;
+  } catch {
+    return null;
+  }
+}
+
 export function WorkWithMeClient() {
   const [stage, setStage] = useState<FunnelStage>("landing");
   const [answers, setAnswers] = useState<IntakeAnswer[]>([]);
@@ -62,6 +81,36 @@ export function WorkWithMeClient() {
     name: string;
   } | null>(null);
   const [sessionId, setSessionId] = useState<string | null>(null);
+  const [hydrated, setHydrated] = useState(false);
+
+  // Restore persisted funnel state on mount
+  useEffect(() => {
+    const saved = loadPersistedState();
+    if (saved && saved.stage !== "landing") {
+      setAnswers(saved.answers);
+      setLeadInfo(saved.leadInfo);
+      setSessionId(saved.sessionId);
+      // If they were generating/viewing the plan, re-enter the generating stage
+      // so PlanDisplay re-generates from their saved answers
+      const restoreStage =
+        saved.stage === "plan" || saved.stage === "generating"
+          ? "generating"
+          : saved.stage;
+      setStage(restoreStage);
+    }
+    setHydrated(true);
+  }, []);
+
+  // Persist funnel state on every change (after hydration)
+  useEffect(() => {
+    if (!hydrated) return;
+    const state: PersistedState = { stage, answers, leadInfo, sessionId };
+    try {
+      sessionStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    } catch {
+      // sessionStorage full or unavailable — non-blocking
+    }
+  }, [stage, answers, leadInfo, sessionId, hydrated]);
 
   // Scroll to top when stage changes
   useEffect(() => {
@@ -121,11 +170,12 @@ export function WorkWithMeClient() {
   }, [sessionId]);
 
   const handleNewAssessment = useCallback(() => {
-    // Reset all state
+    // Reset all state and clear persisted session
     setAnswers([]);
     setLeadInfo(null);
     setSessionId(null);
     setStage("intake");
+    try { sessionStorage.removeItem(STORAGE_KEY); } catch {}
   }, []);
 
   // ── Render ──────────────────────────────────────────────────────
@@ -142,9 +192,9 @@ export function WorkWithMeClient() {
           exit="exit"
         >
           <ConsultingHero onStart={() => setStage("intake")} />
+          <TrustStrip />
           <ServiceGrid />
           <HowItWorks />
-          <TrustStrip />
           <FAQSection />
           <Footer />
         </motion.div>

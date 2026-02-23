@@ -6,6 +6,10 @@ import {
   IntakeNotificationEmail,
   getIntakeNotificationSubject,
 } from "@/lib/email/intake-notification";
+import {
+  PlanDeliveryEmail,
+  getPlanDeliverySubject,
+} from "@/lib/email/plan-delivery";
 import type { IntakeAnswer } from "@/lib/schemas/intake";
 import type { BusinessPlan } from "@/lib/schemas/business-plan";
 import { SERVICES } from "@/lib/data/services";
@@ -170,6 +174,34 @@ export async function saveIntakePlan(input: {
           })
           .catch((err) => {
             console.error("[intake-notification] Send failed:", err);
+          });
+
+        // Send plan copy to the lead
+        resend.emails
+          .send({
+            from: "Lucas Senechal <notifications@lucassenechal.com>",
+            to: session.email,
+            subject: getPlanDeliverySubject(session.name),
+            react: PlanDeliveryEmail({
+              name: session.name,
+              goalMirroring: input.plan.goalMirroring ?? "",
+              bottleneck: input.plan.bottleneckDiagnosis ?? "",
+              steps: (input.plan.proposedSystemSteps ?? []).map((s) => ({
+                title: s.title,
+                description: s.description,
+              })),
+              tools: input.plan.toolsAndIntegrations ?? [],
+              phases: (input.plan.implementationPhases ?? []).map((p) => ({
+                phase: p.phase,
+                duration: p.duration,
+              })),
+              totalRange: input.plan.estimate?.totalRange ?? "",
+              timeline: input.plan.estimate?.timeline ?? "",
+              recommendedService: serviceName,
+            }),
+          })
+          .catch((err) => {
+            console.error("[plan-delivery] Send to lead failed:", err);
           });
       }
     }

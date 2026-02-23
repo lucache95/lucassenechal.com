@@ -22,6 +22,7 @@ export interface IntakeQuestion {
   inputType: 'buttons' | 'text' | 'slider' | 'multi-select';
   options?: string[];
   sliderConfig?: { min: number; max: number; step: number; labels: [string, string] };
+  placeholder?: string;
   isRequired: boolean;
   isDeepDive: boolean;
   priority: number;
@@ -37,6 +38,7 @@ const coreQuestions: IntakeQuestion[] = [
     category: 'business',
     text: 'What does your business do?',
     inputType: 'text',
+    placeholder: 'We run a real estate agency with 12 agents across 3 offices...',
     isRequired: true,
     isDeepDive: false,
     priority: 1,
@@ -60,6 +62,7 @@ const coreQuestions: IntakeQuestion[] = [
     category: 'workflow',
     text: 'Which workflow eats the most time?',
     inputType: 'text',
+    placeholder: 'Following up with leads — we lose track of who to call back and when...',
     isRequired: true,
     isDeepDive: false,
     priority: 3,
@@ -70,6 +73,7 @@ const coreQuestions: IntakeQuestion[] = [
     category: 'workflow',
     text: 'How do you currently handle that workflow?',
     inputType: 'text',
+    placeholder: 'I manually check my email every morning and add follow-ups to a spreadsheet...',
     isRequired: false,
     isDeepDive: false,
     priority: 5,
@@ -106,6 +110,7 @@ const coreQuestions: IntakeQuestion[] = [
     category: 'scope',
     text: "What would 'done' look like for this project?",
     inputType: 'text',
+    placeholder: 'New leads get an automatic follow-up sequence and I only step in when they reply...',
     isRequired: false,
     isDeepDive: false,
     priority: 7,
@@ -129,6 +134,7 @@ const coreQuestions: IntakeQuestion[] = [
     category: 'pain',
     text: "What's the biggest bottleneck in your current process?",
     inputType: 'text',
+    placeholder: 'Manually copying data between CRM and spreadsheets takes hours every week...',
     isRequired: true,
     isDeepDive: false,
     priority: 4,
@@ -150,6 +156,7 @@ const coreQuestions: IntakeQuestion[] = [
     category: 'pain',
     text: 'What happens when this process breaks?',
     inputType: 'text',
+    placeholder: 'Leads go cold, deals slip through the cracks, and we lose revenue...',
     isRequired: false,
     isDeepDive: false,
     priority: 11,
@@ -189,6 +196,7 @@ const deepDiveQuestions: IntakeQuestion[] = [
     category: 'deep',
     text: 'Where does data currently live?',
     inputType: 'text',
+    placeholder: 'Mix of Google Sheets, Salesforce, and email threads...',
     isRequired: false,
     isDeepDive: true,
     priority: 14,
@@ -199,6 +207,7 @@ const deepDiveQuestions: IntakeQuestion[] = [
     category: 'deep',
     text: 'What does your reporting/metrics stack look like?',
     inputType: 'text',
+    placeholder: 'We pull numbers from Sheets into a monthly deck — mostly manual...',
     isRequired: false,
     isDeepDive: true,
     priority: 15,
@@ -209,6 +218,7 @@ const deepDiveQuestions: IntakeQuestion[] = [
     category: 'deep',
     text: 'Who are the stakeholders for this project?',
     inputType: 'text',
+    placeholder: 'Me and my ops manager — plus our CEO wants monthly reports on it...',
     isRequired: false,
     isDeepDive: true,
     priority: 16,
@@ -219,6 +229,7 @@ const deepDiveQuestions: IntakeQuestion[] = [
     category: 'deep',
     text: "What's been tried before that didn't work?",
     inputType: 'text',
+    placeholder: 'We tried Zapier but it got too complex, and a freelancer built something that broke...',
     isRequired: false,
     isDeepDive: true,
     priority: 17,
@@ -240,6 +251,7 @@ const deepDiveQuestions: IntakeQuestion[] = [
     category: 'deep',
     text: 'What does success look like in 6 months?',
     inputType: 'text',
+    placeholder: 'Zero manual data entry, real-time dashboards, and my team focused on closing deals...',
     isRequired: false,
     isDeepDive: true,
     priority: 19,
@@ -250,6 +262,7 @@ const deepDiveQuestions: IntakeQuestion[] = [
     category: 'deep',
     text: 'How do you handle handoffs between team members?',
     inputType: 'text',
+    placeholder: 'Mostly Slack messages and hoping nothing falls through the cracks...',
     isRequired: false,
     isDeepDive: true,
     priority: 20,

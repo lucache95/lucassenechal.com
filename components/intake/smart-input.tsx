@@ -8,6 +8,7 @@ interface SmartInputProps {
   type: "buttons" | "text" | "slider" | "multi-select";
   options?: string[];
   sliderConfig?: { min: number; max: number; step: number; labels: [string, string] };
+  placeholder?: string;
   value: string;
   onChange: (value: string) => void;
   onSubmit: () => void;
@@ -26,6 +27,7 @@ export function SmartInput({
   type,
   options = [],
   sliderConfig,
+  placeholder,
   value,
   onChange,
   onSubmit,
@@ -66,7 +68,7 @@ export function SmartInput({
 
   // ── Text ───────────────────────────────────────────────────────
   if (type === "text") {
-    return <TextInput value={value} onChange={onChange} onSubmit={onSubmit} />;
+    return <TextInput value={value} onChange={onChange} onSubmit={onSubmit} placeholder={placeholder} />;
   }
 
   // ── Slider ─────────────────────────────────────────────────────
@@ -102,10 +104,12 @@ function TextInput({
   value,
   onChange,
   onSubmit,
+  placeholder,
 }: {
   value: string;
   onChange: (v: string) => void;
   onSubmit: () => void;
+  placeholder?: string;
 }) {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -135,7 +139,7 @@ function TextInput({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         onKeyDown={handleKeyDown}
-        placeholder="Type your answer..."
+        placeholder={placeholder || "Type your answer..."}
         className="w-full resize-none rounded-lg border border-border bg-surface px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent transition-colors duration-200"
       />
       <div className="mt-2 flex items-center justify-between">

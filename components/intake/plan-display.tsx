@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { experimental_useObject as useObject } from "@ai-sdk/react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { businessPlanSchema, type BusinessPlan } from "@/lib/schemas/business-plan";
 import { SERVICES } from "@/lib/data/services";
 import { Button } from "@/components/ui/button";
@@ -27,32 +27,32 @@ interface PlanDisplayProps {
   onNewAssessment: () => void;
 }
 
-const sectionVariants = {
-  hidden: { opacity: 0, y: 12 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: [0.25, 0.4, 0.25, 1] as [number, number, number, number],
-    },
-  },
-};
-
+/**
+ * Reveals once when `show` becomes true, then stays mounted.
+ * Animates only on first mount — subsequent streaming updates
+ * change content in-place without re-triggering layout animations.
+ */
 function SectionWrapper({ children, show }: { children: React.ReactNode; show: boolean }) {
+  const [revealed, setRevealed] = useState(false);
+
+  useEffect(() => {
+    if (show && !revealed) setRevealed(true);
+  }, [show, revealed]);
+
+  if (!revealed) return null;
+
   return (
-    <AnimatePresence>
-      {show && (
-        <motion.div
-          variants={sectionVariants}
-          initial="hidden"
-          animate="visible"
-          className="mb-6"
-        >
-          {children}
-        </motion.div>
-      )}
-    </AnimatePresence>
+    <motion.div
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.5,
+        ease: [0.25, 0.4, 0.25, 1] as [number, number, number, number],
+      }}
+      className="mb-6"
+    >
+      {children}
+    </motion.div>
   );
 }
 
@@ -357,32 +357,30 @@ export function PlanDisplay({ answers, sessionId, onBookCall, onNewAssessment }:
       </SectionWrapper>
 
       {/* Post-generation CTAs */}
-      <AnimatePresence>
-        {done && (
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-10 space-y-6 text-center"
-          >
-            {/* Download + Book CTA row */}
-            <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <PlanDownloadButton plan={plan as BusinessPlan} />
-              <Button variant="primary" size="lg" onClick={onBookCall}>
-                Book a Discovery Call
-              </Button>
-            </div>
+      {done && (
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-10 space-y-6 text-center"
+        >
+          {/* Download + Book CTA row */}
+          <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <PlanDownloadButton plan={plan as BusinessPlan} />
+            <Button variant="primary" size="lg" onClick={onBookCall}>
+              Book a Discovery Call
+            </Button>
+          </div>
 
-            {/* New assessment link */}
-            <button
-              onClick={onNewAssessment}
-              className="text-sm text-muted hover:text-foreground transition-colors duration-200 underline underline-offset-2"
-            >
-              Start a new assessment
-            </button>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          {/* New assessment link */}
+          <button
+            onClick={onNewAssessment}
+            className="text-sm text-muted hover:text-foreground transition-colors duration-200 underline underline-offset-2"
+          >
+            Start a new assessment
+          </button>
+        </motion.div>
+      )}
     </div>
   );
 }

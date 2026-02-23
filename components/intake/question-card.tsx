@@ -94,6 +94,7 @@ export function QuestionCard({
                 type={question.inputType}
                 options={question.options}
                 sliderConfig={question.sliderConfig}
+                placeholder={question.placeholder}
                 value={currentAnswer}
                 onChange={onAnswer}
                 onSubmit={onSubmit}

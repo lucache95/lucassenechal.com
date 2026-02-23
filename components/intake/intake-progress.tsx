@@ -64,15 +64,15 @@ export function IntakeProgress({
                 <Button
                   variant="primary"
                   size="md"
-                  onClick={onGeneratePlan}
+                  onClick={onContinue}
                 >
-                  Generate My Plan
+                  Answer More for a Better Plan
                 </Button>
                 <button
-                  onClick={onContinue}
+                  onClick={onGeneratePlan}
                   className="text-sm text-muted hover:text-foreground transition-colors duration-200 underline underline-offset-2"
                 >
-                  Answer more for a better plan
+                  Generate my plan now
                 </button>
               </div>
             </div>
