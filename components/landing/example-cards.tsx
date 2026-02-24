@@ -2,8 +2,10 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import Link from "next/link";
 
 interface TopicCard {
+  slug: string;
   title: string;
   description: string;
   snippet: string;
@@ -12,6 +14,7 @@ interface TopicCard {
 
 const topics: TopicCard[] = [
   {
+    slug: "ai-tools-automation",
     title: "AI Tools & Automation",
     description: "Latest releases, tutorials, and workflows",
     snippet:
@@ -19,6 +22,7 @@ const topics: TopicCard[] = [
     icon: "~",
   },
   {
+    slug: "local-deals-events",
     title: "Local Deals & Events",
     description: "Restaurants, concerts, openings near you",
     snippet:
@@ -26,6 +30,7 @@ const topics: TopicCard[] = [
     icon: "#",
   },
   {
+    slug: "business-leads-opportunities",
     title: "Business Leads & Opportunities",
     description: "Markets, trends, and prospects",
     snippet:
@@ -33,6 +38,7 @@ const topics: TopicCard[] = [
     icon: "$",
   },
   {
+    slug: "tech-news",
     title: "Tech News",
     description: "Breaking releases and industry moves",
     snippet:
@@ -40,6 +46,7 @@ const topics: TopicCard[] = [
     icon: ">",
   },
   {
+    slug: "health-fitness",
     title: "Health & Fitness",
     description: "Research, local gyms, and recipes",
     snippet:
@@ -47,6 +54,7 @@ const topics: TopicCard[] = [
     icon: "+",
   },
   {
+    slug: "finance-markets",
     title: "Finance & Markets",
     description: "Stocks, crypto, and economic trends",
     snippet:
@@ -54,6 +62,7 @@ const topics: TopicCard[] = [
     icon: "%",
   },
   {
+    slug: "creative-inspiration",
     title: "Creative Inspiration",
     description: "Design trends, music, and art",
     snippet:
@@ -61,6 +70,7 @@ const topics: TopicCard[] = [
     icon: "*",
   },
   {
+    slug: "career-skills",
     title: "Career & Skills",
     description: "Job market, learning, and certifications",
     snippet:
@@ -85,19 +95,24 @@ function Card({ card, index }: { card: TopicCard; index: number }) {
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       onTouchStart={() => setIsHovered((prev) => !prev)}
-      className="relative cursor-default rounded-xl border border-border bg-surface p-5 transition-shadow duration-200 hover:border-accent/40"
+      className="relative"
     >
-      <div className="flex items-start gap-3">
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent/10 font-mono text-sm font-bold text-accent">
-          {card.icon}
-        </span>
-        <div className="min-w-0">
-          <h3 className="font-semibold leading-snug text-foreground">
-            {card.title}
-          </h3>
-          <p className="mt-0.5 text-sm text-muted">{card.description}</p>
+      <Link
+        href={`/topics/${card.slug}`}
+        className="block cursor-pointer rounded-xl border border-border bg-surface p-5 transition-shadow duration-200 hover:border-accent/40"
+      >
+        <div className="flex items-start gap-3">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent/10 font-mono text-sm font-bold text-accent">
+            {card.icon}
+          </span>
+          <div className="min-w-0">
+            <h3 className="font-semibold leading-snug text-foreground">
+              {card.title}
+            </h3>
+            <p className="mt-0.5 text-sm text-muted">{card.description}</p>
+          </div>
         </div>
-      </div>
+      </Link>
 
       <AnimatePresence>
         {isHovered && (
@@ -106,7 +121,7 @@ function Card({ card, index }: { card: TopicCard; index: number }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -4 }}
             transition={{ duration: 0.18, ease: "easeOut" }}
-            className="absolute left-0 right-0 top-full z-20 mt-1 rounded-xl border border-border bg-surface p-4 shadow-lg shadow-black/8"
+            className="pointer-events-none absolute left-0 right-0 top-full z-20 mt-1 rounded-xl border border-border bg-surface p-4 shadow-lg shadow-black/8"
           >
             <p className="text-[11px] font-medium uppercase tracking-wider text-accent">
               Sample briefing preview

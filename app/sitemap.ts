@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllTools } from "@/lib/data/tools";
+import { getAllTopicPages } from "@/lib/data/topic-pages";
+import { getAllServices } from "@/lib/data/services";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://lucassenechal.com";
@@ -44,5 +46,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...toolPages];
+  const topicPages: MetadataRoute.Sitemap = getAllTopicPages().map((topic) => ({
+    url: `${baseUrl}/topics/${topic.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: 0.7,
+  }));
+
+  const servicePages: MetadataRoute.Sitemap = getAllServices().map((service) => ({
+    url: `${baseUrl}/services/${service.id}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...toolPages, ...topicPages, ...servicePages];
 }

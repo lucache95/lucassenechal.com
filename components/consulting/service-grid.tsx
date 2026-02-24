@@ -1,39 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-interface ServiceCard {
-  icon: string;
-  title: string;
-  description: string;
-}
-
-const services: ServiceCard[] = [
-  {
-    icon: "\u2699\uFE0F",
-    title: "AI Automation",
-    description:
-      "Turn repetitive workflows into AI-powered systems that run themselves.",
-  },
-  {
-    icon: "\uD83D\uDCCB",
-    title: "Process Consulting",
-    description:
-      "Audit your operations and design the automation roadmap.",
-  },
-  {
-    icon: "\uD83D\uDD04",
-    title: "Ongoing Management",
-    description:
-      "Keep your AI systems running, improving, and scaling with you.",
-  },
-  {
-    icon: "\uD83C\uDF93",
-    title: "Training & Enablement",
-    description:
-      "Get your team confident building and working alongside AI.",
-  },
-];
+import Link from "next/link";
+import { SERVICES } from "@/lib/data/services";
 
 export function ServiceGrid() {
   return (
@@ -54,9 +23,9 @@ export function ServiceGrid() {
 
         {/* Card grid */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {services.map((service, index) => (
+          {SERVICES.map((service, index) => (
             <motion.div
-              key={service.title}
+              key={service.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -65,17 +34,21 @@ export function ServiceGrid() {
                 delay: index * 0.08,
                 ease: [0.25, 0.4, 0.25, 1] as [number, number, number, number],
               }}
-              className="rounded-xl border border-border bg-surface p-6 transition-shadow duration-300 hover:shadow-lg hover:shadow-accent/5"
             >
-              <span className="mb-4 block text-3xl" role="img" aria-label={service.title}>
-                {service.icon}
-              </span>
-              <h3 className="mb-2 text-lg font-semibold text-foreground">
-                {service.title}
-              </h3>
-              <p className="text-sm leading-relaxed text-muted">
-                {service.description}
-              </p>
+              <Link
+                href={`/services/${service.id}`}
+                className="block rounded-xl border border-border bg-surface p-6 transition-shadow duration-300 hover:shadow-lg hover:shadow-accent/5"
+              >
+                <span className="mb-4 block text-3xl" role="img" aria-label={service.title}>
+                  {service.icon}
+                </span>
+                <h3 className="mb-2 text-lg font-semibold text-foreground">
+                  {service.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-muted">
+                  {service.description}
+                </p>
+              </Link>
             </motion.div>
           ))}
         </div>
