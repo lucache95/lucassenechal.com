@@ -244,3 +244,95 @@ export async function markIntakeBooked(input: {
     return { error: "Something went wrong." };
   }
 }
+
+// ---------------------------------------------------------------------------
+// saveChatIntakeSession — Save chat conversation and send notification
+// ---------------------------------------------------------------------------
+
+type SaveChatSessionResult = { sessionId: string } | { error: string };
+
+export async function saveChatIntakeSession(input: {
+  email: string;
+  name: string;
+  messages: Array<{ role: string; content: string }>;
+}): Promise<SaveChatSessionResult> {
+  const supabase = getSupabase();
+
+  try {
+    // 1. Create intake_sessions row
+    const { data: session, error: sessionError } = await supabase
+      .from("intake_sessions")
+      .insert({
+        email: input.email,
+        name: input.name,
+        status: "plan_generated",
+        created_at: new Date().toISOString(),
+        plan_generated_at: new Date().toISOString(),
+      })
+      .select("id")
+      .single();
+
+    if (sessionError || !session) {
+      console.error("[saveChatIntakeSession] Session insert error:", sessionError);
+      return { error: "Failed to save session. Please try again." };
+    }
+
+    // 2. Save conversation as answers
+    const conversationText = input.messages
+      .map((m, i) => `${m.role === "user" ? "User" : "AI"}: ${m.content}`)
+      .join("\n\n");
+
+    const answerRows = [
+      {
+        session_id: session.id,
+        question_id: "chat-conversation",
+        question_text: "Chat conversation transcript",
+        answer_value: conversationText,
+        answer_display: conversationText,
+        sequence_order: 1,
+      },
+    ];
+
+    const { error: answersError } = await supabase
+      .from("intake_answers")
+      .insert(answerRows);
+
+    if (answersError) {
+      console.error("[saveChatIntakeSession] Answers insert error:", answersError);
+    }
+
+    // 3. Send notification email to Lucas
+    if (process.env.RESEND_API_KEY) {
+      const resend = new Resend(process.env.RESEND_API_KEY);
+      const recipientEmail =
+        process.env.RESEND_NOTIFICATION_EMAIL ?? "lucas@lucassenechal.com";
+
+      // Extract business summary from first few messages
+      const userMessages = input.messages.filter(m => m.role === "user");
+      const businessDescription = userMessages.slice(0, 3).map(m => m.content).join(" | ");
+
+      resend.emails
+        .send({
+          from: "Lucas Senechal <notifications@lucassenechal.com>",
+          to: recipientEmail,
+          subject: `New Chat Intake: ${input.name}`,
+          react: IntakeNotificationEmail({
+            name: input.name,
+            email: input.email,
+            businessDescription: businessDescription.slice(0, 200),
+            recommendedService: "Chat Intake",
+            questionCount: input.messages.length,
+            planSummary: "Chat-based intake conversation",
+          }),
+        })
+        .catch((err) => {
+          console.error("[chat-intake-notification] Send failed:", err);
+        });
+    }
+
+    return { sessionId: session.id };
+  } catch (err) {
+    console.error("[saveChatIntakeSession] Unexpected error:", err);
+    return { error: "Something went wrong. Please try again." };
+  }
+}
