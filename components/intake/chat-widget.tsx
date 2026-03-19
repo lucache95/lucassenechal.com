@@ -86,23 +86,9 @@ export function ChatWidget({ onEmailCapture }: ChatWidgetProps) {
           const { done, value } = await reader.read();
           if (done) break;
 
-          const chunk = decoder.decode(value);
-          const lines = chunk.split("\n");
-
-          for (const line of lines) {
-            if (line.startsWith("0:")) {
-              // Text chunk format from streamText data stream
-              try {
-                const text = JSON.parse(line.slice(2));
-                assistantMessage += text;
-              } catch {
-                // skip malformed chunk
-              }
-              
-              // Update messages with partial response
-              setMessages([...newMessages, { role: "assistant", content: assistantMessage }]);
-            }
-          }
+          // toTextStreamResponse sends raw text chunks
+          assistantMessage += decoder.decode(value, { stream: true });
+          setMessages([...newMessages, { role: "assistant", content: assistantMessage }]);
         }
       }
 
