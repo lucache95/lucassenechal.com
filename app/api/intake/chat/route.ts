@@ -1,5 +1,5 @@
 import { streamText } from 'ai';
-import { anthropic } from '@ai-sdk/anthropic';
+import { google } from '@ai-sdk/google';
 
 const SYSTEM_PROMPT = `You are an AI intake assistant for Lucas Senechal, an AI automation consultant. Your job is to understand the visitor's business and pain points through natural conversation.
 
@@ -40,7 +40,7 @@ export async function POST(req: Request) {
 
     // Use Claude Haiku for cost efficiency
     const result = streamText({
-      model: anthropic('claude-3-5-haiku-20241022'),
+      model: google('gemini-2.0-flash'),
       system: SYSTEM_PROMPT,
       messages,
     });
