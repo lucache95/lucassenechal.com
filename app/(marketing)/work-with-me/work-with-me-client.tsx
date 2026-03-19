@@ -89,7 +89,8 @@ export function WorkWithMeClient() {
   // Restore persisted funnel state on mount
   useEffect(() => {
     const saved = loadPersistedState();
-    if (saved && saved.stage !== "landing") {
+    const restorableStages: FunnelStage[] = ["capture", "generating", "plan", "booking", "complete"];
+    if (saved && restorableStages.includes(saved.stage)) {
       setAnswers(saved.answers);
       setLeadInfo(saved.leadInfo);
       setSessionId(saved.sessionId);
