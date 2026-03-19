@@ -13,12 +13,15 @@ import { LeadCaptureGate } from "@/components/intake/lead-capture-gate";
 import { PlanDisplay } from "@/components/intake/plan-display";
 import { CalEmbed } from "@/components/consulting/cal-embed";
 import { Button } from "@/components/ui/button";
-import { saveIntakeSession, markIntakeBooked } from "@/app/actions/intake";
+import { ChatWidget } from "@/components/intake/chat-widget";
+import { saveIntakeSession, markIntakeBooked, saveChatIntakeSession } from "@/app/actions/intake";
 import type { IntakeAnswer } from "@/lib/schemas/intake";
 import Link from "next/link";
 
 export type FunnelStage =
   | "landing"
+  | "choose"
+  | "chat"
   | "intake"
   | "capture"
   | "generating"
@@ -121,6 +124,26 @@ export function WorkWithMeClient() {
 
   // ── Stage handlers ──────────────────────────────────────────────
 
+  const handleChatComplete = useCallback(
+    async (data: { email: string; name: string; messages: Array<{ role: string; content: string }> }) => {
+      setLeadInfo({ email: data.email, name: data.name });
+      setStage("complete");
+
+      // Save chat session to database
+      try {
+        const result = await saveChatIntakeSession(data);
+        if ("sessionId" in result) {
+          setSessionId(result.sessionId);
+        } else {
+          console.error("[WorkWithMe] Save chat session error:", result.error);
+        }
+      } catch (err) {
+        console.error("[WorkWithMe] Save chat session failed:", err);
+      }
+    },
+    []
+  );
+
   const handleIntakeComplete = useCallback((intakeAnswers: IntakeAnswer[]) => {
     setAnswers(intakeAnswers);
     setStage("capture");
@@ -174,7 +197,7 @@ export function WorkWithMeClient() {
     setAnswers([]);
     setLeadInfo(null);
     setSessionId(null);
-    setStage("intake");
+    setStage("choose");
     try { sessionStorage.removeItem(STORAGE_KEY); } catch {}
   }, []);
 
@@ -191,16 +214,96 @@ export function WorkWithMeClient() {
           animate="animate"
           exit="exit"
         >
-          <ConsultingHero onStart={() => setStage("intake")} />
-          <TrustStrip />
-          <ServiceGrid />
-          <HowItWorks />
-          <FAQSection />
-          <Footer />
+          <ConsultingHero onStart={() => setStage("choose")} />
+          <div className="opacity-100" style={{ transform: "none" }}>
+            <TrustStrip />
+            <ServiceGrid />
+            <HowItWorks />
+            <FAQSection />
+            <Footer />
+          </div>
         </motion.div>
       )}
 
-      {/* Stage 2: Intake questions */}
+      {/* Stage 2: Choose intake method */}
+      {stage === "choose" && (
+        <motion.div
+          key="choose"
+          variants={stageVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          className="min-h-screen flex flex-col items-center justify-center px-6 py-24"
+        >
+          <div className="mx-auto max-w-2xl w-full">
+            <button
+              onClick={() => setStage("landing")}
+              className="text-sm text-muted hover:text-foreground transition-colors duration-200 flex items-center gap-2 mb-10"
+            >
+              ← Back
+            </button>
+            <h1 className="text-3xl font-bold text-foreground mb-2">
+              Tell Me About Your Business
+            </h1>
+            <p className="text-muted mb-10">
+              How would you prefer to share your situation?
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <button
+                onClick={() => setStage("chat")}
+                className="group flex flex-col gap-3 rounded-2xl border border-border bg-surface p-7 text-left hover:border-accent hover:bg-surface-hover transition-all duration-200"
+              >
+                <span className="text-2xl">💬</span>
+                <span className="font-semibold text-foreground text-lg">Chat with AI</span>
+                <span className="text-sm text-muted leading-relaxed">
+                  Answer a few conversational questions. Takes 3–5 minutes and I&apos;ll tailor the plan to your exact situation.
+                </span>
+              </button>
+              <button
+                onClick={() => setStage("intake")}
+                className="group flex flex-col gap-3 rounded-2xl border border-border bg-surface p-7 text-left hover:border-accent hover:bg-surface-hover transition-all duration-200"
+              >
+                <span className="text-2xl">📋</span>
+                <span className="font-semibold text-foreground text-lg">Fill Out a Form</span>
+                <span className="text-sm text-muted leading-relaxed">
+                  Prefer to type it all out at once? A quick structured form that covers the essentials.
+                </span>
+              </button>
+            </div>
+          </div>
+        </motion.div>
+      )}
+
+      {/* Stage 3: Chat intake */}
+      {stage === "chat" && (
+        <motion.div
+          key="chat"
+          variants={stageVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+        >
+          <div className="min-h-screen py-12">
+            <div className="mx-auto max-w-3xl px-6 mb-8">
+              <button
+                onClick={() => setStage("choose")}
+                className="text-sm text-muted hover:text-foreground transition-colors duration-200 flex items-center gap-2"
+              >
+                ← Back
+              </button>
+              <h1 className="text-3xl font-bold text-foreground mt-6 mb-2">
+                Tell Me About Your Business
+              </h1>
+              <p className="text-muted leading-relaxed">
+                I'll ask a few questions to understand your situation and create a custom plan.
+              </p>
+            </div>
+            <ChatWidget onEmailCapture={handleChatComplete} />
+          </div>
+        </motion.div>
+      )}
+
+      {/* Stage 3: Intake questions (original form-based flow) */}
       {stage === "intake" && (
         <motion.div
           key="intake"
@@ -211,12 +314,12 @@ export function WorkWithMeClient() {
         >
           <IntakeContainer
             onComplete={handleIntakeComplete}
-            onBack={() => setStage("landing")}
+            onBack={() => setStage("choose")}
           />
         </motion.div>
       )}
 
-      {/* Stage 3: Lead capture (email + name) */}
+      {/* Stage 4: Lead capture (email + name) */}
       {stage === "capture" && (
         <motion.div
           key="capture"
@@ -229,7 +332,7 @@ export function WorkWithMeClient() {
         </motion.div>
       )}
 
-      {/* Stage 4: Plan generation + display */}
+      {/* Stage 5: Plan generation + display */}
       {(stage === "generating" || stage === "plan") && (
         <motion.div
           key="plan"
@@ -241,13 +344,15 @@ export function WorkWithMeClient() {
           <PlanDisplay
             answers={answers}
             sessionId={sessionId}
+            clientName={leadInfo?.name}
+            clientEmail={leadInfo?.email}
             onBookCall={handleBookCall}
             onNewAssessment={handleNewAssessment}
           />
         </motion.div>
       )}
 
-      {/* Stage 5: Booking (Cal.com embed) */}
+      {/* Stage 6: Booking (Cal.com embed) */}
       {stage === "booking" && (
         <motion.div
           key="booking"
@@ -280,7 +385,7 @@ export function WorkWithMeClient() {
         </motion.div>
       )}
 
-      {/* Stage 6: Complete / Thank you */}
+      {/* Stage 7: Complete / Thank you */}
       {stage === "complete" && (
         <motion.div
           key="complete"
