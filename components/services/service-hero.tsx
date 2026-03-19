@@ -7,9 +7,10 @@ interface ServiceHeroProps {
   icon: string;
   title: string;
   tagline: string;
+  pricing?: string;
 }
 
-export function ServiceHero({ icon, title, tagline }: ServiceHeroProps) {
+export function ServiceHero({ icon, title, tagline, pricing }: ServiceHeroProps) {
   return (
     <section className="px-6 pb-16 pt-32 md:px-8 md:pb-20 md:pt-40">
       <div className="mx-auto max-w-3xl">
@@ -62,6 +63,9 @@ export function ServiceHero({ icon, title, tagline }: ServiceHeroProps) {
               {title}
             </h1>
             <p className="mt-4 text-lg text-muted md:text-xl">{tagline}</p>
+            {pricing && (
+              <p className="mt-3 text-sm font-medium text-accent">{pricing}</p>
+            )}
           </div>
         </motion.div>
       </div>

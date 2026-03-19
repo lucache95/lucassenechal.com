@@ -19,6 +19,38 @@ export function ServiceJsonLd({ service }: ServiceJsonLdProps) {
           '@type': 'Person',
           name: 'Lucas Senechal',
           url: baseUrl,
+          jobTitle: 'AI Automation Consultant',
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Kelowna',
+            addressRegion: 'BC',
+            addressCountry: 'CA',
+          },
+        },
+        areaServed: [
+          { '@type': 'Country', name: 'Canada' },
+          { '@type': 'Country', name: 'United States' },
+        ],
+        offers: {
+          '@type': 'Offer',
+          priceSpecification: {
+            '@type': 'PriceSpecification',
+            priceCurrency: 'USD',
+          },
+          price: service.pricing,
+          description: service.pricing,
+        },
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: `${service.title} — What's Included`,
+          itemListElement: service.whatsIncluded.map((item, index) => ({
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: item,
+            },
+            position: index + 1,
+          })),
         },
       },
       {

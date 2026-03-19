@@ -23,6 +23,8 @@ interface IntakeAnswer {
 interface PlanDisplayProps {
   answers: IntakeAnswer[];
   sessionId: string | null;
+  clientName?: string;
+  clientEmail?: string;
   onBookCall: () => void;
   onNewAssessment: () => void;
 }
@@ -94,7 +96,7 @@ function SkeletonSection() {
   );
 }
 
-export function PlanDisplay({ answers, sessionId, onBookCall, onNewAssessment }: PlanDisplayProps) {
+export function PlanDisplay({ answers, sessionId, clientName, clientEmail, onBookCall, onNewAssessment }: PlanDisplayProps) {
   const [hasStarted, setHasStarted] = useState(false);
   const planSavedRef = useRef(false);
 
@@ -366,7 +368,12 @@ export function PlanDisplay({ answers, sessionId, onBookCall, onNewAssessment }:
         >
           {/* Download + Book CTA row */}
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <PlanDownloadButton plan={plan as BusinessPlan} />
+            <PlanDownloadButton
+              plan={plan as BusinessPlan}
+              clientName={clientName}
+              clientEmail={clientEmail}
+              businessDescription={answers.find((a) => a.questionId === "business-type")?.answerValue}
+            />
             <Button variant="primary" size="lg" onClick={onBookCall}>
               Book a Discovery Call
             </Button>

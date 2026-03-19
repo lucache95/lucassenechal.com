@@ -64,7 +64,10 @@ export const businessPlanSchema = z.object({
     'process-consulting',
     'ongoing-management',
     'training',
-  ]).describe('Which of the 4 services best fits their needs based on intake answers'),
+    'ai-implementation',
+    'chatbot-development',
+    'content-operations',
+  ]).describe('Which of the 7 services best fits their needs based on intake answers'),
 });
 
 export type BusinessPlan = z.infer<typeof businessPlanSchema>;

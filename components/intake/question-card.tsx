@@ -71,7 +71,7 @@ export function QuestionCard({
               ))}
             </div>
             <p className="mt-4 text-sm text-muted">
-              Selecting the best next question...
+              Thinking...
             </p>
           </motion.div>
         ) : (

@@ -122,6 +122,7 @@ export function IntakeContainer({ onComplete, onBack }: IntakeContainerProps) {
             answeredQuestionIds: answeredIds,
             answers: answers.map((a) => ({
               questionId: a.questionId,
+              questionText: a.questionText,
               answerValue: a.answerValue,
             })),
             questionCount,

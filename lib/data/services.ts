@@ -1,7 +1,7 @@
 /**
  * Service definitions for the consulting funnel.
  *
- * Single source of truth for the 4 services offered.
+ * Single source of truth for the 7 services offered.
  * Used by:
  *   - components/homepage/what-i-build.tsx (card grid)
  *   - components/consulting/service-grid.tsx (consulting page cards)
@@ -21,6 +21,7 @@ export interface Service {
   metaTitle: string;
   metaDescription: string;
   tagline: string;
+  pricing: string;
   whatItIs: string;
   howItWorks: string;
   whoItsFor: string;
@@ -41,6 +42,7 @@ export const SERVICES: Service[] = [
     metaDescription:
       'Custom AI agents and automation pipelines built for your workflows. From lead follow-ups to report generation — systems that handle the busywork so you focus on revenue.',
     tagline: 'Custom AI systems that handle the busywork so your team focuses on revenue.',
+    pricing: '$5,000–$25,000 per project',
     whatItIs:
       'AI Automation is the process of designing, building, and deploying custom AI-powered systems that handle repetitive tasks in your business. These are not off-the-shelf chatbots — they are purpose-built pipelines that connect to your existing tools, understand your specific workflows, and execute multi-step processes autonomously.\n\nThink of it as hiring a tireless employee who never misses a step, works 24/7, and gets faster over time. From processing incoming leads and drafting personalized follow-ups, to extracting data from documents and updating your CRM, to generating weekly reports from raw data — these systems replace the manual work that drains your team\'s time and energy.',
     howItWorks:
@@ -91,6 +93,7 @@ export const SERVICES: Service[] = [
     metaDescription:
       'Deep-dive operations audit to identify where AI automation fits your business. Get a prioritized roadmap with ROI estimates — know exactly what to build first.',
     tagline: 'Find where AI fits your business — and where it doesn\'t — before spending a dollar on development.',
+    pricing: '$3,000–$8,000 per engagement',
     whatItIs:
       'Process Consulting is a structured engagement where I audit your current business operations and deliver a clear roadmap for where AI automation will (and won\'t) create value. Too many businesses jump straight to building AI systems without understanding which processes are actually worth automating. This engagement prevents wasted development spend.\n\nYou get a prioritized list of automation opportunities ranked by ROI, implementation difficulty, and business impact. For each opportunity, I provide a realistic estimate of development time, ongoing costs, and expected time savings. The deliverable is a document your team can execute against — whether with me or on your own.',
     howItWorks:
@@ -141,6 +144,7 @@ export const SERVICES: Service[] = [
     metaDescription:
       'Monthly retainer to keep your AI systems running, improving, and scaling. Performance tuning, new integrations, and workflow adaptations as your business evolves.',
     tagline: 'Your AI systems maintained, optimized, and scaled — without hiring a full-time engineer.',
+    pricing: '$2,000–$8,000/month retainer',
     whatItIs:
       'Ongoing Management is a monthly retainer that keeps your AI automation systems running at peak performance. AI systems are not "set it and forget it" — they need monitoring, tuning, and adaptation as your business evolves, data patterns shift, and AI models improve.\n\nThink of it as a fractional AI engineer on your team. I monitor system performance, fix issues before they become problems, integrate new tools as your needs grow, and update workflows when your processes change. You get the benefits of having a dedicated AI specialist without the $150k+ salary.',
     howItWorks:
@@ -192,6 +196,7 @@ export const SERVICES: Service[] = [
     metaDescription:
       'Hands-on AI training for your team — from prompt engineering to building internal tools. Tailored to your workflows, tools, and skill level.',
     tagline: 'Hands-on AI training tailored to your team\'s tools, workflows, and skill level.',
+    pricing: '$2,500–$15,000 per program',
     whatItIs:
       'Training & Enablement is a hands-on program that gets your team confident and productive with AI tools. Not a generic "intro to ChatGPT" webinar — this is training built around your team\'s actual tools, workflows, and challenges.\n\nThe program covers everything from foundational prompt engineering (getting reliable, high-quality outputs from AI models) to building internal tools with no-code AI platforms. Every session uses real examples from your business, so the skills transfer immediately to daily work. Your team leaves not just knowing what AI can do, but knowing how to use it for their specific job.',
     howItWorks:
@@ -230,6 +235,167 @@ export const SERVICES: Service[] = [
       },
     ],
     relatedServices: ['process-consulting', 'ai-automation'],
+  },
+  {
+    id: 'ai-implementation',
+    icon: '🔌',
+    title: 'AI Implementation',
+    description:
+      'Connect AI to your business data — files, docs, CRM, history — so your team can ask questions and get instant answers.',
+    longDescription:
+      'Install and configure AI tools (Claude, ChatGPT, custom agents) connected to your internal business data, so your team gets accurate answers from your own documents instantly.',
+    metaTitle: 'AI Implementation Services | Lucas Senechal',
+    metaDescription:
+      'Get AI connected to your business data — files, docs, CRM. Your team asks questions, AI answers from your own documents. Setup from $2,000.',
+    tagline:
+      'Connect AI to your business data — files, docs, CRM, history — so your team can ask questions and get instant answers.',
+    pricing: '$2,000–$5,000 setup + $500–$1,000/month',
+    whatItIs:
+      'AI Implementation is installing AI that actually knows YOUR business — not a generic chatbot that gives Wikipedia answers. I connect tools like Claude, ChatGPT, or local AI models directly to your internal files, documents, policies, CRM history, and knowledge bases. When an employee asks a question, the AI answers using your company\'s actual data.\n\nThis is the difference between "AI that sounds smart" and "AI that IS smart about your business." A law firm\'s AI knows the firm\'s precedent library. A real estate brokerage\'s AI knows every listing, every comparable, every market report. A medical practice\'s AI knows billing codes, insurance policies, and patient intake protocols. Based in Kelowna, BC, I work with businesses across Canada and the US to deploy these systems using Claude, OpenAI, Google Workspace integrations, and local AI setups for sensitive data.',
+    howItWorks:
+      'The process starts with a data audit. I map out where your business knowledge lives — Google Drive, SharePoint, Dropbox, CRM records, email templates, internal wikis, SOPs. Then I structure that data so AI can access it efficiently, because raw file dumps produce garbage answers.\n\nNext, I select and configure the right AI tool for your use case. Claude for nuanced document analysis, OpenAI for broad general knowledge, or a local model for data that cannot leave your network. I connect the AI to your data sources via APIs, build access controls so different teams see different data, and configure the interface — whether that\'s a Slack bot, a web portal, or an integration inside your existing CRM like HubSpot or Salesforce.\n\nFinally, I test the system with real questions your team actually asks, train your staff on how to get the best results, and provide 30 days of support to handle the edge cases that always surface in the first month.',
+    whoItsFor:
+      'Small to mid-sized businesses that have valuable internal knowledge locked in files, emails, and documents that nobody can find quickly. If your team wastes hours searching for information that exists somewhere in your systems, this service eliminates that problem.\n\nCommon clients include law firms drowning in case files and precedent research, agencies managing playbooks across dozens of client accounts, real estate brokerages that need instant access to market data and comparables, medical practices navigating complex billing and insurance documentation, and any business where the answer exists — it just takes too long to find.',
+    whatsIncluded: [
+      'Data audit and structure plan',
+      'AI tool selection and configuration (Claude, OpenAI, or local models)',
+      'Connection to your files, folders, CRM, and knowledge bases',
+      'Access controls setup (team-level permissions)',
+      'Custom interface (Slack bot, web portal, or CRM integration)',
+      'Team training session (hands-on, using real questions)',
+      '30 days of post-launch support and tuning',
+    ],
+    faqs: [
+      {
+        question: 'Is my data secure? Will AI send my business data to third parties?',
+        answer:
+          'Security is the first thing I address in every implementation. For most businesses, I use enterprise-tier AI APIs (Claude or OpenAI) that do not train on your data and comply with SOC 2 standards. For businesses with strict data residency requirements — legal, medical, financial — I deploy local AI models that never send data outside your network. Every implementation includes access controls so only authorized team members can query specific data sets.',
+      },
+      {
+        question: 'What AI tools do you use for implementation?',
+        answer:
+          'I select the best tool for your specific use case. Claude (by Anthropic) excels at nuanced document analysis and long-form reasoning. OpenAI\'s GPT models are strong for broad general knowledge and quick answers. For sensitive data that cannot leave your network, I deploy local models using Ollama or similar frameworks. Integration tools include n8n for orchestration, Supabase for vector storage, and direct API connections to Google Workspace, HubSpot, Salesforce, and Slack.',
+      },
+      {
+        question: 'How long does AI implementation take?',
+        answer:
+          'Most implementations go from kickoff to production in 2–4 weeks. The first week covers data audit and structuring. Week two handles AI configuration and data connection. Weeks three and four are testing, training, and refinement. Larger organizations with complex data landscapes or multiple departments may need 4–6 weeks.',
+      },
+      {
+        question: 'How much does AI implementation cost?',
+        answer:
+          'Setup ranges from $2,000 to $5,000 depending on the complexity of your data sources and the number of integrations required. Ongoing maintenance and AI API costs run $500 to $1,000 per month. A small business connecting AI to Google Drive and a CRM is typically at the lower end. Enterprises with multiple data sources and custom access controls are at the higher end.',
+      },
+    ],
+    relatedServices: ['ai-automation', 'ongoing-management'],
+  },
+  {
+    id: 'chatbot-development',
+    icon: '💬',
+    title: 'AI Chatbot Development',
+    description:
+      'Industry-specific AI chatbots that handle client intake, answer questions, and qualify leads — built once for your vertical, deployed fast.',
+    longDescription:
+      'Purpose-built AI chatbots for specific industries — dental offices, law firms, real estate agencies, insurance brokers. Handles FAQs, appointment scheduling, lead qualification, and intake — without a human touching it.',
+    metaTitle: 'AI Chatbot Development | Lucas Senechal',
+    metaDescription:
+      'Custom AI chatbots for dental, legal, real estate, and insurance. Handle intake, FAQs, scheduling, and lead qualification 24/7. From $3,000 setup.',
+    tagline:
+      'Industry-specific AI chatbots that handle client intake, answer questions, and qualify leads — built once for your vertical, deployed fast.',
+    pricing: '$3,000–$8,000 setup + $500/month',
+    whatItIs:
+      'This is not a generic chatbot that says "I\'m sorry, I didn\'t understand that" after two messages. I build AI chatbots purpose-designed for specific industries with the exact questions your clients ask, the workflows your staff follows, and tight integration into your existing tools.\n\nA dental office chatbot knows your services, insurance networks, and scheduling availability — it books appointments, answers "do you accept Delta Dental?", and collects patient intake forms before the visit. A law firm chatbot qualifies potential clients by asking the right screening questions, captures case details, and routes qualified leads to the appropriate attorney. These chatbots are trained on your specific business data using Claude or OpenAI, integrated with your CRM (HubSpot, Salesforce, or industry-specific tools like Clio or Dentrix), and deployed on your website, Facebook Messenger, or SMS.',
+    howItWorks:
+      'I start with an industry analysis. What questions do your clients ask most? What\'s your intake workflow? What qualifies a good lead versus a time-waster? This isn\'t generic research — I study your actual call logs, intake forms, and FAQ pages.\n\nThen I design the conversation flows. Not a rigid decision tree — a flexible AI-powered dialogue that handles the messy way real people communicate. The chatbot understands context, asks follow-up questions, and knows when to hand off to a human.\n\nI build and integrate the chatbot with your existing tools: calendar systems (Cal.com, Google Calendar, Calendly) for scheduling, CRM (HubSpot, Salesforce, Clio) for lead capture, and your website or messaging platforms for deployment. Testing happens with real scenarios from your business — not hypothetical examples.\n\nAfter launch, I monitor conversations for the first 30 days, identify gaps in the chatbot\'s knowledge, and refine responses. Monthly performance reports show you exactly how many leads were captured, appointments booked, and questions handled without human intervention.',
+    whoItsFor:
+      'High-volume service businesses that answer the same questions hundreds of times a week. If your front desk staff spends more time answering "what are your hours?" and "do you accept my insurance?" than doing productive work, this chatbot handles it.\n\nIdeal industries include dental offices and medical practices (patient intake, insurance verification, appointment scheduling), law firms (client screening, case type qualification, consultation booking), real estate agencies (property inquiries, showing scheduling, buyer/seller qualification), insurance brokers (policy questions, quote requests, claims intake), and home services companies (service inquiries, estimate scheduling, emergency triage).',
+    whatsIncluded: [
+      'Industry-specific conversation flow design',
+      'Custom AI training on your services, policies, and procedures',
+      'CRM integration (HubSpot, Salesforce, Clio, Dentrix, etc.)',
+      'Calendar and scheduling integration',
+      'Lead capture and qualification logic',
+      'Escalation pathways to human staff',
+      'Website, SMS, or Messenger deployment',
+      'Monthly performance report (leads captured, questions handled, bookings made)',
+    ],
+    faqs: [
+      {
+        question: 'Which industries do you build chatbots for?',
+        answer:
+          'I specialize in high-volume service businesses: dental offices, law firms, real estate agencies, insurance brokers, medical practices, and home services companies. These industries share a common pattern — a high volume of repetitive inquiries that follow predictable patterns, making them ideal for AI automation. If your industry involves regular client intake and FAQ handling, the approach translates directly.',
+      },
+      {
+        question: 'Will the chatbot integrate with my existing tools and CRM?',
+        answer:
+          'Yes. Every chatbot I build integrates directly with your existing tech stack. Common integrations include HubSpot, Salesforce, and Clio for CRM; Google Calendar, Cal.com, and Calendly for scheduling; Dentrix and Open Dental for dental practices; and your website platform (WordPress, Squarespace, Webflow, or custom). I use n8n and direct API connections to ensure data flows seamlessly between the chatbot and your systems.',
+      },
+      {
+        question: 'What happens when the AI chatbot cannot answer a question?',
+        answer:
+          'Every chatbot includes escalation logic. When the AI encounters a question outside its training, it acknowledges the limitation honestly, captures the person\'s contact information and question, and routes it to the appropriate human team member via email, Slack, or your CRM\'s task system. The handoff is seamless — the human receives the full conversation context so the client does not have to repeat themselves.',
+      },
+      {
+        question: 'How much does an AI chatbot cost?',
+        answer:
+          'Setup ranges from $3,000 to $8,000 depending on the complexity of conversation flows, number of integrations, and whether you need multi-channel deployment (website + SMS + Messenger). Ongoing costs are approximately $500 per month covering AI API usage, monitoring, and monthly refinements. A single-channel chatbot with one CRM integration is at the lower end. Multi-channel deployment with complex qualification logic is at the higher end.',
+      },
+    ],
+    relatedServices: ['ai-automation', 'ongoing-management'],
+  },
+  {
+    id: 'content-operations',
+    icon: '📣',
+    title: 'AI Content Operations',
+    description:
+      'Automated content pipelines that keep you posting consistently — social media, email newsletters, and blog content — without it consuming your week.',
+    longDescription:
+      'End-to-end content automation: research, draft, edit, schedule, and post. AI-powered pipelines that keep your brand active on every channel while you focus on running the business.',
+    metaTitle: 'AI Content Operations | Lucas Senechal',
+    metaDescription:
+      'Automated content pipelines for social media, newsletters, and blogs. AI researches, drafts, and schedules — you review and approve. From $1,500/month.',
+    tagline:
+      'Automated content pipelines that keep you posting consistently — social media, email newsletters, and blog content — without it consuming your week.',
+    pricing: '$1,500–$3,000/month retainer',
+    whatItIs:
+      'AI Content Operations is a systemized content pipeline — not a one-time post generator that spits out generic LinkedIn fluff. This is an ongoing operation that researches trending topics in your industry, drafts posts and emails in your brand voice, queues them for your review, and publishes on schedule across every channel.\n\nBuilt for businesses that know they should be creating content but never have time. The pipeline uses Claude and GPT for drafting, n8n for orchestration, and connects to your publishing platforms (LinkedIn, Twitter/X, Instagram, Mailchimp, ConvertKit, WordPress, Ghost). Every piece of content goes through a review step — you approve, tweak, or reject before anything goes live. The AI learns from your edits and gets better over time.\n\nThis is not about replacing a content strategist. It\'s about giving you the output of one without the $80k salary or the 15 hours a week of writing time.',
+    howItWorks:
+      'I start by documenting your brand voice. How do you talk? What tone resonates with your audience? What topics position you as an authority? I analyze your existing content (if any), your competitors, and your industry landscape to build a voice profile the AI uses for every piece of content.\n\nThen I define the content calendar — which channels, what frequency, what content types (thought leadership posts, educational threads, email newsletters, blog articles). Together we set realistic cadence that the pipeline can sustain.\n\nThe pipeline itself runs on n8n with Claude or GPT as the drafting engine. It researches topics using RSS feeds, industry news sources, and trending conversations in your niche. Drafts land in a review queue (Notion, Google Docs, or Slack — your choice) where you approve, edit, or reject. Approved content is automatically scheduled and published via Buffer, Hootsuite, or direct API integrations.\n\nMonthly, I review performance data — engagement rates, open rates, click-throughs — and adjust the content strategy. Topics that resonate get more coverage. Formats that underperform get replaced.',
+    whoItsFor:
+      'Small business owners, consultants, and agencies that need a consistent content presence but cannot dedicate hours each week to writing. Especially valuable for businesses where the owner IS the brand — coaches, consultants, therapists, financial advisors, and service professionals who know their expertise should be visible online but are too busy delivering services to write about them.\n\nAlso ideal for companies with a small marketing team that\'s stretched thin. The pipeline handles the volume work (drafting, scheduling, publishing) so your team can focus on strategy, client relationships, and high-touch creative projects.',
+    whatsIncluded: [
+      'Brand voice documentation and AI voice profile',
+      'Content calendar setup (channels, frequency, content types)',
+      'AI research and drafting pipeline (n8n + Claude/GPT)',
+      'Review and approval workflow (Notion, Google Docs, or Slack)',
+      'Scheduling and publishing automation (Buffer, Hootsuite, or direct)',
+      'Monthly performance report with engagement analytics',
+      'Weekly content queue (5–15 pieces depending on plan)',
+      'Ongoing content strategy adjustments based on performance',
+    ],
+    faqs: [
+      {
+        question: 'Does Lucas write the content or does AI write it?',
+        answer:
+          'The AI drafts the content using your documented brand voice and industry research. I design and maintain the pipeline, train the AI on your voice, and optimize the content strategy. You review and approve every piece before it publishes. Think of the AI as a first-draft writer that knows your industry — you\'re the editor with final say. Most clients spend 15–30 minutes per week reviewing their content queue.',
+      },
+      {
+        question: 'How much human review is needed?',
+        answer:
+          'Plan on 15–30 minutes per week to review your content queue. Each piece arrives as a draft with a suggested publish date. You can approve it as-is, make quick edits, or reject it with a note. The AI learns from your edits over time, so the review gets faster as the system calibrates to your preferences. Most clients find that after the first month, 80% of drafts need minimal or no editing.',
+      },
+      {
+        question: 'Which platforms and channels are supported?',
+        answer:
+          'The pipeline supports LinkedIn, Twitter/X, Instagram, Facebook, email newsletters (Mailchimp, ConvertKit, Beehiiv), blogs (WordPress, Ghost, Webflow), and custom publishing via API. Most clients start with 2–3 channels and expand as they see results. I build the pipeline to be modular, so adding a new channel takes a day, not a rebuild.',
+      },
+      {
+        question: 'How much does AI content operations cost?',
+        answer:
+          'The service runs as a monthly retainer: $1,500 to $3,000 per month depending on the number of channels, content volume, and complexity. The $1,500 tier typically covers 2 channels with 5–8 pieces per week. The $3,000 tier covers 4+ channels with 10–15 pieces per week plus email newsletters. Setup in the first month includes the brand voice audit, pipeline build, and calendar design at no additional cost.',
+      },
+    ],
+    relatedServices: ['ai-automation', 'training'],
   },
 ];
 

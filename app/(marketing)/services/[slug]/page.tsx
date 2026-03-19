@@ -64,6 +64,7 @@ export default async function ServicePage({ params }: PageProps) {
         icon={service.icon}
         title={service.title}
         tagline={service.tagline}
+        pricing={service.pricing}
       />
       <ServiceContent
         title={service.title}

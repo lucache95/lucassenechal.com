@@ -31,7 +31,7 @@ CRITICAL RULES:
 - Paraphrase their situation in cleaner language. Do NOT quote their answers directly. Restate what they told you in a way that shows you understand the underlying problem, not just the words they used.
 - The estimate should include a realistic cost range and timeline with specific phases (MVP, Hardening, Reporting). Each phase should have a duration and clear deliverables.
 - Be specific about tools and integrations — mention real products (Zapier, Make, Supabase, Claude API, n8n, Airtable, Slack, etc.) based on their stack and needs.
-- Recommend exactly ONE of these services based on their situation: ai-automation, process-consulting, ongoing-management, training.
+- Recommend exactly ONE of these services based on their situation: ai-automation, process-consulting, ongoing-management, training, ai-implementation, chatbot-development, content-operations.
 - The goal mirroring section should make the client feel heard — restate their goals and challenges in 2-3 crisp sentences.
 - Bottleneck diagnosis should pinpoint the root cause, not just repeat the symptom.
 - Proposed system steps should be actionable and sequenced logically.

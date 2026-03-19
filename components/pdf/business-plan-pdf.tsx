@@ -196,23 +196,34 @@ const styles = StyleSheet.create({
 interface BusinessPlanPDFProps {
   plan: BusinessPlan;
   clientName?: string;
+  clientEmail?: string;
+  businessDescription?: string;
 }
 
-export function BusinessPlanPDF({ plan, clientName = "Client" }: BusinessPlanPDFProps) {
+export function BusinessPlanPDF({ plan, clientName, clientEmail, businessDescription }: BusinessPlanPDFProps) {
   const today = new Date().toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
   });
 
+  const title = clientName
+    ? `Business Plan for ${clientName}`
+    : "Your Custom Business Plan";
+
   return (
     <Document>
       <Page size="A4" style={styles.page}>
         {/* Header */}
         <View style={styles.header}>
-          <Text style={styles.headerTitle}>Business Plan for {clientName}</Text>
+          <Text style={styles.headerTitle}>{title}</Text>
+          {businessDescription && (
+            <Text style={{ fontSize: 10, color: FOREGROUND, marginBottom: 4 }}>
+              {businessDescription}
+            </Text>
+          )}
           <Text style={styles.headerSub}>
-            Prepared by Lucas Senechal | {today}
+            {clientEmail ? `${clientEmail} · ` : ""}Prepared by Lucas Senechal | {today}
           </Text>
         </View>
 
@@ -326,13 +337,19 @@ export function BusinessPlanPDF({ plan, clientName = "Client" }: BusinessPlanPDF
 interface PlanDownloadButtonProps {
   plan: BusinessPlan;
   clientName?: string;
+  clientEmail?: string;
+  businessDescription?: string;
 }
 
-export function PlanDownloadButton({ plan, clientName }: PlanDownloadButtonProps) {
+export function PlanDownloadButton({ plan, clientName, clientEmail, businessDescription }: PlanDownloadButtonProps) {
+  const fileName = clientName
+    ? `business-plan-${clientName.toLowerCase().replace(/\s+/g, "-")}.pdf`
+    : "business-plan.pdf";
+
   return (
     <PDFDownloadLink
-      document={<BusinessPlanPDF plan={plan} clientName={clientName} />}
-      fileName="business-plan.pdf"
+      document={<BusinessPlanPDF plan={plan} clientName={clientName} clientEmail={clientEmail} businessDescription={businessDescription} />}
+      fileName={fileName}
       className="inline-flex items-center justify-center gap-2 rounded-lg font-medium
         transition-all duration-200 ease-out px-7 py-3.5 text-lg
         border border-border text-foreground hover:bg-surface-hover
