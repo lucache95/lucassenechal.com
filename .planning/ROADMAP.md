@@ -18,7 +18,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1.1: Homepage Pivot & Information Architecture** *(INSERTED)* - Transform homepage to consulting-first, relocate newsletter content to /newsletter
 - [ ] **Phase 2: Subscriber Onboarding** - Multi-step signup flow at /newsletter that collects topics, preferences, and consent
 - [ ] **Phase 3: Consulting Funnel** - /work-with-me page with 2-stage AI smart intake, instant business plan output, and Calendly booking
-- [ ] **Phase 4: AI Research Engine** - The core value engine: parse topics, query sources, synthesize per-subscriber research
+- [x] **Phase 4: AI Research Engine** - The core value engine: parse topics, query sources, synthesize per-subscriber research (completed 2026-03-20)
 - [ ] **Phase 5: Content Generation** - Transform raw research into polished newsletter content in three formats
 - [ ] **Phase 6: Email Delivery & Compliance** - Send personalized emails via Resend with deliverability infrastructure and consulting CTAs
 - [ ] **Phase 7: Preference Management** - Email-link-based preference updates, format changes, and unsubscribe flows
@@ -208,7 +208,7 @@ Note: Phase 2 (Subscriber Onboarding) and Phase 3 (Consulting Funnel) both depen
 | 1.1. Homepage Pivot & IA | 3/3 | Complete | 2026-02-22 |
 | 2. Subscriber Onboarding | 0/4 | Planned | - |
 | 3. Consulting Funnel | 0/5 | Planned | - |
-| 4. AI Research Engine | 0/6 | Planned | - |
+| 4. AI Research Engine | 6/6 | Complete   | 2026-03-20 |
 | 5. Content Generation | 0/2 | Not started | - |
 | 6. Email Delivery & Compliance | 0/4 | Not started | - |
 | 7. Preference Management | 0/2 | Not started | - |

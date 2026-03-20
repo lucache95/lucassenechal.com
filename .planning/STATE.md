@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 04-05-PLAN.md
-last_updated: "2026-03-20T01:56:26.907Z"
+stopped_at: Completed 04-06-PLAN.md
+last_updated: "2026-03-20T01:58:42.978Z"
 progress:
   total_phases: 9
-  completed_phases: 4
+  completed_phases: 5
   total_plans: 22
-  completed_plans: 21
+  completed_plans: 22
 ---
 
 # Project State
@@ -24,8 +24,8 @@ See: .planning/PROJECT.md (updated 2026-02-20)
 
 ## Current Position
 
-Phase: 04 (AI Research Engine) — EXECUTING
-Plan: 6 of 6
+Phase: 04 (AI Research Engine) — COMPLETE
+Plan: 6 of 6 (all complete)
 
 ## Performance Metrics
 
@@ -55,6 +55,7 @@ Plan: 6 of 6
 | Phase 04 P04 | 2min | 2 tasks | 5 files |
 | Phase 04 P03 | 5min | 2 tasks | 9 files |
 | Phase 04 P05 | 3min | 2 tasks | 6 files |
+| Phase 04 P06 | 3min | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -148,6 +149,9 @@ Recent decisions affecting current work:
 - [Phase 04]: Fail-open on dedup DB errors: return empty set so results show rather than silently drop
 - [Phase 04]: Null publishedAt included in freshness filter (benefit of doubt for unknown dates)
 - [Phase 04]: URL normalization strips query params and hash for dedup (utm tracking params don't create false negatives)
+- [Phase 04]: Hand-rolled 30-line TF-IDF scorer with stop words instead of natural.js (2MB+ savings)
+- [Phase 04]: All pipeline logic inlined in Edge Function (Deno cannot import from lib/)
+- [Phase 04]: SSRF validation inlined from feed-validator.ts in Edge Function for custom RSS feeds
 
 ### Pending Todos
 
@@ -166,7 +170,7 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-03-20T01:56:26.905Z
-Stopped at: Completed 04-05-PLAN.md
+Last session: 2026-03-20T01:58:42.975Z
+Stopped at: Completed 04-06-PLAN.md
 Resume file: None
 Next action: Continue Phase 04 Plan 02
