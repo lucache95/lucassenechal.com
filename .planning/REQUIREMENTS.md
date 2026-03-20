@@ -51,7 +51,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **RSCH-06**: X (Twitter) content research integration
 - [ ] **RSCH-07**: Targeted site scraping for specific sources
 - [ ] **RSCH-08**: Custom source monitoring (subscriber-provided RSS/Atom feeds only in v1 — validate feed format, block internal IPs, enforce size limits)
-- [ ] **RSCH-09**: Daily automated research runs per subscriber
+- [x] **RSCH-09**: Daily automated research runs per subscriber
 - [ ] **RSCH-10**: Source attribution and URL verification (anti-hallucination)
 - [ ] **RSCH-11**: Topic clustering for cost optimization (shared research where topics overlap)
 
@@ -121,8 +121,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Ops & Observability
 
-- [ ] **OPS-01**: Per-run logging — what queries ran, what sources returned, what was sent to each subscriber
-- [ ] **OPS-02**: Retry strategy and alerting for failed research runs or email sends
+- [x] **OPS-01**: Per-run logging — what queries ran, what sources returned, what was sent to each subscriber
+- [x] **OPS-02**: Retry strategy and alerting for failed research runs or email sends
 - [ ] **OPS-03**: Admin view — subscriber list, last send status, error traces (internal, for Lucas)
 
 ### Copy & UX
@@ -217,7 +217,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | RSCH-06 | Phase 4: AI Research Engine | Pending |
 | RSCH-07 | Phase 4: AI Research Engine | Pending |
 | RSCH-08 | Phase 4: AI Research Engine | Pending |
-| RSCH-09 | Phase 4: AI Research Engine | Pending |
+| RSCH-09 | Phase 4: AI Research Engine | Complete |
 | RSCH-10 | Phase 4: AI Research Engine | Pending |
 | RSCH-11 | Phase 4: AI Research Engine | Pending |
 | CONT-01 | Phase 5: Content Generation | Pending |
@@ -263,8 +263,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | QUAL-04 | Phase 5: Content Generation | Pending |
 | FDBK-01 | Phase 6: Email Delivery & Compliance | Pending |
 | FDBK-02 | Phase 7: Preference Management | Pending |
-| OPS-01 | Phase 4: AI Research Engine | Pending |
-| OPS-02 | Phase 4: AI Research Engine | Pending |
+| OPS-01 | Phase 4: AI Research Engine | Complete |
+| OPS-02 | Phase 4: AI Research Engine | Complete |
 | OPS-03 | Phase 6: Email Delivery & Compliance | Pending |
 | COPY-01 | Phase 1: Foundation & Landing Page | Complete |
 | COPY-02 | Phase 2: Subscriber Onboarding | Complete |
