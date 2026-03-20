@@ -265,6 +265,44 @@ Deno.serve(async (req) => {
           }
         }
 
+        // Default curated RSS feeds (inlined from lib/data/default-feeds.ts — Deno cannot import lib/)
+        const DEFAULT_RSS_FEEDS = [
+          { name: 'TechCrunch',            url: 'https://techcrunch.com/feed/' },
+          { name: 'Ars Technica',          url: 'https://feeds.arstechnica.com/arstechnica/index' },
+          { name: 'Hacker News',           url: 'https://hnrss.org/frontpage' },
+          { name: 'The Verge',             url: 'https://www.theverge.com/rss/index.xml' },
+          { name: 'Reuters',               url: 'https://www.rss.reuters.com/news/topNews' },
+          { name: 'NPR News',              url: 'https://feeds.npr.org/1001/rss.xml' },
+          { name: 'MIT Technology Review', url: 'https://www.technologyreview.com/feed/' },
+          { name: 'Benedict Evans',        url: 'https://www.ben-evans.com/feed' },
+        ]
+
+        // Fetch all 8 default RSS feeds in parallel — trusted hardcoded URLs, no SSRF validation needed
+        const DefaultRssParser = (await import('npm:rss-parser@3')).default
+        for (const feed of DEFAULT_RSS_FEEDS) {
+          sourcePromises.push(
+            (async () => {
+              try {
+                const parser = new DefaultRssParser({ timeout: 10000 })
+                const feedData = await parser.parseURL(feed.url)
+                return (feedData.items ?? []).slice(0, 15).map((item: any) => ({
+                  url: item.link ?? '',
+                  urlHash: '',
+                  title: item.title ?? 'Untitled',
+                  snippet: (item.contentSnippet ?? '').slice(0, 300),
+                  sourceName: 'rss',
+                  sourceUrl: feed.url,
+                  publishedAt: item.isoDate ? new Date(item.isoDate) : item.pubDate ? new Date(item.pubDate) : null,
+                  relevanceScore: 0,
+                })).filter((r: any) => r.url.length > 0)
+              } catch (err) {
+                console.error(`Default RSS fetch failed for ${feed.name}: ${err}`)
+                return []
+              }
+            })()
+          )
+        }
+
         // Wait for all sources
         const sourceResults = await Promise.allSettled(sourcePromises)
         let allResults: any[] = []
