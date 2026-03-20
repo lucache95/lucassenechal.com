@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 05-01-PLAN.md
-last_updated: "2026-03-20T19:56:47.666Z"
+stopped_at: Completed 05-02-PLAN.md
+last_updated: "2026-03-20T20:02:58.597Z"
 progress:
   total_phases: 9
-  completed_phases: 5
+  completed_phases: 6
   total_plans: 25
-  completed_plans: 24
+  completed_plans: 25
 ---
 
 # Project State
@@ -24,8 +24,8 @@ See: .planning/PROJECT.md (updated 2026-02-20)
 
 ## Current Position
 
-Phase: 05 (content-generation) — EXECUTING
-Plan: 2 of 2
+Phase: 05 (content-generation) — COMPLETE
+Plan: 2 of 2 (all plans complete)
 
 ## Performance Metrics
 
@@ -58,6 +58,7 @@ Plan: 2 of 2
 | Phase 04 P06 | 3min | 2 tasks | 6 files |
 | Phase 04 P07 | 1min | 1 tasks | 1 files |
 | Phase 05 P01 | 4min | 2 tasks | 7 files |
+| Phase 05 P02 | 3min | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -159,6 +160,9 @@ Recent decisions affecting current work:
 - [Phase 05]: [05-01]: generateText + Output.object with Gemini 2.5 Flash for content generation (matching AI SDK v6 pattern)
 - [Phase 05]: [05-01]: FORMAT_SCHEMAS map dispatches DigestSchema/BriefingSchema/MixedSchema by ContentFormat key
 - [Phase 05]: [05-01]: Anti-hallucination URL validation on all LLM output before content delivery
+- [Phase 05]: Content generation Edge Function inlines all lib/content/* logic (Deno cannot import from lib/)
+- [Phase 05]: Fire-and-forget trigger pattern: research pipeline fetch().catch() without await for non-blocking content generation
+- [Phase 05]: URL validation halts content storage on hallucinated URLs (no newsletter rather than broken links)
 
 ### Pending Todos
 
@@ -177,7 +181,7 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-03-20T19:56:47.664Z
-Stopped at: Completed 05-01-PLAN.md
+Last session: 2026-03-20T20:02:58.594Z
+Stopped at: Completed 05-02-PLAN.md
 Resume file: None
 Next action: Continue Phase 04 Plan 02
