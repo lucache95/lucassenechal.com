@@ -1,3 +1,17 @@
+---
+gsd_state_version: 1.0
+milestone: v1.0
+milestone_name: milestone
+status: unknown
+stopped_at: Completed 04-01-PLAN.md
+last_updated: "2026-03-20T01:05:41.435Z"
+progress:
+  total_phases: 9
+  completed_phases: 4
+  total_plans: 22
+  completed_plans: 18
+---
+
 # Project State
 
 ## Project Reference
@@ -6,20 +20,17 @@ See: .planning/PROJECT.md (updated 2026-02-20)
 
 **Core value prop:** AI systems that eliminate repetitive admin and follow-ups so teams scale revenue without scaling headcount.
 **Core value (newsletter):** Every subscriber receives a daily briefing researched and written specifically for them.
-**Current focus:** Phase 3: Consulting Funnel
+**Current focus:** Phase 04 — AI Research Engine
 
 ## Current Position
 
-Phase: 3 of 8 (Consulting Funnel)
-Plan: 5 of 5 in current phase
-Status: Executing
-Last activity: 2026-02-22 -- Completed 03-04: AI business plan generation pipeline
-
-Progress: [#######...] 70%
+Phase: 04 (AI Research Engine) — EXECUTING
+Plan: 3 of 6
 
 ## Performance Metrics
 
 **Velocity:**
+
 - Total plans completed: 15
 - Average duration: 3min
 - Total execution time: 0.89 hours
@@ -34,10 +45,12 @@ Progress: [#######...] 70%
 | 3 - Consulting Funnel | 4/5 | 13min | 3min |
 
 **Recent Trend:**
+
 - Last 5 plans: 03-04 (4min), 03-03 (4min), 03-01 (3min), 03-02 (2min), 02-04 (5min)
 - Trend: Improving
 
 *Updated after each plan completion*
+| Phase 04 P01 | 4min | 2 tasks | 8 files |
 
 ## Accumulated Context
 
@@ -115,6 +128,14 @@ Recent decisions affecting current work:
 - [03-04]: PDF uses Helvetica (built-in) with blue accent matching site palette -- zero custom font overhead
 - [03-04]: PlanDownloadButton dynamically imported with ssr:false to prevent react-pdf SSR hydration crashes
 - [03-04]: System prompt enforces paraphrased mirroring, specific tool recs, and phase-by-phase estimates
+- [04-01]: Vitest 4.1 with path alias @/* matching tsconfig for test imports
+- [04-01]: generateObject + SearchQueriesSchema pattern for structured Gemini output (not streamObject)
+- [04-01]: vi.mock('ai') + vi.mock('@ai-sdk/google') for isolated topic parser testing without real API calls
+- [04-01]: Cost constants in types.ts: $0.005/Brave query, $0.001/Gemini call, $0.10/subscriber/day cap
+- [Phase 04]: Vitest 4.1 with path alias @/* matching tsconfig for test imports
+- [Phase 04-02]: Vault secrets and Edge Function trigger commented out with placeholders in pg_cron job
+- [Phase 04-02]: Cross-runtime getEnv() helper with typeof guards for Node.js/Deno compatibility in run-logger
+- [Phase 04-02]: vi.hoisted() pattern for Vitest v4 mock variable hoisting in test files
 
 ### Pending Todos
 
@@ -133,7 +154,7 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-02-22
-Stopped at: Completed 03-04-PLAN.md
+Last session: 2026-03-20T01:05:19.235Z
+Stopped at: Completed 04-01-PLAN.md
 Resume file: None
-Next action: Continue Phase 3 Plan 05 (Lead capture + booking)
+Next action: Continue Phase 04 Plan 02

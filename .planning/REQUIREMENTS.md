@@ -43,7 +43,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### AI Research Engine
 
-- [ ] **RSCH-01**: NLP topic parsing -- convert plain-English descriptions + category selections into actionable research queries
+- [x] **RSCH-01**: NLP topic parsing -- convert plain-English descriptions + category selections into actionable research queries
 - [ ] **RSCH-02**: Brave API web search integration
 - [ ] **RSCH-03**: News APIs integration (structured news feeds)
 - [ ] **RSCH-04**: RSS feed parsing for curated sources
@@ -209,7 +209,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SIGN-07 | Phase 2: Subscriber Onboarding | Complete |
 | SIGN-08 | Phase 2: Subscriber Onboarding | Complete |
 | SIGN-09 | Phase 2: Subscriber Onboarding | Complete |
-| RSCH-01 | Phase 4: AI Research Engine | Pending |
+| RSCH-01 | Phase 4: AI Research Engine | Complete |
 | RSCH-02 | Phase 4: AI Research Engine | Pending |
 | RSCH-03 | Phase 4: AI Research Engine | Pending |
 | RSCH-04 | Phase 4: AI Research Engine | Pending |
