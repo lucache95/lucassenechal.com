@@ -115,15 +115,15 @@ Plans:
   5. Topic clustering shares research across subscribers with overlapping interests to optimize API costs
   6. Results are deduplicated, recency-filtered (prefer last 7 days), and relevance-scored before inclusion
   7. Per-run logging captures queries, sources, results, and errors; failed runs retry with alerting
-**Plans**: TBD
+**Plans**: 6 plans
 
 Plans:
-- [ ] 04-01: NLP topic parsing and query generation
-- [ ] 04-02: Queue infrastructure (pgmq), scheduling (pg_cron), logging, and retry strategy
-- [ ] 04-03: Source integrations (Brave API, News APIs, RSS feeds)
-- [ ] 04-04: Source integrations (Reddit, X, site scraping, custom RSS feeds)
-- [ ] 04-05: Source attribution, freshness filtering, deduplication, and anti-hallucination
-- [ ] 04-06: Topic clustering, relevance scoring, and research caching for cost optimization
+- [ ] 04-01-PLAN.md — Vitest setup, shared types, Zod schemas, NLP topic parser with Gemini 2.5 Flash
+- [ ] 04-02-PLAN.md — Database schema (5 tables), pgmq queue, pg_cron scheduling, run logger
+- [ ] 04-03-PLAN.md — Source integrations: Brave API, GDELT DOC API, RSS feed parser, default feeds
+- [ ] 04-04-PLAN.md — Cheerio site scraper, SSRF-safe feed validator (Reddit/X deferred to v2)
+- [ ] 04-05-PLAN.md — URL verification (HEAD), SHA-256 deduplication, 7-day freshness filter
+- [ ] 04-06-PLAN.md — TF-IDF relevance scoring, topic clustering, research cache, Edge Function pipeline
 
 ### Phase 5: Content Generation
 **Goal**: Raw research results are transformed into polished, voice-injected newsletter content in three distinct formats
@@ -208,7 +208,7 @@ Note: Phase 2 (Subscriber Onboarding) and Phase 3 (Consulting Funnel) both depen
 | 1.1. Homepage Pivot & IA | 3/3 | Complete | 2026-02-22 |
 | 2. Subscriber Onboarding | 0/4 | Planned | - |
 | 3. Consulting Funnel | 0/5 | Planned | - |
-| 4. AI Research Engine | 0/6 | Not started | - |
+| 4. AI Research Engine | 0/6 | Planned | - |
 | 5. Content Generation | 0/2 | Not started | - |
 | 6. Email Delivery & Compliance | 0/4 | Not started | - |
 | 7. Preference Management | 0/2 | Not started | - |
@@ -216,4 +216,4 @@ Note: Phase 2 (Subscriber Onboarding) and Phase 3 (Consulting Funnel) both depen
 
 ---
 *Roadmap created: 2026-02-19*
-*Last updated: 2026-02-20 after direction pivot — consulting-first homepage, inserted Phase 1.1, elevated consulting funnel to Phase 3, expanded smart intake to 2-stage with curated question library*
+*Last updated: 2026-03-19 -- Phase 4 planned with 6 plans in 3 waves; Reddit/X deferred to v2; GDELT selected over NewsData.io*
