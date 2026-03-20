@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 04-03-PLAN.md
-last_updated: "2026-03-20T01:52:21.402Z"
+stopped_at: Completed 04-05-PLAN.md
+last_updated: "2026-03-20T01:56:26.907Z"
 progress:
   total_phases: 9
   completed_phases: 4
   total_plans: 22
-  completed_plans: 20
+  completed_plans: 21
 ---
 
 # Project State
@@ -25,7 +25,7 @@ See: .planning/PROJECT.md (updated 2026-02-20)
 ## Current Position
 
 Phase: 04 (AI Research Engine) — EXECUTING
-Plan: 5 of 6
+Plan: 6 of 6
 
 ## Performance Metrics
 
@@ -54,6 +54,7 @@ Plan: 5 of 6
 | Phase 04 P02 | 4min | 2 tasks | 4 files |
 | Phase 04 P04 | 2min | 2 tasks | 5 files |
 | Phase 04 P03 | 5min | 2 tasks | 9 files |
+| Phase 04 P05 | 3min | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -144,6 +145,9 @@ Recent decisions affecting current work:
 - [Phase 04]: Static import for rss-parser instead of dynamic import() to enable vi.mock interception in tests
 - [Phase 04]: vi.hoisted() pattern for mock variable hoisting in RSS tests (Vitest v4 compatibility)
 - [Phase 04]: vi.stubGlobal fetch pattern for mocking Brave and GDELT API clients
+- [Phase 04]: Fail-open on dedup DB errors: return empty set so results show rather than silently drop
+- [Phase 04]: Null publishedAt included in freshness filter (benefit of doubt for unknown dates)
+- [Phase 04]: URL normalization strips query params and hash for dedup (utm tracking params don't create false negatives)
 
 ### Pending Todos
 
@@ -162,7 +166,7 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-03-20T01:52:21.400Z
-Stopped at: Completed 04-03-PLAN.md
+Last session: 2026-03-20T01:56:26.905Z
+Stopped at: Completed 04-05-PLAN.md
 Resume file: None
 Next action: Continue Phase 04 Plan 02

@@ -52,7 +52,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **RSCH-07**: Targeted site scraping for specific sources
 - [x] **RSCH-08**: Custom source monitoring (subscriber-provided RSS/Atom feeds only in v1 — validate feed format, block internal IPs, enforce size limits)
 - [x] **RSCH-09**: Daily automated research runs per subscriber
-- [ ] **RSCH-10**: Source attribution and URL verification (anti-hallucination)
+- [x] **RSCH-10**: Source attribution and URL verification (anti-hallucination)
 - [ ] **RSCH-11**: Topic clustering for cost optimization (shared research where topics overlap)
 
 ### Content Generation
@@ -109,8 +109,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Content Quality
 
-- [ ] **QUAL-01**: Deduplication — never show the same story/item twice across consecutive newsletters
-- [ ] **QUAL-02**: Recency filtering — prefer content from last 7 days unless subscriber requested evergreen topics
+- [x] **QUAL-01**: Deduplication — never show the same story/item twice across consecutive newsletters
+- [x] **QUAL-02**: Recency filtering — prefer content from last 7 days unless subscriber requested evergreen topics
 - [ ] **QUAL-03**: Relevance scoring — rank research results by keyword overlap and topic match before inclusion
 - [ ] **QUAL-04**: "Nothing found" fallback — when research yields insufficient results, be honest and suggest refining preferences
 
@@ -218,7 +218,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | RSCH-07 | Phase 4: AI Research Engine | Complete |
 | RSCH-08 | Phase 4: AI Research Engine | Complete |
 | RSCH-09 | Phase 4: AI Research Engine | Complete |
-| RSCH-10 | Phase 4: AI Research Engine | Pending |
+| RSCH-10 | Phase 4: AI Research Engine | Complete |
 | RSCH-11 | Phase 4: AI Research Engine | Pending |
 | CONT-01 | Phase 5: Content Generation | Pending |
 | CONT-02 | Phase 5: Content Generation | Pending |
@@ -257,8 +257,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PREF-04 | Phase 7: Preference Management | Pending |
 | PREF-05 | Phase 7: Preference Management | Pending |
 | PREF-06 | Phase 7: Preference Management | Pending |
-| QUAL-01 | Phase 4: AI Research Engine | Pending |
-| QUAL-02 | Phase 4: AI Research Engine | Pending |
+| QUAL-01 | Phase 4: AI Research Engine | Complete |
+| QUAL-02 | Phase 4: AI Research Engine | Complete |
 | QUAL-03 | Phase 4: AI Research Engine | Pending |
 | QUAL-04 | Phase 5: Content Generation | Pending |
 | FDBK-01 | Phase 6: Email Delivery & Compliance | Pending |
