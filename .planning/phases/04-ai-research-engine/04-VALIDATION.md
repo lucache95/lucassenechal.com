@@ -2,7 +2,7 @@
 phase: 4
 slug: ai-research-engine
 status: draft
-nyquist_compliant: false
+nyquist_compliant: true
 wave_0_complete: false
 created: 2026-03-19
 ---
@@ -42,16 +42,16 @@ created: 2026-03-19
 | 04-01-02 | 01 | 1 | RSCH-01 | unit | `npx vitest run lib/research/query-generator.test.ts` | ⬜ pending |
 | 04-02-01 | 02 | 1 | OPS-01 | manual | Verify pgmq queue created in Supabase SQL editor | ⬜ pending |
 | 04-02-02 | 02 | 1 | OPS-01, OPS-02 | manual | Verify pg_cron job created and pg_net extension enabled | ⬜ pending |
-| 04-02-03 | 02 | 1 | OPS-01 | unit | `npx vitest run lib/research/logging.test.ts` | ⬜ pending |
+| 04-02-03 | 02 | 1 | OPS-01 | unit | `npx vitest run lib/research/run-logger.test.ts` | ⬜ pending |
 | 04-03-01 | 03 | 2 | RSCH-02 | unit | `npx vitest run lib/research/sources/brave.test.ts` | ⬜ pending |
 | 04-03-02 | 03 | 2 | RSCH-03 | unit | `npx vitest run lib/research/sources/gdelt.test.ts` | ⬜ pending |
 | 04-03-03 | 03 | 2 | RSCH-04 | unit | `npx vitest run lib/research/sources/rss.test.ts` | ⬜ pending |
 | 04-04-01 | 04 | 2 | RSCH-07, RSCH-08 | unit | `npx vitest run lib/research/sources/scraper.test.ts` | ⬜ pending |
-| 04-05-01 | 05 | 3 | RSCH-10 | unit | `npx vitest run lib/research/attribution.test.ts` | ⬜ pending |
-| 04-05-02 | 05 | 3 | QUAL-01 | unit | `npx vitest run lib/research/dedup.test.ts` | ⬜ pending |
+| 04-05-01 | 05 | 3 | RSCH-10 | unit | `npx vitest run lib/research/url-verifier.test.ts` | ⬜ pending |
+| 04-05-02 | 05 | 3 | QUAL-01 | unit | `npx vitest run lib/research/deduplicator.test.ts` | ⬜ pending |
 | 04-05-03 | 05 | 3 | QUAL-02 | unit | `npx vitest run lib/research/freshness.test.ts` | ⬜ pending |
-| 04-06-01 | 06 | 3 | RSCH-11 | unit | `npx vitest run lib/research/clustering.test.ts` | ⬜ pending |
-| 04-06-02 | 06 | 3 | QUAL-03 | unit | `npx vitest run lib/research/scorer.test.ts` | ⬜ pending |
+| 04-06-01 | 06 | 3 | RSCH-11 | unit | `npx vitest run lib/research/cluster.test.ts` | ⬜ pending |
+| 04-06-02 | 06 | 3 | QUAL-03 | unit | `npx vitest run lib/research/relevance-scorer.test.ts` | ⬜ pending |
 
 *Status: ⬜ pending · ✅ green · ❌ red · ⚠️ flaky*
 
@@ -61,7 +61,7 @@ created: 2026-03-19
 
 - [ ] `lib/research/__tests__/` directory created
 - [ ] `vitest.config.ts` — configure if not exists
-- [ ] Test stubs for topic-parser, query-generator, logging, brave, gdelt, rss, scraper, attribution, dedup, freshness, clustering, scorer
+- [ ] Test stubs for topic-parser, query-generator, run-logger, brave, gdelt, rss, scraper, url-verifier, deduplicator, freshness, cluster, relevance-scorer
 
 ---
 
@@ -79,11 +79,11 @@ created: 2026-03-19
 
 ## Validation Sign-Off
 
-- [ ] All tasks have `<automated>` verify or Wave 0 dependencies
+- [x] All tasks have `<automated>` verify or Wave 0 dependencies
 - [ ] Sampling continuity: no 3 consecutive tasks without automated verify
 - [ ] Wave 0 covers all MISSING references
 - [ ] No watch-mode flags
 - [ ] Feedback latency < 15s
-- [ ] `nyquist_compliant: true` set in frontmatter
+- [x] `nyquist_compliant: true` set in frontmatter
 
 **Approval:** pending
