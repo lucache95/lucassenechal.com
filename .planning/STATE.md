@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 04-07-PLAN.md
-last_updated: "2026-03-20T17:01:25.695Z"
+stopped_at: Completed 05-01-PLAN.md
+last_updated: "2026-03-20T19:56:47.666Z"
 progress:
   total_phases: 9
   completed_phases: 5
-  total_plans: 23
-  completed_plans: 23
+  total_plans: 25
+  completed_plans: 24
 ---
 
 # Project State
@@ -20,12 +20,12 @@ See: .planning/PROJECT.md (updated 2026-02-20)
 
 **Core value prop:** AI systems that eliminate repetitive admin and follow-ups so teams scale revenue without scaling headcount.
 **Core value (newsletter):** Every subscriber receives a daily briefing researched and written specifically for them.
-**Current focus:** Phase 04 — ai-research-engine
+**Current focus:** Phase 05 — content-generation
 
 ## Current Position
 
-Phase: 04 (ai-research-engine) — EXECUTING
-Plan: 1 of 7
+Phase: 05 (content-generation) — EXECUTING
+Plan: 2 of 2
 
 ## Performance Metrics
 
@@ -57,6 +57,7 @@ Plan: 1 of 7
 | Phase 04 P05 | 3min | 2 tasks | 6 files |
 | Phase 04 P06 | 3min | 2 tasks | 6 files |
 | Phase 04 P07 | 1min | 1 tasks | 1 files |
+| Phase 05 P01 | 4min | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -155,6 +156,9 @@ Recent decisions affecting current work:
 - [Phase 04]: SSRF validation inlined from feed-validator.ts in Edge Function for custom RSS feeds
 - [Phase 04-07]: Inlined DEFAULT_RSS_FEEDS constant in Edge Function (Deno cannot import from lib/)
 - [Phase 04-07]: sourceName: 'rss' for curated defaults vs 'custom_rss' for subscriber-provided feeds (origin distinction)
+- [Phase 05]: [05-01]: generateText + Output.object with Gemini 2.5 Flash for content generation (matching AI SDK v6 pattern)
+- [Phase 05]: [05-01]: FORMAT_SCHEMAS map dispatches DigestSchema/BriefingSchema/MixedSchema by ContentFormat key
+- [Phase 05]: [05-01]: Anti-hallucination URL validation on all LLM output before content delivery
 
 ### Pending Todos
 
@@ -173,7 +177,7 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-03-20T05:11:15.443Z
-Stopped at: Completed 04-07-PLAN.md
+Last session: 2026-03-20T19:56:47.664Z
+Stopped at: Completed 05-01-PLAN.md
 Resume file: None
 Next action: Continue Phase 04 Plan 02

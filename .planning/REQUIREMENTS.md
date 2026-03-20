@@ -57,10 +57,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Content Generation
 
-- [ ] **CONT-01**: Content generation in "curated digest" format (5-8 items with summaries and links)
-- [ ] **CONT-02**: Content generation in "written briefing" format (narrative synthesis with sources)
-- [ ] **CONT-03**: Content generation in "mixed" format (short synthesis + itemized links)
-- [ ] **CONT-04**: Voice injection -- content reads naturally, not AI-generic (deliverability + brand)
+- [x] **CONT-01**: Content generation in "curated digest" format (5-8 items with summaries and links)
+- [x] **CONT-02**: Content generation in "written briefing" format (narrative synthesis with sources)
+- [x] **CONT-03**: Content generation in "mixed" format (short synthesis + itemized links)
+- [x] **CONT-04**: Voice injection -- content reads naturally, not AI-generic (deliverability + brand)
 
 ### Email Delivery
 
@@ -112,7 +112,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **QUAL-01**: Deduplication — never show the same story/item twice across consecutive newsletters
 - [x] **QUAL-02**: Recency filtering — prefer content from last 7 days unless subscriber requested evergreen topics
 - [x] **QUAL-03**: Relevance scoring — rank research results by keyword overlap and topic match before inclusion
-- [ ] **QUAL-04**: "Nothing found" fallback — when research yields insufficient results, be honest and suggest refining preferences
+- [x] **QUAL-04**: "Nothing found" fallback — when research yields insufficient results, be honest and suggest refining preferences
 
 ### Feedback Loops
 
@@ -220,10 +220,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | RSCH-09 | Phase 4: AI Research Engine | Complete |
 | RSCH-10 | Phase 4: AI Research Engine | Complete |
 | RSCH-11 | Phase 4: AI Research Engine | Complete |
-| CONT-01 | Phase 5: Content Generation | Pending |
-| CONT-02 | Phase 5: Content Generation | Pending |
-| CONT-03 | Phase 5: Content Generation | Pending |
-| CONT-04 | Phase 5: Content Generation | Pending |
+| CONT-01 | Phase 5: Content Generation | Complete |
+| CONT-02 | Phase 5: Content Generation | Complete |
+| CONT-03 | Phase 5: Content Generation | Complete |
+| CONT-04 | Phase 5: Content Generation | Complete |
 | MAIL-01 | Phase 6: Email Delivery & Compliance | Pending |
 | MAIL-02 | Phase 6: Email Delivery & Compliance | Pending |
 | MAIL-03 | Phase 6: Email Delivery & Compliance | Pending |
@@ -260,7 +260,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | QUAL-01 | Phase 4: AI Research Engine | Complete |
 | QUAL-02 | Phase 4: AI Research Engine | Complete |
 | QUAL-03 | Phase 4: AI Research Engine | Complete |
-| QUAL-04 | Phase 5: Content Generation | Pending |
+| QUAL-04 | Phase 5: Content Generation | Complete |
 | FDBK-01 | Phase 6: Email Delivery & Compliance | Pending |
 | FDBK-02 | Phase 7: Preference Management | Pending |
 | OPS-01 | Phase 4: AI Research Engine | Complete |
