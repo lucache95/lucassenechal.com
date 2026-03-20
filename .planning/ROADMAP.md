@@ -135,11 +135,11 @@ Plans:
   3. Research results can be generated into a "mixed" format (short synthesis + itemized links)
   4. Generated content reads naturally with Lucas's personal voice — not generic AI-sounding text
   5. When research yields insufficient results, the system honestly communicates this and suggests refining preferences
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 05-01: Content generation pipeline and format templates
-- [ ] 05-02: Voice injection, style system, and content variation
+- [ ] 05-01-PLAN.md — Content types, Zod schemas, voice prompt, fallback module, content generator with tests
+- [ ] 05-02-PLAN.md — Database migration, content generation Edge Function, research pipeline trigger wiring
 
 ### Phase 6: Email Delivery & Compliance
 **Goal**: Subscribers receive their personalized daily email reliably and on schedule with full deliverability compliance and consulting CTAs
@@ -209,11 +209,11 @@ Note: Phase 2 (Subscriber Onboarding) and Phase 3 (Consulting Funnel) both depen
 | 2. Subscriber Onboarding | 0/4 | Planned | - |
 | 3. Consulting Funnel | 0/5 | Planned | - |
 | 4. AI Research Engine | 7/7 | Complete   | 2026-03-20 |
-| 5. Content Generation | 0/2 | Not started | - |
+| 5. Content Generation | 0/2 | Planned | - |
 | 6. Email Delivery & Compliance | 0/4 | Not started | - |
 | 7. Preference Management | 0/2 | Not started | - |
 | 8. SMS Channel | 0/3 | Not started | - |
 
 ---
 *Roadmap created: 2026-02-19*
-*Last updated: 2026-03-19 -- Phase 4 planned with 6 plans in 3 waves; Reddit/X deferred to v2; GDELT selected over NewsData.io*
+*Last updated: 2026-03-20 -- Phase 5 planned with 2 plans in 2 waves; content generation via Gemini 2.5 Flash with voice injection*
