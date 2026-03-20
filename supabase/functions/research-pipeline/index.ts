@@ -432,6 +432,37 @@ Deno.serve(async (req) => {
           }).eq('id', runId)
         }
 
+        // Step 11.5: Trigger content generation (fire-and-forget)
+        // Phase 5: Content generation runs as a separate Edge Function for isolation:
+        // - Different failure modes (research success != content success)
+        // - Keeps research pipeline under 150s limit
+        // - Content can be regenerated independently without re-running research
+        try {
+          const supabaseUrl = Deno.env.get('SUPABASE_URL')
+          const serviceRoleKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
+          if (supabaseUrl && serviceRoleKey && resultsToStore.length > 0) {
+            fetch(
+              `${supabaseUrl}/functions/v1/content-generation`,
+              {
+                method: 'POST',
+                headers: {
+                  'Authorization': `Bearer ${serviceRoleKey}`,
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  subscriber_id,
+                  research_date: new Date().toISOString().split('T')[0],
+                }),
+              }
+            ).catch(err => {
+              console.error(`Content generation trigger failed for ${subscriber_id}:`, err)
+            })
+          }
+        } catch (err) {
+          // Non-fatal: research results are already stored
+          console.error(`Content generation trigger error for ${subscriber_id}:`, err)
+        }
+
         // Step 12: Archive message (success)
         await supabase.rpc('pgmq_archive', {
           queue_name: 'research_jobs',
