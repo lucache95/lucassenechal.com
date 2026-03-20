@@ -47,10 +47,10 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **RSCH-02**: Brave API web search integration
 - [ ] **RSCH-03**: News APIs integration (structured news feeds)
 - [ ] **RSCH-04**: RSS feed parsing for curated sources
-- [ ] **RSCH-05**: Reddit content research integration
-- [ ] **RSCH-06**: X (Twitter) content research integration
-- [ ] **RSCH-07**: Targeted site scraping for specific sources
-- [ ] **RSCH-08**: Custom source monitoring (subscriber-provided RSS/Atom feeds only in v1 — validate feed format, block internal IPs, enforce size limits)
+- [x] **RSCH-05**: Reddit content research integration
+- [x] **RSCH-06**: X (Twitter) content research integration
+- [x] **RSCH-07**: Targeted site scraping for specific sources
+- [x] **RSCH-08**: Custom source monitoring (subscriber-provided RSS/Atom feeds only in v1 — validate feed format, block internal IPs, enforce size limits)
 - [x] **RSCH-09**: Daily automated research runs per subscriber
 - [ ] **RSCH-10**: Source attribution and URL verification (anti-hallucination)
 - [ ] **RSCH-11**: Topic clustering for cost optimization (shared research where topics overlap)
@@ -213,10 +213,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | RSCH-02 | Phase 4: AI Research Engine | Pending |
 | RSCH-03 | Phase 4: AI Research Engine | Pending |
 | RSCH-04 | Phase 4: AI Research Engine | Pending |
-| RSCH-05 | Phase 4: AI Research Engine | Pending |
-| RSCH-06 | Phase 4: AI Research Engine | Pending |
-| RSCH-07 | Phase 4: AI Research Engine | Pending |
-| RSCH-08 | Phase 4: AI Research Engine | Pending |
+| RSCH-05 | Phase 4: AI Research Engine | Complete |
+| RSCH-06 | Phase 4: AI Research Engine | Complete |
+| RSCH-07 | Phase 4: AI Research Engine | Complete |
+| RSCH-08 | Phase 4: AI Research Engine | Complete |
 | RSCH-09 | Phase 4: AI Research Engine | Complete |
 | RSCH-10 | Phase 4: AI Research Engine | Pending |
 | RSCH-11 | Phase 4: AI Research Engine | Pending |
