@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 05-02-PLAN.md
-last_updated: "2026-03-20T20:06:13.688Z"
+stopped_at: Completed 06-01-PLAN.md
+last_updated: "2026-03-21T20:41:21.782Z"
 progress:
   total_phases: 9
   completed_phases: 6
-  total_plans: 25
-  completed_plans: 25
+  total_plans: 29
+  completed_plans: 26
 ---
 
 # Project State
@@ -20,12 +20,12 @@ See: .planning/PROJECT.md (updated 2026-02-20)
 
 **Core value prop:** AI systems that eliminate repetitive admin and follow-ups so teams scale revenue without scaling headcount.
 **Core value (newsletter):** Every subscriber receives a daily briefing researched and written specifically for them.
-**Current focus:** Phase 05 — content-generation
+**Current focus:** Phase 06 — email-delivery-compliance
 
 ## Current Position
 
-Phase: 05 (content-generation) — COMPLETE
-Plan: 2 of 2 (all plans complete)
+Phase: 06 (email-delivery-compliance) — EXECUTING
+Plan: 2 of 4
 
 ## Performance Metrics
 
@@ -59,6 +59,7 @@ Plan: 2 of 2 (all plans complete)
 | Phase 04 P07 | 1min | 1 tasks | 1 files |
 | Phase 05 P01 | 4min | 2 tasks | 7 files |
 | Phase 05 P02 | 3min | 2 tasks | 4 files |
+| Phase 06 P01 | 3min | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -163,6 +164,10 @@ Recent decisions affecting current work:
 - [Phase 05]: Content generation Edge Function inlines all lib/content/* logic (Deno cannot import from lib/)
 - [Phase 05]: Fire-and-forget trigger pattern: research pipeline fetch().catch() without await for non-blocking content generation
 - [Phase 05]: URL validation halts content storage on hallucinated URLs (no newsletter rather than broken links)
+- [Phase 06]: HMAC-SHA256 with dedicated EMAIL_LINK_SECRET env var for email link security
+- [Phase 06]: CTA escalation has 2 levels (soft/medium): soft default, medium at 3+ clicks or 2+ feedback in 7 days
+- [Phase 06]: Warm-up starts at 50/day, 50% increase every 3 days, caps at 500/day around day 19
+- [Phase 06]: Delivery enqueue routes by subscriber_preferences.delivery_time matching time_window parameter
 
 ### Pending Todos
 
@@ -181,7 +186,7 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-03-20T20:02:58.594Z
-Stopped at: Completed 05-02-PLAN.md
+Last session: 2026-03-21T20:41:21.780Z
+Stopped at: Completed 06-01-PLAN.md
 Resume file: None
 Next action: Continue Phase 04 Plan 02

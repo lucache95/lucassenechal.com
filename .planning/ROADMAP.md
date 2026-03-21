@@ -157,7 +157,7 @@ Plans:
 **Plans**: 4 plans
 
 Plans:
-- [ ] 06-01-PLAN.md -- Database schema (send_log, subscriber_feedback, warm_up_config), pgmq queue, HMAC token module, CTA logic, shared email styles
+- [x] 06-01-PLAN.md -- Database schema (send_log, subscriber_feedback, warm_up_config), pgmq queue, HMAC token module, CTA logic, shared email styles
 - [ ] 06-02-PLAN.md -- React Email templates (digest, briefing, mixed, fallback) with feedback links and consulting CTAs
 - [ ] 06-03-PLAN.md -- API endpoints: feedback links, unsubscribe (RFC 8058), Resend webhook handler
 - [ ] 06-04-PLAN.md -- Email delivery Edge Function + admin dashboard at /admin

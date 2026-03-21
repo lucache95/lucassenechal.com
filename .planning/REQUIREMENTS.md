@@ -68,11 +68,11 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **MAIL-02**: 3 responsive email templates matching the 3 formats
 - [ ] **MAIL-03**: Clean design matching website aesthetic, 60%+ text ratio
 - [ ] **MAIL-04**: One-click unsubscribe in every email (CAN-SPAM/GDPR compliant)
-- [ ] **MAIL-05**: SPF/DKIM/DMARC authentication setup
-- [ ] **MAIL-06**: Domain warm-up strategy (graduated volume over 4-6 weeks)
+- [x] **MAIL-05**: SPF/DKIM/DMARC authentication setup
+- [x] **MAIL-06**: Domain warm-up strategy (graduated volume over 4-6 weeks)
 - [ ] **MAIL-07**: Preference update link in every email
-- [ ] **MAIL-08**: Per-subscriber delivery time scheduling
-- [ ] **MAIL-09**: Deliverability monitoring (open rates, bounces, spam complaints)
+- [x] **MAIL-08**: Per-subscriber delivery time scheduling
+- [x] **MAIL-09**: Deliverability monitoring (open rates, bounces, spam complaints)
 - [ ] **MAIL-10**: Soft CTA to "Work With Me" in every email; stronger CTAs triggered by engagement signals (clicks/replies/feedback)
 
 ### SMS Channel
@@ -116,7 +116,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Feedback Loops
 
-- [ ] **FDBK-01**: "More like this / Less like this" links per item in newsletter emails
+- [x] **FDBK-01**: "More like this / Less like this" links per item in newsletter emails
 - [ ] **FDBK-02**: Capture feedback to automatically refine research queries over time
 
 ### Ops & Observability
@@ -228,11 +228,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | MAIL-02 | Phase 6: Email Delivery & Compliance | Pending |
 | MAIL-03 | Phase 6: Email Delivery & Compliance | Pending |
 | MAIL-04 | Phase 6: Email Delivery & Compliance | Pending |
-| MAIL-05 | Phase 6: Email Delivery & Compliance | Pending |
-| MAIL-06 | Phase 6: Email Delivery & Compliance | Pending |
+| MAIL-05 | Phase 6: Email Delivery & Compliance | Complete |
+| MAIL-06 | Phase 6: Email Delivery & Compliance | Complete |
 | MAIL-07 | Phase 6: Email Delivery & Compliance | Pending |
-| MAIL-08 | Phase 6: Email Delivery & Compliance | Pending |
-| MAIL-09 | Phase 6: Email Delivery & Compliance | Pending |
+| MAIL-08 | Phase 6: Email Delivery & Compliance | Complete |
+| MAIL-09 | Phase 6: Email Delivery & Compliance | Complete |
 | MAIL-10 | Phase 6: Email Delivery & Compliance | Pending |
 | SMS-01 | Phase 8: SMS Channel | Pending |
 | SMS-02 | Phase 8: SMS Channel | Pending |
@@ -261,7 +261,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | QUAL-02 | Phase 4: AI Research Engine | Complete |
 | QUAL-03 | Phase 4: AI Research Engine | Complete |
 | QUAL-04 | Phase 5: Content Generation | Complete |
-| FDBK-01 | Phase 6: Email Delivery & Compliance | Pending |
+| FDBK-01 | Phase 6: Email Delivery & Compliance | Complete |
 | FDBK-02 | Phase 7: Preference Management | Pending |
 | OPS-01 | Phase 4: AI Research Engine | Complete |
 | OPS-02 | Phase 4: AI Research Engine | Complete |
