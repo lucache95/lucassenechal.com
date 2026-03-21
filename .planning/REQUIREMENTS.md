@@ -65,15 +65,15 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Email Delivery
 
 - [ ] **MAIL-01**: Daily personalized emails via Resend
-- [ ] **MAIL-02**: 3 responsive email templates matching the 3 formats
-- [ ] **MAIL-03**: Clean design matching website aesthetic, 60%+ text ratio
+- [x] **MAIL-02**: 3 responsive email templates matching the 3 formats
+- [x] **MAIL-03**: Clean design matching website aesthetic, 60%+ text ratio
 - [x] **MAIL-04**: One-click unsubscribe in every email (CAN-SPAM/GDPR compliant)
 - [x] **MAIL-05**: SPF/DKIM/DMARC authentication setup
 - [x] **MAIL-06**: Domain warm-up strategy (graduated volume over 4-6 weeks)
-- [ ] **MAIL-07**: Preference update link in every email
+- [x] **MAIL-07**: Preference update link in every email
 - [x] **MAIL-08**: Per-subscriber delivery time scheduling
 - [x] **MAIL-09**: Deliverability monitoring (open rates, bounces, spam complaints)
-- [ ] **MAIL-10**: Soft CTA to "Work With Me" in every email; stronger CTAs triggered by engagement signals (clicks/replies/feedback)
+- [x] **MAIL-10**: Soft CTA to "Work With Me" in every email; stronger CTAs triggered by engagement signals (clicks/replies/feedback)
 
 ### SMS Channel
 
@@ -225,15 +225,15 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CONT-03 | Phase 5: Content Generation | Complete |
 | CONT-04 | Phase 5: Content Generation | Complete |
 | MAIL-01 | Phase 6: Email Delivery & Compliance | Pending |
-| MAIL-02 | Phase 6: Email Delivery & Compliance | Pending |
-| MAIL-03 | Phase 6: Email Delivery & Compliance | Pending |
+| MAIL-02 | Phase 6: Email Delivery & Compliance | Complete |
+| MAIL-03 | Phase 6: Email Delivery & Compliance | Complete |
 | MAIL-04 | Phase 6: Email Delivery & Compliance | Complete |
 | MAIL-05 | Phase 6: Email Delivery & Compliance | Complete |
 | MAIL-06 | Phase 6: Email Delivery & Compliance | Complete |
-| MAIL-07 | Phase 6: Email Delivery & Compliance | Pending |
+| MAIL-07 | Phase 6: Email Delivery & Compliance | Complete |
 | MAIL-08 | Phase 6: Email Delivery & Compliance | Complete |
 | MAIL-09 | Phase 6: Email Delivery & Compliance | Complete |
-| MAIL-10 | Phase 6: Email Delivery & Compliance | Pending |
+| MAIL-10 | Phase 6: Email Delivery & Compliance | Complete |
 | SMS-01 | Phase 8: SMS Channel | Pending |
 | SMS-02 | Phase 8: SMS Channel | Pending |
 | SMS-03 | Phase 8: SMS Channel | Pending |
