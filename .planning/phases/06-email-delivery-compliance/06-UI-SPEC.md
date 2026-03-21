@@ -45,9 +45,14 @@ Declared values (must be multiples of 4):
 | 2xl | 48px | Email container vertical padding (top/bottom) |
 | 3xl | 64px | Not used in email templates (excessive for email); admin page-level spacing |
 
+**Legacy hardcoded values -- not part of spacing scale:**
+
+The following values are inherited from existing email templates (`welcome-template.tsx`, `plan-delivery.tsx`, `intake-notification.tsx`) and must not be replicated in new spacing decisions. They exist only in the `margin` property of the email container wrapper:
+
+- `margin: "40px auto"` -- vertical centering margin on email container. All 3 existing templates use this value. New Phase 6 email templates must preserve this value for visual consistency with existing emails, but 40px must not be used anywhere else.
+
 Exceptions:
 - Email container max-width: 560px (matching existing email templates in `lib/email/`)
-- Email container margin: 40px auto (matching existing email templates)
 - Email container border-radius: 8px (matching existing email templates)
 
 ---
@@ -59,11 +64,13 @@ Exceptions:
 | Role | Size | Weight | Line Height | Usage |
 |------|------|--------|-------------|-------|
 | Body | 15px | 400 (regular) | 1.6 | Item summaries, briefing narrative, synthesis text |
-| Label | 12px | 600 (semibold) | 1.5 | Section headers (uppercase, 0.05em letter-spacing), feedback link text |
+| Heading | 24px | 600 (semibold) | 1.3 | Email header (e.g., newsletter title), CTA button text |
+| Label | 12px | 600 (semibold) | 1.5 | Section headers (uppercase, 0.05em letter-spacing), feedback link text, item headlines in digest/mixed |
 | Small | 13px | 400 (regular) | 1.5 | Source attribution, footer text, preference/unsubscribe links |
-| Heading | 24px | 700 (bold) | 1.3 | Email header (e.g., newsletter title) |
 
-Source: Extracted from existing email templates (`welcome-template.tsx`, `plan-delivery.tsx`, `intake-notification.tsx`). All three use identical sizing. Do NOT deviate.
+**2 weights only: 400 (regular) and 600 (semibold).** The existing templates use 700 for headings, but at 24px size alone provides sufficient hierarchy. New Phase 6 templates use 600 for all bold/emphasis roles. This consolidation also aligns heading weight with the label weight, reducing visual fragmentation.
+
+Source: Adapted from existing email templates (`welcome-template.tsx`, `plan-delivery.tsx`, `intake-notification.tsx`). Existing templates use 600 as the workhorse weight for all labels, section headers, and inline bold elements.
 
 ### Admin Dashboard (Tailwind classes)
 
@@ -128,7 +135,7 @@ Accent reserved for: source URL hyperlinks, "Update Preferences" link, "Unsubscr
 
 ```
 [Body background: #f8fafc]
-  [Container: #ffffff, max-width 560px, padding 40px 32px, border-radius 8px]
+  [Container: #ffffff, max-width 560px, padding 48px 32px, border-radius 8px]
     [Header: newsletter title heading]
     [Subject-specific content area]
     [HR divider]
@@ -224,7 +231,7 @@ Accent reserved for: source URL hyperlinks, "Update Preferences" link, "Unsubscr
 ### Digest Format Layout
 
 ```
-[Heading: 24px/700] Newsletter title or themed heading
+[Heading: 24px/600] Newsletter title or themed heading
 [Text: 15px/400, #64748b] LLM-generated greeting
 
 [HR: #e2e8f0]
@@ -250,7 +257,7 @@ Accent reserved for: source URL hyperlinks, "Update Preferences" link, "Unsubscr
 ### Briefing Format Layout
 
 ```
-[Heading: 24px/700] Newsletter title
+[Heading: 24px/600] Newsletter title
 [Text: 15px/400, #64748b] LLM-generated intro (2-3 sentences)
 
 [HR: #e2e8f0]
@@ -279,7 +286,7 @@ Accent reserved for: source URL hyperlinks, "Update Preferences" link, "Unsubscr
 ### Mixed Format Layout
 
 ```
-[Heading: 24px/700] Newsletter title
+[Heading: 24px/600] Newsletter title
 [Text: 15px/400, #64748b] LLM-generated synthesis (3-5 sentences)
 
 [HR: #e2e8f0]
