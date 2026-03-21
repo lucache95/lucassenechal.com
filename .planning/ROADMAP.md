@@ -20,7 +20,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 3: Consulting Funnel** - /work-with-me page with 2-stage AI smart intake, instant business plan output, and Calendly booking
 - [x] **Phase 4: AI Research Engine** - The core value engine: parse topics, query sources, synthesize per-subscriber research (completed 2026-03-20)
 - [ ] **Phase 5: Content Generation** - Transform raw research into polished newsletter content in three formats
-- [ ] **Phase 6: Email Delivery & Compliance** - Send personalized emails via Resend with deliverability infrastructure and consulting CTAs
+- [x] **Phase 6: Email Delivery & Compliance** - Send personalized emails via Resend with deliverability infrastructure and consulting CTAs (completed 2026-03-21)
 - [ ] **Phase 7: Preference Management** - Email-link-based preference updates, format changes, and unsubscribe flows
 - [ ] **Phase 8: SMS Channel** - Twilio-powered SMS summaries and two-way conversational AI
 
@@ -160,7 +160,7 @@ Plans:
 - [x] 06-01-PLAN.md -- Database schema (send_log, subscriber_feedback, warm_up_config), pgmq queue, HMAC token module, CTA logic, shared email styles
 - [x] 06-02-PLAN.md -- React Email templates (digest, briefing, mixed, fallback) with feedback links and consulting CTAs
 - [x] 06-03-PLAN.md -- API endpoints: feedback links, unsubscribe (RFC 8058), Resend webhook handler
-- [ ] 06-04-PLAN.md -- Email delivery Edge Function + admin dashboard at /admin
+- [x] 06-04-PLAN.md -- Email delivery Edge Function + admin dashboard at /admin
 
 ### Phase 7: Preference Management
 **Goal**: Subscribers can update all their preferences and unsubscribe without needing a login
@@ -210,7 +210,7 @@ Note: Phase 2 (Subscriber Onboarding) and Phase 3 (Consulting Funnel) both depen
 | 3. Consulting Funnel | 0/5 | Planned | - |
 | 4. AI Research Engine | 7/7 | Complete   | 2026-03-20 |
 | 5. Content Generation | 0/2 | Planned | - |
-| 6. Email Delivery & Compliance | 3/4 | In Progress|  |
+| 6. Email Delivery & Compliance | 4/4 | Complete   | 2026-03-21 |
 | 7. Preference Management | 0/2 | Not started | - |
 | 8. SMS Channel | 0/3 | Not started | - |
 

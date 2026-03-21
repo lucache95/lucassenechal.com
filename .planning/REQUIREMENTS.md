@@ -64,7 +64,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Email Delivery
 
-- [ ] **MAIL-01**: Daily personalized emails via Resend
+- [x] **MAIL-01**: Daily personalized emails via Resend
 - [x] **MAIL-02**: 3 responsive email templates matching the 3 formats
 - [x] **MAIL-03**: Clean design matching website aesthetic, 60%+ text ratio
 - [x] **MAIL-04**: One-click unsubscribe in every email (CAN-SPAM/GDPR compliant)
@@ -123,7 +123,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **OPS-01**: Per-run logging — what queries ran, what sources returned, what was sent to each subscriber
 - [x] **OPS-02**: Retry strategy and alerting for failed research runs or email sends
-- [ ] **OPS-03**: Admin view — subscriber list, last send status, error traces (internal, for Lucas)
+- [x] **OPS-03**: Admin view — subscriber list, last send status, error traces (internal, for Lucas)
 
 ### Copy & UX
 
@@ -224,7 +224,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CONT-02 | Phase 5: Content Generation | Complete |
 | CONT-03 | Phase 5: Content Generation | Complete |
 | CONT-04 | Phase 5: Content Generation | Complete |
-| MAIL-01 | Phase 6: Email Delivery & Compliance | Pending |
+| MAIL-01 | Phase 6: Email Delivery & Compliance | Complete |
 | MAIL-02 | Phase 6: Email Delivery & Compliance | Complete |
 | MAIL-03 | Phase 6: Email Delivery & Compliance | Complete |
 | MAIL-04 | Phase 6: Email Delivery & Compliance | Complete |
@@ -265,7 +265,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FDBK-02 | Phase 7: Preference Management | Pending |
 | OPS-01 | Phase 4: AI Research Engine | Complete |
 | OPS-02 | Phase 4: AI Research Engine | Complete |
-| OPS-03 | Phase 6: Email Delivery & Compliance | Pending |
+| OPS-03 | Phase 6: Email Delivery & Compliance | Complete |
 | COPY-01 | Phase 1: Foundation & Landing Page | Complete |
 | COPY-02 | Phase 2: Subscriber Onboarding | Complete |
 | COPY-03 | Phase 1.1: Homepage Pivot & IA, Phase 3: Consulting Funnel | Complete |

@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 06-02-PLAN.md
-last_updated: "2026-03-21T20:49:02.020Z"
+stopped_at: Completed 06-04-PLAN.md
+last_updated: "2026-03-21T22:36:15.549Z"
 progress:
   total_phases: 9
-  completed_phases: 6
+  completed_phases: 7
   total_plans: 29
-  completed_plans: 28
+  completed_plans: 29
 ---
 
 # Project State
@@ -25,7 +25,7 @@ See: .planning/PROJECT.md (updated 2026-02-20)
 ## Current Position
 
 Phase: 06 (email-delivery-compliance) — EXECUTING
-Plan: 3 of 4
+Plan: 4 of 4
 
 ## Performance Metrics
 
@@ -62,6 +62,7 @@ Plan: 3 of 4
 | Phase 06 P01 | 3min | 2 tasks | 7 files |
 | Phase 06 P03 | 3min | 2 tasks | 6 files |
 | Phase 06 P02 | 4min | 2 tasks | 5 files |
+| Phase 06 P04 | 6min | 3 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -176,6 +177,9 @@ Recent decisions affecting current work:
 - [Phase 06]: Feedback links use encodeURIComponent(item.url) as identifier for Phase 7 FDBK-02 compatibility (not numeric indices)
 - [Phase 06]: MAIL-03 compliance verified via no-images proxy (not raw string ratio) because React Email inline styles inflate HTML size
 - [Phase 06]: FallbackEmail omits consulting CTA per UI-SPEC (bad experience day -- do not pitch)
+- [Phase 06]: Deno Web Crypto API (crypto.subtle) used for HMAC-SHA256 token generation — identical hex output to Node.js, no external library needed
+- [Phase 06]: Template literal HTML builders in Deno Edge Function — @react-email/render requires react-dom/server which is not Deno-compatible
+- [Phase 06]: Feedback tokens use actual item URLs as action (feedback:${url}) not indices — enables Phase 7 FDBK-02 URL-based matching
 
 ### Pending Todos
 
@@ -194,7 +198,7 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-03-21T20:49:02.016Z
-Stopped at: Completed 06-02-PLAN.md
+Last session: 2026-03-21T22:36:15.547Z
+Stopped at: Completed 06-04-PLAN.md
 Resume file: None
 Next action: Continue Phase 04 Plan 02
