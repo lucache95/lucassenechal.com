@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 06-01-PLAN.md
-last_updated: "2026-03-21T20:41:21.782Z"
+stopped_at: Completed 06-03-PLAN.md
+last_updated: "2026-03-21T20:46:59.483Z"
 progress:
   total_phases: 9
   completed_phases: 6
   total_plans: 29
-  completed_plans: 26
+  completed_plans: 27
 ---
 
 # Project State
@@ -60,6 +60,7 @@ Plan: 2 of 4
 | Phase 05 P01 | 4min | 2 tasks | 7 files |
 | Phase 05 P02 | 3min | 2 tasks | 4 files |
 | Phase 06 P01 | 3min | 2 tasks | 7 files |
+| Phase 06 P03 | 3min | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -168,6 +169,9 @@ Recent decisions affecting current work:
 - [Phase 06]: CTA escalation has 2 levels (soft/medium): soft default, medium at 3+ clicks or 2+ feedback in 7 days
 - [Phase 06]: Warm-up starts at 50/day, 50% increase every 3 days, caps at 500/day around day 19
 - [Phase 06]: Delivery enqueue routes by subscriber_preferences.delivery_time matching time_window parameter
+- [Phase 06]: Feedback token action uses actual item URL (feedback:${itemUrl}) not an index -- enables Phase 7 FDBK-02 URL-based matching against research results
+- [Phase 06]: RFC 8058 POST unsubscribe returns empty 200 body -- compatible with email client one-click unsubscribe automation
+- [Phase 06]: 3-consecutive-bounce auto-pause: queries last 3 send_log rows ordered by sent_at desc, pauses subscriber if all bounced
 
 ### Pending Todos
 
@@ -186,7 +190,7 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-03-21T20:41:21.780Z
-Stopped at: Completed 06-01-PLAN.md
+Last session: 2026-03-21T20:46:59.481Z
+Stopped at: Completed 06-03-PLAN.md
 Resume file: None
 Next action: Continue Phase 04 Plan 02

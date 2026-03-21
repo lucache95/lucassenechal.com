@@ -67,7 +67,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **MAIL-01**: Daily personalized emails via Resend
 - [ ] **MAIL-02**: 3 responsive email templates matching the 3 formats
 - [ ] **MAIL-03**: Clean design matching website aesthetic, 60%+ text ratio
-- [ ] **MAIL-04**: One-click unsubscribe in every email (CAN-SPAM/GDPR compliant)
+- [x] **MAIL-04**: One-click unsubscribe in every email (CAN-SPAM/GDPR compliant)
 - [x] **MAIL-05**: SPF/DKIM/DMARC authentication setup
 - [x] **MAIL-06**: Domain warm-up strategy (graduated volume over 4-6 weeks)
 - [ ] **MAIL-07**: Preference update link in every email
@@ -227,7 +227,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | MAIL-01 | Phase 6: Email Delivery & Compliance | Pending |
 | MAIL-02 | Phase 6: Email Delivery & Compliance | Pending |
 | MAIL-03 | Phase 6: Email Delivery & Compliance | Pending |
-| MAIL-04 | Phase 6: Email Delivery & Compliance | Pending |
+| MAIL-04 | Phase 6: Email Delivery & Compliance | Complete |
 | MAIL-05 | Phase 6: Email Delivery & Compliance | Complete |
 | MAIL-06 | Phase 6: Email Delivery & Compliance | Complete |
 | MAIL-07 | Phase 6: Email Delivery & Compliance | Pending |

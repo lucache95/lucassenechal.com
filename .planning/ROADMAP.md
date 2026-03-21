@@ -159,7 +159,7 @@ Plans:
 Plans:
 - [x] 06-01-PLAN.md -- Database schema (send_log, subscriber_feedback, warm_up_config), pgmq queue, HMAC token module, CTA logic, shared email styles
 - [ ] 06-02-PLAN.md -- React Email templates (digest, briefing, mixed, fallback) with feedback links and consulting CTAs
-- [ ] 06-03-PLAN.md -- API endpoints: feedback links, unsubscribe (RFC 8058), Resend webhook handler
+- [x] 06-03-PLAN.md -- API endpoints: feedback links, unsubscribe (RFC 8058), Resend webhook handler
 - [ ] 06-04-PLAN.md -- Email delivery Edge Function + admin dashboard at /admin
 
 ### Phase 7: Preference Management
@@ -210,7 +210,7 @@ Note: Phase 2 (Subscriber Onboarding) and Phase 3 (Consulting Funnel) both depen
 | 3. Consulting Funnel | 0/5 | Planned | - |
 | 4. AI Research Engine | 7/7 | Complete   | 2026-03-20 |
 | 5. Content Generation | 0/2 | Planned | - |
-| 6. Email Delivery & Compliance | 0/4 | Not started | - |
+| 6. Email Delivery & Compliance | 2/4 | In Progress|  |
 | 7. Preference Management | 0/2 | Not started | - |
 | 8. SMS Channel | 0/3 | Not started | - |
 
