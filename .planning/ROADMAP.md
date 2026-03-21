@@ -154,13 +154,13 @@ Plans:
   6. Domain warm-up is actively managed with graduated volume increases over 4-6 weeks
   7. Deliverability metrics (open rates, bounce rates, spam complaints) are monitored and actionable
   8. Admin view shows subscriber list, last send status, and error traces
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
-- [ ] 06-01: Email sending pipeline (Resend integration, scheduling, queue processing)
-- [ ] 06-02: React Email templates for all three formats with feedback links and consulting CTAs
-- [ ] 06-03: Compliance (unsubscribe, headers, warm-up management, deliverability monitoring)
-- [ ] 06-04: Admin dashboard (subscriber list, send status, error traces)
+- [ ] 06-01-PLAN.md -- Database schema (send_log, subscriber_feedback, warm_up_config), pgmq queue, HMAC token module, CTA logic, shared email styles
+- [ ] 06-02-PLAN.md -- React Email templates (digest, briefing, mixed, fallback) with feedback links and consulting CTAs
+- [ ] 06-03-PLAN.md -- API endpoints: feedback links, unsubscribe (RFC 8058), Resend webhook handler
+- [ ] 06-04-PLAN.md -- Email delivery Edge Function + admin dashboard at /admin
 
 ### Phase 7: Preference Management
 **Goal**: Subscribers can update all their preferences and unsubscribe without needing a login
