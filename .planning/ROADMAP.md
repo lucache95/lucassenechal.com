@@ -175,7 +175,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 07-01-PLAN.md — Preference page with token validation, sectioned UI, Server Actions for all preference updates and unsubscribe
+- [x] 07-01-PLAN.md — Preference page with token validation, sectioned UI, Server Actions for all preference updates and unsubscribe
 - [x] 07-02-PLAN.md — Feedback-driven research query refinement in research pipeline Edge Function
 
 ### Phase 8: SMS Channel

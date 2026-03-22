@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 07-02-PLAN.md
-last_updated: "2026-03-22T01:25:08.242Z"
+stopped_at: Completed 07-01-PLAN.md
+last_updated: "2026-03-22T01:28:02.798Z"
 progress:
   total_phases: 9
-  completed_phases: 7
+  completed_phases: 8
   total_plans: 31
-  completed_plans: 30
+  completed_plans: 31
 ---
 
 # Project State
@@ -64,6 +64,7 @@ Plan: 2 of 2
 | Phase 06 P02 | 4min | 2 tasks | 5 files |
 | Phase 06 P04 | 6min | 3 tasks | 6 files |
 | Phase 07 P02 | 1min | 1 tasks | 1 files |
+| Phase 07 P01 | 3min | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -182,6 +183,9 @@ Recent decisions affecting current work:
 - [Phase 06]: Template literal HTML builders in Deno Edge Function — @react-email/render requires react-dom/server which is not Deno-compatible
 - [Phase 06]: Feedback tokens use actual item URLs as action (feedback:${url}) not indices — enables Phase 7 FDBK-02 URL-based matching
 - [Phase 07]: 30-day feedback window with 50-record limit for query refinement; domain-level matching with 1.3x boost / 0.5x penalty for relevance scoring
+- [Phase 07]: Combined SMS toggle into Format & Delivery section (same updatePreferences action)
+- [Phase 07]: Per-section save pattern: each section has own useActionState + form ref + hidden JSON input
+- [Phase 07]: Unsubscribed users see amber banner with re-subscribe button at top of preference page
 
 ### Pending Todos
 
@@ -200,7 +204,7 @@ Recent decisions affecting current work:
 
 ## Session Continuity
 
-Last session: 2026-03-22T01:25:08.238Z
-Stopped at: Completed 07-02-PLAN.md
+Last session: 2026-03-22T01:28:02.796Z
+Stopped at: Completed 07-01-PLAN.md
 Resume file: None
 Next action: Continue Phase 04 Plan 02

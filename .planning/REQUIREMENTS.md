@@ -100,12 +100,12 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Preference Management
 
-- [ ] **PREF-01**: Email-link preference management (no login required, token-based)
-- [ ] **PREF-02**: Update topics (multiple choice + custom)
-- [ ] **PREF-03**: Update format, delivery time, location
-- [ ] **PREF-04**: SMS opt-in/opt-out toggle
-- [ ] **PREF-05**: Manage custom sources
-- [ ] **PREF-06**: Unsubscribe flow
+- [x] **PREF-01**: Email-link preference management (no login required, token-based)
+- [x] **PREF-02**: Update topics (multiple choice + custom)
+- [x] **PREF-03**: Update format, delivery time, location
+- [x] **PREF-04**: SMS opt-in/opt-out toggle
+- [x] **PREF-05**: Manage custom sources
+- [x] **PREF-06**: Unsubscribe flow
 
 ### Content Quality
 
@@ -251,12 +251,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | WORK-09 | Phase 3: Consulting Funnel | Complete |
 | WORK-10 | Phase 3: Consulting Funnel | Complete |
 | WORK-11 | Phase 3: Consulting Funnel | Complete |
-| PREF-01 | Phase 7: Preference Management | Pending |
-| PREF-02 | Phase 7: Preference Management | Pending |
-| PREF-03 | Phase 7: Preference Management | Pending |
-| PREF-04 | Phase 7: Preference Management | Pending |
-| PREF-05 | Phase 7: Preference Management | Pending |
-| PREF-06 | Phase 7: Preference Management | Pending |
+| PREF-01 | Phase 7: Preference Management | Complete |
+| PREF-02 | Phase 7: Preference Management | Complete |
+| PREF-03 | Phase 7: Preference Management | Complete |
+| PREF-04 | Phase 7: Preference Management | Complete |
+| PREF-05 | Phase 7: Preference Management | Complete |
+| PREF-06 | Phase 7: Preference Management | Complete |
 | QUAL-01 | Phase 4: AI Research Engine | Complete |
 | QUAL-02 | Phase 4: AI Research Engine | Complete |
 | QUAL-03 | Phase 4: AI Research Engine | Complete |
