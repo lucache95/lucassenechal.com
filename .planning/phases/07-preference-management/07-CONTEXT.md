@@ -21,7 +21,7 @@ Subscribers can update all their preferences and unsubscribe without needing a l
 
 ### Token Security & UX
 - No token expiry — HMAC is derived from subscriber ID + action, not time-based. Tokens auto-invalidate when subscriber is deleted
-- Single "manage" action token — one token for the whole preference page via `generateToken(id, 'manage')`
+- Single token action for the whole preference page via `generateToken(id, 'preferences')` — Note: Phase 6 email-delivery Edge Function already ships tokens with action `'preferences'` (not `'manage'` as originally discussed). The action name `'preferences'` is the correct, shipped value.
 - Invalid token shows simple error page with "Request a new link" email input — user enters email, receives fresh preferences link
 - Unsubscribe placed in "danger zone" at bottom of preference page — red-bordered section with unsubscribe button, separated from other settings
 
@@ -55,7 +55,7 @@ Subscribers can update all their preferences and unsubscribe without needing a l
 - Framer Motion for animations (established in Phase 1)
 
 ### Integration Points
-- Email footer links: all templates include manage preferences URL (needs `generateToken(id, 'manage')`)
+- Email footer links: all templates include manage preferences URL (uses `generateToken(id, 'preferences')`)
 - DB tables: `subscriber_preferences`, `subscriber_topics`, `subscriber_custom_topics`, `subscriber_sources`
 - Existing unsubscribe route at `/api/unsubscribe` — preference page danger zone should use same logic
 
