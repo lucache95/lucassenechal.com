@@ -176,7 +176,7 @@ Plans:
 
 Plans:
 - [ ] 07-01-PLAN.md — Preference page with token validation, sectioned UI, Server Actions for all preference updates and unsubscribe
-- [ ] 07-02-PLAN.md — Feedback-driven research query refinement in research pipeline Edge Function
+- [x] 07-02-PLAN.md — Feedback-driven research query refinement in research pipeline Edge Function
 
 ### Phase 8: SMS Channel
 **Goal**: Opted-in subscribers receive SMS summaries and can interact with their newsletter via two-way text conversation

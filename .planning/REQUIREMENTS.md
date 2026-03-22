@@ -117,7 +117,7 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Feedback Loops
 
 - [x] **FDBK-01**: "More like this / Less like this" links per item in newsletter emails
-- [ ] **FDBK-02**: Capture feedback to automatically refine research queries over time
+- [x] **FDBK-02**: Capture feedback to automatically refine research queries over time
 
 ### Ops & Observability
 
@@ -262,7 +262,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | QUAL-03 | Phase 4: AI Research Engine | Complete |
 | QUAL-04 | Phase 5: Content Generation | Complete |
 | FDBK-01 | Phase 6: Email Delivery & Compliance | Complete |
-| FDBK-02 | Phase 7: Preference Management | Pending |
+| FDBK-02 | Phase 7: Preference Management | Complete |
 | OPS-01 | Phase 4: AI Research Engine | Complete |
 | OPS-02 | Phase 4: AI Research Engine | Complete |
 | OPS-03 | Phase 6: Email Delivery & Compliance | Complete |
