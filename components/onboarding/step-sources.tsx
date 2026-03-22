@@ -294,6 +294,10 @@ export function StepSources({ feedUrls, smsOptIn, phone, onUpdate }: StepSources
                 <p className="text-xs text-muted-foreground">
                   We&apos;ll only text you about your briefing. Reply STOP anytime.
                 </p>
+                <p className="text-xs text-slate-500 mt-1">
+                  By enabling SMS, you agree to receive automated text messages from The Daily Briefing.
+                  Message and data rates may apply. Reply STOP to unsubscribe.
+                </p>
               </div>
             </motion.div>
           )}

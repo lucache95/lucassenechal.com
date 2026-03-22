@@ -44,11 +44,23 @@ export async function updatePreferences(
     return { error: parsed.error.issues[0]?.message || 'Validation failed' }
   }
 
-  const { subscriberId, format, deliveryTime, timezone, city, smsOptIn, phone } = parsed.data
+  const { subscriberId, format, deliveryTime, timezone, city, smsOptIn, phone, consentIp } = parsed.data
 
   const supabase = getSupabase()
 
   try {
+    // Check if this is a new SMS opt-in (transitioning from opt-out to opt-in)
+    let isNewConsent = false
+    if (smsOptIn) {
+      const { data: existing } = await supabase
+        .from('subscriber_preferences')
+        .select('sms_opt_in')
+        .eq('subscriber_id', subscriberId)
+        .single()
+
+      isNewConsent = !existing || !existing.sms_opt_in
+    }
+
     const { error } = await supabase
       .from('subscriber_preferences')
       .upsert({
@@ -60,6 +72,10 @@ export async function updatePreferences(
         sms_opt_in: smsOptIn,
         phone: phone || null,
         updated_at: new Date().toISOString(),
+        ...(isNewConsent && smsOptIn ? {
+          sms_consent_at: new Date().toISOString(),
+          sms_consent_ip: consentIp || null,
+        } : {}),
       }, { onConflict: 'subscriber_id' })
 
     if (error) {

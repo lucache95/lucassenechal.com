@@ -19,6 +19,7 @@ export const preferencesUpdateSchema = z.object({
     (val) => val === '' || /^\+?[1-9]\d{1,14}$/.test(val),
     { message: 'Invalid phone number format' }
   ),
+  consentIp: z.string().optional(),
 });
 
 export const topicsUpdateSchema = z.object({

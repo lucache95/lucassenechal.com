@@ -2,6 +2,7 @@
 
 import { createClient } from '@supabase/supabase-js'
 import { Resend } from 'resend'
+import { headers } from 'next/headers'
 import { onboardingSchema } from '@/lib/schemas/onboarding'
 import { WelcomeEmail } from '@/lib/email/welcome-template'
 import { TOPIC_CATEGORIES } from '@/lib/data/topics'
@@ -114,6 +115,12 @@ export async function completeOnboarding(
     process.env.SUPABASE_SERVICE_ROLE_KEY!
   )
 
+  // Extract consent IP from request headers for TCPA compliance
+  const headersList = await headers()
+  const consentIp = headersList.get('x-forwarded-for')?.split(',')[0]?.trim()
+    || headersList.get('x-real-ip')
+    || 'unknown'
+
   try {
     // 4a. Write subscriber_preferences (core data)
     const { error: prefError } = await supabase
@@ -126,6 +133,10 @@ export async function completeOnboarding(
         city: city || null,
         sms_opt_in: smsOptIn,
         phone: phone || null,
+        ...(smsOptIn ? {
+          sms_consent_at: new Date().toISOString(),
+          sms_consent_ip: consentIp,
+        } : {}),
       }, { onConflict: 'subscriber_id' })
 
     if (prefError) {
