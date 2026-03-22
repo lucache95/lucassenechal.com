@@ -77,10 +77,10 @@ Plans:
 **Plans**: 4 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Dependencies, Supabase preference schema, Zod validation, topic data
-- [ ] 02-02-PLAN.md — Stepper shell, progress bar, Topics step, Format step with F/G/E copy
-- [ ] 02-03-PLAN.md — Delivery Time & Location step, Sources & SMS step with F/G/E copy
-- [ ] 02-04-PLAN.md — Confirmation step, Server Action persistence, welcome email, landing page redirect
+- [x] 02-01-PLAN.md — Dependencies, Supabase preference schema, Zod validation, topic data
+- [x] 02-02-PLAN.md — Stepper shell, progress bar, Topics step, Format step with F/G/E copy
+- [x] 02-03-PLAN.md — Delivery Time & Location step, Sources & SMS step with F/G/E copy
+- [x] 02-04-PLAN.md — Confirmation step, Server Action persistence, welcome email, landing page redirect
 
 ### Phase 3: Consulting Funnel
 **Goal**: Prospective clients can explore Lucas's services and complete a 2-stage AI-driven intake that produces an instant business plan and estimate
@@ -97,11 +97,11 @@ Plans:
 **Plans**: 5 plans
 
 Plans:
-- [ ] 03-01-PLAN.md — Dependencies, question library, Zod schemas, Supabase migration, service data
-- [ ] 03-02-PLAN.md — Consulting landing page: hero, service grid, how-it-works, FAQ, trust strip, state machine
-- [ ] 03-03-PLAN.md — AI question selection API + intake UI (smart inputs, progress, back/skip)
-- [ ] 03-04-PLAN.md — Streaming business plan generation API + plan display + PDF download
-- [ ] 03-05-PLAN.md — Lead capture, Cal.com booking, data persistence, email notification, full wiring
+- [x] 03-01-PLAN.md — Dependencies, question library, Zod schemas, Supabase migration, service data
+- [x] 03-02-PLAN.md — Consulting landing page: hero, service grid, how-it-works, FAQ, trust strip, state machine
+- [x] 03-03-PLAN.md — AI question selection API + intake UI (smart inputs, progress, back/skip)
+- [x] 03-04-PLAN.md — Streaming business plan generation API + plan display + PDF download
+- [x] 03-05-PLAN.md — Lead capture, Cal.com booking, data persistence, email notification, full wiring
 
 ### Phase 4: AI Research Engine
 **Goal**: The system can take a subscriber's topic preferences and produce fresh, sourced research results daily
@@ -138,8 +138,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 05-01-PLAN.md — Content types, Zod schemas, voice prompt, fallback module, content generator with tests
-- [ ] 05-02-PLAN.md — Database migration, content generation Edge Function, research pipeline trigger wiring
+- [x] 05-01-PLAN.md — Content types, Zod schemas, voice prompt, fallback module, content generator with tests
+- [x] 05-02-PLAN.md — Database migration, content generation Edge Function, research pipeline trigger wiring
 
 ### Phase 6: Email Delivery & Compliance
 **Goal**: Subscribers receive their personalized daily email reliably and on schedule with full deliverability compliance and consulting CTAs
