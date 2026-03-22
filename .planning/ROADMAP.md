@@ -183,17 +183,17 @@ Plans:
 **Depends on**: Phase 6
 **Requirements**: SMS-01, SMS-02, SMS-03, SMS-04, SMS-05, SMS-06
 **Success Criteria** (what must be TRUE):
-  1. Twilio is integrated with A2P 10DLC registration approved and active
+  1. Twilio is integrated with toll-free number verified and active
   2. Opted-in subscribers receive a daily SMS summary of their newsletter report
   3. Subscribers can text back follow-up questions about their report and receive AI-generated answers
   4. Subscribers can update preferences via natural language text ("add local events", "stop sending crypto stuff")
   5. STOP keyword immediately opts out, quiet hours are enforced (no sends before 8am or after 9pm local time), and TCPA-compliant consent is documented
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 08-01: Twilio setup, A2P 10DLC registration, and TCPA compliance framework
-- [ ] 08-02: SMS summary generation and delivery pipeline
-- [ ] 08-03: Two-way conversational AI (follow-ups and preference updates via text)
+- [ ] 08-01-PLAN.md — Database schema (sms_send_log, sms_conversations), consent columns, Twilio SDK, quiet hours + intent parser modules with tests
+- [ ] 08-02-PLAN.md — SMS delivery Edge Function (outbound summary via Twilio + Claude Haiku), email-delivery trigger, newsletter view-in-browser page
+- [ ] 08-03-PLAN.md — Twilio inbound webhook handler (conversational AI, preference updates, STOP/START), TCPA consent recording
 
 ## Progress
 
@@ -216,4 +216,4 @@ Note: Phase 2 (Subscriber Onboarding) and Phase 3 (Consulting Funnel) both depen
 
 ---
 *Roadmap created: 2026-02-19*
-*Last updated: 2026-03-21 -- Phase 7 planned with 2 plans in 1 wave; preference page + feedback refinement*
+*Last updated: 2026-03-22 -- Phase 8 planned with 3 plans in 2 waves; toll-free Twilio + Claude Haiku for SMS summaries and conversational AI*
