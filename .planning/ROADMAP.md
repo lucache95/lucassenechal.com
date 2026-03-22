@@ -172,11 +172,11 @@ Plans:
   3. Subscriber can manage their custom source URLs (add, edit, remove)
   4. Subscriber can toggle SMS opt-in/opt-out
   5. Subscriber can unsubscribe entirely through a clear, immediate flow
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 07-01: Token-based preference page and update API
-- [ ] 07-02: Unsubscribe flow and SMS opt-in/out toggle
+- [ ] 07-01-PLAN.md — Preference page with token validation, sectioned UI, Server Actions for all preference updates and unsubscribe
+- [ ] 07-02-PLAN.md — Feedback-driven research query refinement in research pipeline Edge Function
 
 ### Phase 8: SMS Channel
 **Goal**: Opted-in subscribers receive SMS summaries and can interact with their newsletter via two-way text conversation
@@ -216,4 +216,4 @@ Note: Phase 2 (Subscriber Onboarding) and Phase 3 (Consulting Funnel) both depen
 
 ---
 *Roadmap created: 2026-02-19*
-*Last updated: 2026-03-20 -- Phase 5 planned with 2 plans in 2 waves; content generation via Gemini 2.5 Flash with voice injection*
+*Last updated: 2026-03-21 -- Phase 7 planned with 2 plans in 1 wave; preference page + feedback refinement*
