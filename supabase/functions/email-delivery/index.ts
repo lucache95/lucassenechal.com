@@ -520,7 +520,32 @@ Deno.serve(async (_req) => {
         await supabase.rpc('pgmq_archive', { queue_name: 'email_delivery', msg_id: msg.msg_id })
         sent++
 
-        // 3g. Rate limit: 500ms delay between sends (Resend 2 req/s limit)
+        // 3g. Enqueue SMS delivery for opted-in subscribers (SMS-03)
+        // SMS fires 5 minutes after email per locked decision
+        try {
+          const { data: smsPrefs } = await supabase
+            .from('subscriber_preferences')
+            .select('sms_opt_in, phone')
+            .eq('subscriber_id', subscriber_id)
+            .single()
+
+          if (smsPrefs?.sms_opt_in && smsPrefs?.phone) {
+            await supabase.rpc('pgmq_send', {
+              queue_name: 'sms_delivery',
+              msg: JSON.stringify({
+                subscriber_id: subscriber_id,
+                research_date: researchDate,
+                enqueued_at: new Date().toISOString(),
+                retry_count: 0,
+              }),
+            })
+          }
+        } catch (smsErr) {
+          // Fire-and-forget: SMS enqueue failure must not block email delivery
+          console.error('[email-delivery] SMS enqueue error:', smsErr)
+        }
+
+        // 3h. Rate limit: 500ms delay between sends (Resend 2 req/s limit)
         await new Promise(resolve => setTimeout(resolve, 500))
 
       } catch (error) {
