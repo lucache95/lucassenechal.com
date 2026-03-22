@@ -247,7 +247,7 @@ export async function POST(request: NextRequest) {
     await supabase.from('sms_send_log').insert({
       subscriber_id: subscriberId,
       message_body: reply,
-      direction: 'inbound',
+      direction: 'outbound',
       status: 'sent',
     })
 
