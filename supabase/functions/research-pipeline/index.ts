@@ -152,6 +152,23 @@ Deno.serve(async (req) => {
           (s: any) => s.feed_url
         )
 
+        // Get recent feedback signals (last 30 days) for query refinement (FDBK-02)
+        const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString()
+        const { data: feedbackRows } = await supabase
+          .from('subscriber_feedback')
+          .select('item_url, signal')
+          .eq('subscriber_id', subscriber_id)
+          .gte('created_at', thirtyDaysAgo)
+          .order('created_at', { ascending: false })
+          .limit(50)
+
+        const moreFeedback = (feedbackRows ?? [])
+          .filter((f: any) => f.signal === 'more')
+          .map((f: any) => f.item_url)
+        const lessFeedback = (feedbackRows ?? [])
+          .filter((f: any) => f.signal === 'less')
+          .map((f: any) => f.item_url)
+
         // Step 4: Parse topics to search queries via Gemini
         // (Inline implementation -- Edge Function cannot import from lib/)
         const { generateObject } = await import('npm:ai@6')
@@ -174,6 +191,13 @@ Deno.serve(async (req) => {
           if (subtopicNames.length > 0) parts.push(`Selected topics: ${subtopicNames.join(', ')}`)
           if (categoryNames.length > 0) parts.push(`Categories: ${categoryNames.join(', ')}`)
           if (topicDescriptions.length > 0) parts.push(`Custom interests: ${topicDescriptions.join('; ')}`)
+
+          if (moreFeedback.length > 0) {
+            parts.push(`Subscriber liked articles from these URLs (find more like these): ${moreFeedback.slice(0, 10).join(', ')}`)
+          }
+          if (lessFeedback.length > 0) {
+            parts.push(`Subscriber disliked articles from these URLs (avoid similar content): ${lessFeedback.slice(0, 10).join(', ')}`)
+          }
 
           const { object } = await generateObject({
             model: google('gemini-2.5-flash'),
@@ -389,6 +413,24 @@ Deno.serve(async (req) => {
           r.relevanceScore = Math.min(score * 10, 1)
           return r
         }).sort((a: any, b: any) => b.relevanceScore - a.relevanceScore)
+
+        // Apply feedback-based score adjustment (FDBK-02)
+        if (moreFeedback.length > 0 || lessFeedback.length > 0) {
+          for (const r of scoredResults) {
+            // Boost score if URL matches a "more" feedback domain
+            const resultDomain = (() => { try { return new URL(r.url).hostname } catch { return '' } })()
+            const moreMatch = moreFeedback.some((url: string) => {
+              try { return new URL(url).hostname === resultDomain } catch { return false }
+            })
+            const lessMatch = lessFeedback.some((url: string) => {
+              try { return new URL(url).hostname === resultDomain } catch { return false }
+            })
+            if (moreMatch) r.relevanceScore = Math.min(r.relevanceScore * 1.3, 1)
+            if (lessMatch) r.relevanceScore = r.relevanceScore * 0.5
+          }
+          // Re-sort after adjustment
+          scoredResults.sort((a: any, b: any) => b.relevanceScore - a.relevanceScore)
+        }
 
         // Step 10: Store results
         const resultsToStore = scoredResults.slice(0, 20) // Top 20 results max
