@@ -79,7 +79,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **SMS-01**: Twilio integration with A2P 10DLC registration
 - [x] **SMS-02**: TCPA-compliant opt-in with documented consent
-- [ ] **SMS-03**: SMS summary of daily report for opted-in subscribers
+- [x] **SMS-03**: SMS summary of daily report for opted-in subscribers
 - [x] **SMS-04**: Two-way conversational AI -- ask follow-up questions about today's report
 - [x] **SMS-05**: Preference updates via text message ("add local events", "stop sending crypto")
 - [x] **SMS-06**: STOP/opt-out handling and quiet-hours enforcement
@@ -236,7 +236,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | MAIL-10 | Phase 6: Email Delivery & Compliance | Complete |
 | SMS-01 | Phase 8: SMS Channel | Complete |
 | SMS-02 | Phase 8: SMS Channel | Complete |
-| SMS-03 | Phase 8: SMS Channel | Pending |
+| SMS-03 | Phase 8: SMS Channel | Complete |
 | SMS-04 | Phase 8: SMS Channel | Complete |
 | SMS-05 | Phase 8: SMS Channel | Complete |
 | SMS-06 | Phase 8: SMS Channel | Complete |

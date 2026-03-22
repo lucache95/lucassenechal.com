@@ -22,7 +22,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 5: Content Generation** - Transform raw research into polished newsletter content in three formats
 - [x] **Phase 6: Email Delivery & Compliance** - Send personalized emails via Resend with deliverability infrastructure and consulting CTAs (completed 2026-03-21)
 - [ ] **Phase 7: Preference Management** - Email-link-based preference updates, format changes, and unsubscribe flows
-- [ ] **Phase 8: SMS Channel** - Twilio-powered SMS summaries and two-way conversational AI
+- [x] **Phase 8: SMS Channel** - Twilio-powered SMS summaries and two-way conversational AI (completed 2026-03-22)
 
 ## Phase Details
 
@@ -192,7 +192,7 @@ Plans:
 
 Plans:
 - [x] 08-01-PLAN.md — Database schema (sms_send_log, sms_conversations), consent columns, Twilio SDK, quiet hours + intent parser modules with tests
-- [ ] 08-02-PLAN.md — SMS delivery Edge Function (outbound summary via Twilio + Claude Haiku), email-delivery trigger, newsletter view-in-browser page
+- [x] 08-02-PLAN.md — SMS delivery Edge Function (outbound summary via Twilio + Claude Haiku), email-delivery trigger, newsletter view-in-browser page
 - [x] 08-03-PLAN.md — Twilio inbound webhook handler (conversational AI, preference updates, STOP/START), TCPA consent recording
 
 ## Progress
@@ -212,7 +212,7 @@ Note: Phase 2 (Subscriber Onboarding) and Phase 3 (Consulting Funnel) both depen
 | 5. Content Generation | 0/2 | Planned | - |
 | 6. Email Delivery & Compliance | 4/4 | Complete   | 2026-03-21 |
 | 7. Preference Management | 0/2 | Not started | - |
-| 8. SMS Channel | 0/3 | Not started | - |
+| 8. SMS Channel | 3/3 | Complete   | 2026-03-22 |
 
 ---
 *Roadmap created: 2026-02-19*
