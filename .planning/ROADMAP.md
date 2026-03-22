@@ -191,7 +191,7 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 08-01-PLAN.md — Database schema (sms_send_log, sms_conversations), consent columns, Twilio SDK, quiet hours + intent parser modules with tests
+- [x] 08-01-PLAN.md — Database schema (sms_send_log, sms_conversations), consent columns, Twilio SDK, quiet hours + intent parser modules with tests
 - [ ] 08-02-PLAN.md — SMS delivery Edge Function (outbound summary via Twilio + Claude Haiku), email-delivery trigger, newsletter view-in-browser page
 - [ ] 08-03-PLAN.md — Twilio inbound webhook handler (conversational AI, preference updates, STOP/START), TCPA consent recording
 

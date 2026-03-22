@@ -77,12 +77,12 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### SMS Channel
 
-- [ ] **SMS-01**: Twilio integration with A2P 10DLC registration
-- [ ] **SMS-02**: TCPA-compliant opt-in with documented consent
+- [x] **SMS-01**: Twilio integration with A2P 10DLC registration
+- [x] **SMS-02**: TCPA-compliant opt-in with documented consent
 - [ ] **SMS-03**: SMS summary of daily report for opted-in subscribers
 - [ ] **SMS-04**: Two-way conversational AI -- ask follow-up questions about today's report
 - [ ] **SMS-05**: Preference updates via text message ("add local events", "stop sending crypto")
-- [ ] **SMS-06**: STOP/opt-out handling and quiet-hours enforcement
+- [x] **SMS-06**: STOP/opt-out handling and quiet-hours enforcement
 
 ### Work With Me — 2-Stage AI Smart Intake
 
@@ -234,12 +234,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | MAIL-08 | Phase 6: Email Delivery & Compliance | Complete |
 | MAIL-09 | Phase 6: Email Delivery & Compliance | Complete |
 | MAIL-10 | Phase 6: Email Delivery & Compliance | Complete |
-| SMS-01 | Phase 8: SMS Channel | Pending |
-| SMS-02 | Phase 8: SMS Channel | Pending |
+| SMS-01 | Phase 8: SMS Channel | Complete |
+| SMS-02 | Phase 8: SMS Channel | Complete |
 | SMS-03 | Phase 8: SMS Channel | Pending |
 | SMS-04 | Phase 8: SMS Channel | Pending |
 | SMS-05 | Phase 8: SMS Channel | Pending |
-| SMS-06 | Phase 8: SMS Channel | Pending |
+| SMS-06 | Phase 8: SMS Channel | Complete |
 | WORK-01 | Phase 3: Consulting Funnel | Complete |
 | WORK-02 | Phase 3: Consulting Funnel | Complete |
 | WORK-03 | Phase 3: Consulting Funnel | Complete |
