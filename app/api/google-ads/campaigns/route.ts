@@ -40,20 +40,24 @@ export async function POST(request: NextRequest) {
 
     const result = await customer.mutateResources([
       {
-        _resource: 'CampaignBudget',
-        _operation: 'create',
-        resource_name: budgetResourceName,
-        amount_micros: body.dailyBudget * 1_000_000,
-        delivery_method: 'STANDARD',
+        entity: 'campaign_budget',
+        operation: 'create',
+        resource: {
+          resource_name: budgetResourceName,
+          amount_micros: body.dailyBudget * 1_000_000,
+          delivery_method: 2, // STANDARD
+        },
       },
       {
-        _resource: 'Campaign',
-        _operation: 'create',
-        resource_name: campaignResourceName,
-        name: body.name,
-        advertising_channel_type: body.type,
-        status: 'PAUSED',
-        campaign_budget: budgetResourceName,
+        entity: 'campaign',
+        operation: 'create',
+        resource: {
+          resource_name: campaignResourceName,
+          name: body.name,
+          advertising_channel_type: body.type,
+          status: 2, // PAUSED
+          campaign_budget: budgetResourceName,
+        },
       },
     ])
 
@@ -98,13 +102,15 @@ function buildMutation(action: UpdateCampaignAction): any[] {
   const customerId = process.env.GOOGLE_ADS_CUSTOMER_ID!
 
   if (action.resource === 'campaign') {
-    const statusMap: Record<string, string> = { pause: 'PAUSED', enable: 'ENABLED', remove: 'REMOVED' }
+    const statusMap: Record<string, number> = { pause: 3, enable: 2, remove: 4 } // PAUSED=3, ENABLED=2, REMOVED=4
     return [{
-      _resource: 'Campaign',
-      _operation: 'update',
-      resource_name: `customers/${customerId}/campaigns/${action.id}`,
-      status: statusMap[action.operation] || action.operation,
-      ...action.fields,
+      entity: 'campaign' as const,
+      operation: 'update' as const,
+      resource: {
+        resource_name: `customers/${customerId}/campaigns/${action.id}`,
+        status: statusMap[action.operation] ?? action.operation,
+        ...action.fields,
+      },
     }]
   }
 

@@ -58,30 +58,36 @@ async function executeGoogleAdsAction(action: OptimizerActions['actions'][0]): P
     case 'pause_keyword':
     case 'enable_keyword':
       await customer.mutateResources([{
-        _resource: 'AdGroupCriterion',
-        _operation: 'update',
-        resource_name: `customers/${customerId}/adGroupCriteria/${action.id}`,
-        status: action.type === 'pause_keyword' ? 'PAUSED' : 'ENABLED',
+        entity: 'ad_group_criterion' as const,
+        operation: 'update' as const,
+        resource: {
+          resource_name: `customers/${customerId}/adGroupCriteria/${action.id}`,
+          status: action.type === 'pause_keyword' ? 3 : 2, // PAUSED=3, ENABLED=2
+        },
       }])
       break
 
     case 'pause_campaign':
     case 'enable_campaign':
       await customer.mutateResources([{
-        _resource: 'Campaign',
-        _operation: 'update',
-        resource_name: `customers/${customerId}/campaigns/${action.id}`,
-        status: action.type === 'pause_campaign' ? 'PAUSED' : 'ENABLED',
+        entity: 'campaign' as const,
+        operation: 'update' as const,
+        resource: {
+          resource_name: `customers/${customerId}/campaigns/${action.id}`,
+          status: action.type === 'pause_campaign' ? 3 : 2, // PAUSED=3, ENABLED=2
+        },
       }])
       break
 
     case 'adjust_bid':
       if (action.newBid) {
         await customer.mutateResources([{
-          _resource: 'AdGroupCriterion',
-          _operation: 'update',
-          resource_name: `customers/${customerId}/adGroupCriteria/${action.id}`,
-          cpc_bid_micros: action.newBid * 1_000_000,
+          entity: 'ad_group_criterion' as const,
+          operation: 'update' as const,
+          resource: {
+            resource_name: `customers/${customerId}/adGroupCriteria/${action.id}`,
+            cpc_bid_micros: action.newBid * 1_000_000,
+          },
         }])
       }
       break
@@ -89,10 +95,12 @@ async function executeGoogleAdsAction(action: OptimizerActions['actions'][0]): P
     case 'adjust_budget':
       if (action.newBudget) {
         await customer.mutateResources([{
-          _resource: 'CampaignBudget',
-          _operation: 'update',
-          resource_name: `customers/${customerId}/campaignBudgets/${action.id}`,
-          amount_micros: action.newBudget * 1_000_000,
+          entity: 'campaign_budget' as const,
+          operation: 'update' as const,
+          resource: {
+            resource_name: `customers/${customerId}/campaignBudgets/${action.id}`,
+            amount_micros: action.newBudget * 1_000_000,
+          },
         }])
       }
       break
