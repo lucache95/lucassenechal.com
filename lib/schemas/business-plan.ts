@@ -67,7 +67,8 @@ export const businessPlanSchema = z.object({
     'ai-implementation',
     'chatbot-development',
     'content-operations',
-  ]).describe('Which of the 7 services best fits their needs based on intake answers'),
+    'google-ads-management',
+  ]).describe('Which of the 8 services best fits their needs based on intake answers'),
 });
 
 export type BusinessPlan = z.infer<typeof businessPlanSchema>;

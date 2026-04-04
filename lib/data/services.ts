@@ -1,7 +1,7 @@
 /**
  * Service definitions for the consulting funnel.
  *
- * Single source of truth for the 7 services offered.
+ * Single source of truth for the 8 services offered.
  * Used by:
  *   - components/homepage/what-i-build.tsx (card grid)
  *   - components/consulting/service-grid.tsx (consulting page cards)
@@ -396,6 +396,62 @@ export const SERVICES: Service[] = [
       },
     ],
     relatedServices: ['ai-automation', 'training'],
+  },
+  {
+    id: 'google-ads-management',
+    icon: '📊',
+    title: 'AI Google Ads Management',
+    description:
+      'AI-powered Google Ads campaign management — from creation to optimization to reporting — so your ad spend works harder without constant babysitting.',
+    longDescription:
+      'Fully automated Google Ads management powered by AI. Campaign creation, bid optimization, audience targeting, performance reporting, and budget allocation — all handled by AI agents that monitor and adjust 24/7.',
+    metaTitle: 'AI Google Ads Management | Lucas Senechal',
+    metaDescription:
+      'AI-powered Google Ads management — campaign creation, bid optimization, analytics, and reporting. Your ads managed 24/7 by AI agents. From $1,500/month.',
+    tagline:
+      'AI agents that create, optimize, and report on your Google Ads campaigns — 24/7 management without the agency markup.',
+    pricing: '$1,500–$5,000/month + ad spend',
+    whatItIs:
+      'AI Google Ads Management is a fully automated advertising management service powered by AI agents that connect directly to the Google Ads API. Instead of paying an agency $3,000–$10,000 per month for a human account manager who checks your campaigns a few times a week, AI agents monitor your campaigns continuously — adjusting bids, pausing underperformers, scaling winners, and reallocating budget in real time.\n\nThe system handles the full lifecycle: campaign creation based on your business goals, keyword research and audience targeting, ad copy generation and A/B testing, bid optimization using real-time performance data, and comprehensive reporting that tells you exactly where your money went and what it produced. AI agents connect to Google Ads, Google Analytics, and Google Workspace via API to manage everything from a single intelligent layer.\n\nThis is not a dashboard that shows you data and expects you to act on it. This is an autonomous system that takes action based on performance signals — the same decisions a senior media buyer would make, but executed instantly and around the clock.',
+    howItWorks:
+      'Setup starts with connecting your Google Ads account via the Google Ads API. I configure AI agents with access to campaign management, reporting, and keyword planning endpoints. The system imports your existing campaigns (if any) and establishes performance baselines.\n\nFor new campaigns, you describe your business goals — lead generation, e-commerce sales, brand awareness, local foot traffic — and the AI builds campaign structures optimized for those objectives. It handles keyword research using the KeywordPlanIdeaService, writes ad copy variations, sets initial bids, and configures audience targeting.\n\nOnce live, AI agents monitor performance metrics every hour. They adjust bids based on conversion data, pause keywords burning budget without results, test new ad copy variations, and shift budget toward top-performing campaigns. Every optimization decision is logged so you can see exactly what changed and why.\n\nWeekly reports land in your inbox with clear metrics: spend, conversions, cost per acquisition, return on ad spend, and specific actions the AI took that week. Monthly strategy reviews identify new opportunities — new keyword themes, audience segments, or campaign types to test.\n\nThe system also integrates with Google Analytics for full-funnel tracking. You see not just clicks and impressions, but what happens after someone lands on your site — form fills, purchases, phone calls, and revenue attribution.',
+    whoItsFor:
+      'Small to mid-sized businesses spending $1,000–$50,000 per month on Google Ads who want professional-grade campaign management without the traditional agency model. If you are currently managing ads yourself and know you are leaving money on the table, or paying an agency that sends you a report once a month and calls it management, this service delivers better results at a lower cost.\n\nParticularly valuable for e-commerce businesses running Shopping and Search campaigns, local service businesses (HVAC, plumbing, dental, legal) running Local Services Ads, SaaS companies running lead generation campaigns, and agencies that want to offer Google Ads management to their clients without hiring a dedicated media buyer.\n\nAlso ideal for businesses that have tried Google Ads before and given up because it was too time-consuming to manage properly. The AI handles the ongoing optimization that makes the difference between wasted spend and profitable advertising.',
+    whatsIncluded: [
+      'Google Ads API integration and account setup',
+      'AI-powered campaign creation and structuring',
+      'Automated keyword research and audience targeting',
+      'Real-time bid optimization and budget allocation',
+      'Ad copy generation and A/B testing',
+      'Google Analytics integration for full-funnel tracking',
+      'Weekly performance reports with AI action logs',
+      'Monthly strategy review and campaign expansion',
+      'Negative keyword management and waste reduction',
+      'Conversion tracking setup and optimization',
+    ],
+    faqs: [
+      {
+        question: 'How does AI manage Google Ads differently than a traditional agency?',
+        answer:
+          'Traditional agencies assign a human account manager who reviews your campaigns a few times per week and makes adjustments based on their judgment. AI agents monitor your campaigns continuously — every hour, every day — and make data-driven adjustments instantly. They test more ad variations, react to performance changes faster, and never forget to check on a campaign. The result is typically 20–40% better performance at the same ad spend, because optimization happens in real time instead of weekly.',
+      },
+      {
+        question: 'What Google Ads campaign types do you support?',
+        answer:
+          'The system manages Search campaigns, Shopping campaigns, Display campaigns, Performance Max, YouTube ads, and Local Services Ads. It handles campaign creation, keyword management, bid strategies, audience targeting, ad copy, and budget allocation across all campaign types. The AI uses the Google Ads API for campaign creation and management, reporting endpoints for performance analysis, and KeywordPlanIdeaService for keyword research.',
+      },
+      {
+        question: 'Do I still have access to my Google Ads account?',
+        answer:
+          'Absolutely. You retain full ownership and access to your Google Ads account at all times. The AI agents operate through the Google Ads API with permissions you grant, and you can override any decision, pause any campaign, or adjust any setting directly. The system logs every action it takes, so you have complete transparency into what is happening and why.',
+      },
+      {
+        question: 'How much does AI Google Ads management cost?',
+        answer:
+          'Management fees range from $1,500 to $5,000 per month depending on ad spend volume and campaign complexity. This does not include your actual ad spend with Google. For comparison, traditional agencies typically charge 15–20% of ad spend or a flat fee of $3,000–$10,000 per month. Most businesses with $2,000–$20,000 monthly ad spend fall in the $1,500–$3,000 management fee range.',
+      },
+    ],
+    relatedServices: ['ai-automation', 'ongoing-management'],
   },
 ];
 
