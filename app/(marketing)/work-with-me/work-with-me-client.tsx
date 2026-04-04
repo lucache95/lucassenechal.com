@@ -7,6 +7,7 @@ import { ServiceGrid } from "@/components/consulting/service-grid";
 import { HowItWorks } from "@/components/consulting/how-it-works";
 import { FAQSection } from "@/components/consulting/faq-section";
 import { TrustStrip } from "@/components/landing/trust-strip";
+import { Testimonials } from "@/components/consulting/testimonials";
 import { Footer } from "@/components/landing/footer";
 import { IntakeContainer } from "@/components/intake/intake-container";
 import { LeadCaptureGate } from "@/components/intake/lead-capture-gate";
@@ -217,6 +218,7 @@ export function WorkWithMeClient() {
         >
           <ConsultingHero onStart={() => setStage("choose")} />
           <div className="opacity-100" style={{ transform: "none" }}>
+            <Testimonials />
             <TrustStrip />
             <ServiceGrid />
             <HowItWorks />
