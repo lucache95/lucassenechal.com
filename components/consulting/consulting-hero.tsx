@@ -60,11 +60,19 @@ export function ConsultingHero({ onStart }: ConsultingHeroProps) {
         {/* CTA */}
         <motion.div
           variants={childVariants}
-          className="mt-10 flex items-center justify-center"
+          className="mt-10 flex flex-col items-center gap-3"
         >
           <Button variant="primary" size="lg" onClick={onStart}>
             Tell Me About Your Business
           </Button>
+          <a
+            href="https://cal.com/lucas-senechal"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-muted hover:text-foreground transition-colors duration-200"
+          >
+            Ready to talk? Book a call directly &rarr;
+          </a>
         </motion.div>
       </motion.div>
     </section>

@@ -15,7 +15,6 @@ export function WorkWithMeCard() {
         Let&apos;s Build Something
       </h1>
       <p className="text-muted text-lg mb-2">
-        I&apos;m building out the full intake experience here. In the meantime,
         I&apos;d love to hear what you&apos;re working on.
       </p>
       <p className="text-muted text-lg mb-8">

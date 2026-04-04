@@ -8,6 +8,7 @@ const REDIRECT_URI = 'http://localhost:3456'
 const SCOPES = [
   'https://www.googleapis.com/auth/adwords',
   'https://www.googleapis.com/auth/analytics.readonly',
+  'https://www.googleapis.com/auth/business.manage',
 ].join(' ')
 
 if (!CLIENT_ID || !CLIENT_SECRET) {

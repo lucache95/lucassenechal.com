@@ -51,6 +51,7 @@ export default function RootLayout({
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-ZR3S9N3827');
+          gtag('config', 'AW-17972742358');
         `}
       </Script>
       <body className="antialiased">{children}</body>
