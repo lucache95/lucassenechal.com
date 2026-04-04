@@ -77,7 +77,7 @@ export async function generateNewsletterContent(
 
   const { output, usage } = await generateText({
     model: google('gemini-2.5-flash'),
-    output: Output.object({ schema }),
+    output: Output.object({ schema: schema as typeof DigestSchema }),
     system: VOICE_SYSTEM_PROMPT,
     prompt,
   })
@@ -98,8 +98,8 @@ export async function generateNewsletterContent(
     resultCount: results.length,
     isPartial: false,
     tokenUsage: {
-      input: usage?.promptTokens ?? 0,
-      output: usage?.completionTokens ?? 0,
+      input: usage?.inputTokens ?? 0,
+      output: usage?.outputTokens ?? 0,
     },
   }
 }

@@ -21,10 +21,10 @@ export async function hashUrl(url: string): Promise<string> {
 function getSupabase(supabaseUrl?: string, serviceRoleKey?: string) {
   const url = supabaseUrl
     ?? process.env.NEXT_PUBLIC_SUPABASE_URL
-    ?? (typeof Deno !== 'undefined' ? Deno.env.get('SUPABASE_URL') : undefined)
+    ?? (typeof globalThis !== 'undefined' && 'Deno' in globalThis ? (globalThis as any).Deno.env.get('SUPABASE_URL') : undefined)
   const key = serviceRoleKey
     ?? process.env.SUPABASE_SERVICE_ROLE_KEY
-    ?? (typeof Deno !== 'undefined' ? Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') : undefined)
+    ?? (typeof globalThis !== 'undefined' && 'Deno' in globalThis ? (globalThis as any).Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') : undefined)
 
   if (!url || !key) throw new Error('Missing Supabase credentials')
   return createClient(url, key)
