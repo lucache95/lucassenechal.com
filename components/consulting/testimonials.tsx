@@ -3,20 +3,23 @@
 const testimonials = [
   {
     name: "Mike Chamberlain",
+    title: "Owner, GetYouDriving.ca",
     quote:
-      "I started working with Lucas on the advice of a trusted colleague and could not be happier with that decision. He took the time necessary to understand my needs and delivered exactly what I was looking for.",
+      "Upon meeting with Lucas I was immediately impressed. He took the time necessary to explain the service they provide and has lived up to every promise made. Always accessible, patient, and willing to explain the problem and solution in language I can understand.",
     rating: 5,
   },
   {
     name: "A. Khan",
+    title: "Google Local Guide",
     quote:
-      "Knowledgeable and professional — able to provide timely resolutions. I look forward to continuing to work with Lucas and his team.",
+      "I would definitely recommend the team at Sentec Business Solutions; they are knowledgeable and professional and were able to provide me with timely resolutions. I look forward to working with Lucas and his team!",
     rating: 5,
   },
   {
     name: "Darcy S.",
+    title: "Owner, Vernon Spider Control",
     quote:
-      "Lucas went out of his way to answer all of my questions. I really appreciate the fast responses and enthusiasm given when dealing with this company.",
+      "What an excellent service! Lucas went out of his way to answer all of my questions. I really appreciate the fast responses and enthusiasm. I recommend this service and give them a 10/10.",
     rating: 5,
   },
 ];
@@ -60,6 +63,9 @@ export function Testimonials() {
               <p className="mt-4 text-sm font-medium text-foreground">
                 {t.name}
               </p>
+              {t.title && (
+                <p className="text-xs text-muted">{t.title}</p>
+              )}
             </div>
           ))}
         </div>
