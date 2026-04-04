@@ -28,6 +28,13 @@ export function ServiceJsonLd({ service }: ServiceJsonLdProps) {
           },
         },
         areaServed: [
+          { '@type': 'City', name: 'Kelowna', containedInPlace: { '@type': 'AdministrativeArea', name: 'British Columbia' } },
+          { '@type': 'City', name: 'West Kelowna', containedInPlace: { '@type': 'AdministrativeArea', name: 'British Columbia' } },
+          { '@type': 'City', name: 'Peachland', containedInPlace: { '@type': 'AdministrativeArea', name: 'British Columbia' } },
+          { '@type': 'City', name: 'Penticton', containedInPlace: { '@type': 'AdministrativeArea', name: 'British Columbia' } },
+          { '@type': 'City', name: 'Vernon', containedInPlace: { '@type': 'AdministrativeArea', name: 'British Columbia' } },
+          { '@type': 'City', name: 'Summerland', containedInPlace: { '@type': 'AdministrativeArea', name: 'British Columbia' } },
+          { '@type': 'City', name: 'Lake Country', containedInPlace: { '@type': 'AdministrativeArea', name: 'British Columbia' } },
           { '@type': 'Country', name: 'Canada' },
           { '@type': 'Country', name: 'United States' },
         ],

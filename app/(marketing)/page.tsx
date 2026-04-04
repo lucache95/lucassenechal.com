@@ -4,6 +4,7 @@ import { NewsletterTeaser } from "@/components/homepage/newsletter-teaser";
 import { TrustStrip } from "@/components/landing/trust-strip";
 import { About } from "@/components/landing/about";
 import { Footer } from "@/components/landing/footer";
+import { HomepageJsonLd } from "@/components/homepage/homepage-json-ld";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <main>
+      <HomepageJsonLd />
       <ConsultingHero />
       <WhatIBuild />
       <TrustStrip />
