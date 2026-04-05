@@ -68,7 +68,7 @@ export function ConsultingHero({ onStart }: ConsultingHeroProps) {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-lg bg-accent text-accent-foreground hover:bg-accent-hover shadow-sm shadow-accent/20 px-7 py-3.5 text-lg font-medium transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
-            Tell Me About Your Business
+            Book an Intake Call
           </a>
         </motion.div>
       </motion.div>
