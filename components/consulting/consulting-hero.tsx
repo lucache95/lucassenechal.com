@@ -45,7 +45,7 @@ export function ConsultingHero({ onStart }: ConsultingHeroProps) {
           variants={childVariants}
           className="text-4xl font-bold leading-[1.1] tracking-tight text-foreground md:text-5xl lg:text-6xl"
         >
-          Stop Losing Deals to Manual Follow-Ups
+          What If AI Actually Worked For You?
         </motion.h1>
 
         {/* Subheadline */}
@@ -53,8 +53,8 @@ export function ConsultingHero({ onStart }: ConsultingHeroProps) {
           variants={childVariants}
           className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted md:text-xl"
         >
-          I build AI systems that handle the admin, follow-ups, and repetitive
-          ops dragging your team down -- so you close more and chase less.
+          Not a chatbot demo. Not a slide deck. Real AI systems built for your
+          business &mdash; live in weeks.
         </motion.p>
 
         {/* CTA */}
