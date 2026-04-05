@@ -62,16 +62,13 @@ export function ConsultingHero({ onStart }: ConsultingHeroProps) {
           variants={childVariants}
           className="mt-10 flex flex-col items-center gap-3"
         >
-          <Button variant="primary" size="lg" onClick={onStart}>
-            Tell Me About Your Business
-          </Button>
           <a
-            href="https://cal.com/lucas-senechal"
+            href="https://cal.com/lucas-senechal/ai-discovery?overlayCalendar=true"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-muted hover:text-foreground transition-colors duration-200"
+            className="inline-flex items-center justify-center rounded-lg bg-accent text-accent-foreground hover:bg-accent-hover shadow-sm shadow-accent/20 px-7 py-3.5 text-lg font-medium transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
-            Ready to talk? Book a call directly &rarr;
+            Tell Me About Your Business
           </a>
         </motion.div>
       </motion.div>
