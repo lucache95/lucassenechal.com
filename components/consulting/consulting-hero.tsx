@@ -84,6 +84,35 @@ export function ConsultingHero({ onStart }: ConsultingHeroProps) {
           </p>
         </motion.div>
 
+        {/* Guarantees */}
+        <motion.div
+          variants={childVariants}
+          className="mx-auto mt-10 max-w-xl"
+        >
+          <p className="mb-4 text-center text-sm font-medium uppercase tracking-wider text-muted">
+            You will walk away with
+          </p>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {[
+              "A clear picture of where AI fits in your business",
+              "2-3 specific automations you can implement immediately",
+              "Honest assessment of what's worth building vs. not",
+              "A prioritized roadmap with realistic timelines",
+            ].map((item) => (
+              <div
+                key={item}
+                className="flex items-start gap-2.5 rounded-lg border border-border bg-surface p-3"
+              >
+                <span className="mt-0.5 text-accent text-sm">&#10003;</span>
+                <span className="text-sm text-foreground">{item}</span>
+              </div>
+            ))}
+          </div>
+          <p className="mt-4 text-center text-sm text-muted">
+            Even if we never work together, you leave with a plan you can act on.
+          </p>
+        </motion.div>
+
         {/* CTA */}
         <motion.div
           variants={childVariants}
