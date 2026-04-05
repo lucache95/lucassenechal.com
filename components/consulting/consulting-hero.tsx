@@ -113,10 +113,27 @@ export function ConsultingHero({ onStart }: ConsultingHeroProps) {
           </p>
         </motion.div>
 
+        {/* Pricing / Easter offer */}
+        <motion.div
+          variants={childVariants}
+          className="mx-auto mt-8 max-w-sm rounded-xl border border-accent/30 bg-accent/[0.04] p-5 text-center"
+        >
+          <p className="text-xs font-medium uppercase tracking-wider text-accent">
+            Easter Special &mdash; Limited Time
+          </p>
+          <div className="mt-2 flex items-center justify-center gap-3">
+            <span className="text-lg text-muted line-through">$79</span>
+            <span className="text-3xl font-bold text-foreground">Free</span>
+          </div>
+          <p className="mt-1 text-xs text-muted">
+            Normally $79. Free through April.
+          </p>
+        </motion.div>
+
         {/* CTA */}
         <motion.div
           variants={childVariants}
-          className="mt-8 flex flex-col items-center gap-3"
+          className="mt-6 flex flex-col items-center gap-3"
         >
           <a
             href="https://cal.com/lucas-senechal/ai-discovery?overlayCalendar=true"
@@ -124,7 +141,7 @@ export function ConsultingHero({ onStart }: ConsultingHeroProps) {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-lg bg-accent text-accent-foreground hover:bg-accent-hover shadow-sm shadow-accent/20 px-7 py-3.5 text-lg font-medium transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           >
-            Book an Intake Call
+            Book Your Free Intake Call
           </a>
           <p className="text-xs text-muted">No fluff. No sales pitch. Just clarity.</p>
         </motion.div>
