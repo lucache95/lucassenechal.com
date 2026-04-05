@@ -57,10 +57,37 @@ export function ConsultingHero({ onStart }: ConsultingHeroProps) {
           business &mdash; live in weeks.
         </motion.p>
 
+        {/* Call value prop */}
+        <motion.div
+          variants={childVariants}
+          className="mx-auto mt-10 max-w-xl text-left"
+        >
+          <p className="mb-4 text-center text-sm font-medium uppercase tracking-wider text-muted">
+            Free 30-minute strategy call
+          </p>
+          <ul className="space-y-3 text-base text-muted">
+            <li className="flex items-start gap-3">
+              <span className="mt-1 block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+              Where AI can save you the most time and money right now
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="mt-1 block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+              What tools and workflows make sense for your business
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="mt-1 block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+              A realistic roadmap to start seeing results fast
+            </li>
+          </ul>
+          <p className="mt-4 text-center text-sm text-muted">
+            Come with your biggest operational headache. Leave with a clear direction.
+          </p>
+        </motion.div>
+
         {/* CTA */}
         <motion.div
           variants={childVariants}
-          className="mt-10 flex flex-col items-center gap-3"
+          className="mt-8 flex flex-col items-center gap-3"
         >
           <a
             href="https://cal.com/lucas-senechal/ai-discovery?overlayCalendar=true"
@@ -70,6 +97,7 @@ export function ConsultingHero({ onStart }: ConsultingHeroProps) {
           >
             Book an Intake Call
           </a>
+          <p className="text-xs text-muted">No fluff. No sales pitch. Just clarity.</p>
         </motion.div>
       </motion.div>
     </section>
