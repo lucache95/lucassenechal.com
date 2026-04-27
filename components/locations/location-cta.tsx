@@ -14,18 +14,12 @@ export function LocationCTA({ city }: LocationCTAProps) {
         <p className="mt-4 text-lg text-muted">
           Start with a $500 assessment. See exactly where AI saves you time and money.
         </p>
-        <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <div className="mt-8 flex justify-center">
           <Link
             href="/work-with-me"
             className="inline-flex h-12 items-center justify-center rounded-lg bg-accent px-8 text-sm font-semibold text-white transition-colors duration-200 hover:bg-accent/90"
           >
             Work With Me
-          </Link>
-          <Link
-            href="/newsletter"
-            className="inline-flex h-12 items-center justify-center rounded-lg border border-border px-8 text-sm font-semibold text-foreground transition-colors duration-200 hover:bg-surface-hover"
-          >
-            Subscribe to the Newsletter
           </Link>
         </div>
       </div>

@@ -230,7 +230,7 @@ export default async function AdminPage({
               No subscribers yet
             </p>
             <p style={{ fontSize: '14px', color: '#94a3b8', margin: 0 }}>
-              Subscribers will appear here after they complete the onboarding flow at /newsletter.
+              No subscribers in the database.
             </p>
           </div>
         ) : (

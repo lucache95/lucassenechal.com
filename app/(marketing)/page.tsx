@@ -1,6 +1,5 @@
 import { ConsultingHero } from "@/components/homepage/consulting-hero";
 import { WhatIBuild } from "@/components/homepage/what-i-build";
-import { NewsletterTeaser } from "@/components/homepage/newsletter-teaser";
 import { TrustStrip } from "@/components/landing/trust-strip";
 import { About } from "@/components/landing/about";
 import { Footer } from "@/components/landing/footer";
@@ -27,7 +26,6 @@ export default function HomePage() {
       <WhatIBuild />
       <TrustStrip />
       <About />
-      <NewsletterTeaser />
       <Footer />
     </main>
   );

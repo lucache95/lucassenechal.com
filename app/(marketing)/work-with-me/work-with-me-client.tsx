@@ -17,7 +17,6 @@ import { Button } from "@/components/ui/button";
 import { ChatWidget } from "@/components/intake/chat-widget";
 import { saveIntakeSession, markIntakeBooked, saveChatIntakeSession } from "@/app/actions/intake";
 import type { IntakeAnswer } from "@/lib/schemas/intake";
-import Link from "next/link";
 
 export type FunnelStage =
   | "landing"
@@ -409,27 +408,10 @@ export function WorkWithMeClient() {
               our call so we can hit the ground running.
             </p>
 
-            {/* Cross-pollination to newsletter */}
-            <div className="mt-8 rounded-lg border border-border bg-surface p-6">
-              <p className="text-sm font-medium text-foreground">
-                Want daily AI insights while you wait?
-              </p>
-              <p className="mt-1 text-sm text-muted">
-                Get a personalized briefing every morning, researched and
-                written just for you.
-              </p>
-              <Link
-                href="/newsletter"
-                className="mt-4 inline-flex items-center gap-2 rounded-lg border border-border px-5 py-2.5 text-sm font-medium text-foreground hover:bg-surface-hover transition-colors duration-200"
-              >
-                Get the Daily Briefing
-              </Link>
-            </div>
-
             {/* New assessment link */}
             <button
               onClick={handleNewAssessment}
-              className="mt-6 text-sm text-muted hover:text-foreground transition-colors duration-200 underline underline-offset-2"
+              className="mt-8 text-sm text-muted hover:text-foreground transition-colors duration-200 underline underline-offset-2"
             >
               Start a new assessment
             </button>

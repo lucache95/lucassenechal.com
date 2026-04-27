@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
+
 const containerVariants = {
   hidden: {},
   visible: {
@@ -54,27 +55,16 @@ export function ConsultingHero() {
           with AI systems so your team scales revenue without scaling headcount.
         </motion.p>
 
-        {/* CTAs */}
+        {/* CTA */}
         <motion.div
           variants={childVariants}
-          className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
+          className="mt-10 flex flex-col items-center justify-center"
         >
           <Link href="/work-with-me">
             <Button variant="primary" size="lg">
               Work With Me
             </Button>
           </Link>
-
-          <div className="flex flex-col items-center gap-1">
-            <Link href="/newsletter">
-              <Button variant="secondary" size="md">
-                Get the Daily Briefing
-              </Button>
-            </Link>
-            <span className="text-sm text-muted">
-              See what my AI builds every day
-            </span>
-          </div>
         </motion.div>
       </motion.div>
     </section>

@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
 
 export function WorkWithMeCard() {
@@ -27,16 +26,6 @@ export function WorkWithMeCard() {
       >
         Email me at lucas@lucassenechal.com
       </a>
-      <p className="text-muted-foreground text-sm mt-6">
-        Or{" "}
-        <Link
-          href="/newsletter"
-          className="text-accent hover:text-accent-hover underline underline-offset-2 transition-colors duration-200"
-        >
-          grab the daily briefing
-        </Link>{" "}
-        while you wait.
-      </p>
     </motion.div>
   );
 }

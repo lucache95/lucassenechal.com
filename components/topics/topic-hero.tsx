@@ -32,15 +32,6 @@ export function TopicHero({ icon, title, tagline }: TopicHeroProps) {
             </li>
             <li aria-hidden="true">/</li>
             <li>
-              <Link
-                href="/newsletter"
-                className="transition-colors duration-200 hover:text-foreground"
-              >
-                Newsletter
-              </Link>
-            </li>
-            <li aria-hidden="true">/</li>
-            <li>
               <span className="text-foreground">{title}</span>
             </li>
           </ol>

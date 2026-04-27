@@ -113,27 +113,10 @@ export function ConsultingHero({ onStart }: ConsultingHeroProps) {
           </p>
         </motion.div>
 
-        {/* Pricing / Easter offer */}
-        <motion.div
-          variants={childVariants}
-          className="mx-auto mt-8 max-w-sm rounded-xl border border-accent/30 bg-accent/[0.04] p-5 text-center"
-        >
-          <p className="text-xs font-medium uppercase tracking-wider text-accent">
-            Easter Special &mdash; Limited Time
-          </p>
-          <div className="mt-2 flex items-center justify-center gap-3">
-            <span className="text-lg text-muted line-through">$79</span>
-            <span className="text-3xl font-bold text-foreground">Free</span>
-          </div>
-          <p className="mt-1 text-xs text-muted">
-            Normally $79. Free through April.
-          </p>
-        </motion.div>
-
         {/* CTA */}
         <motion.div
           variants={childVariants}
-          className="mt-6 flex flex-col items-center gap-3"
+          className="mt-10 flex flex-col items-center gap-3"
         >
           <a
             href="https://cal.com/lucas-senechal/ai-discovery?overlayCalendar=true"

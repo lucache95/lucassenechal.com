@@ -44,12 +44,6 @@ export function TopicJsonLd({ topic }: TopicJsonLdProps) {
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'Newsletter',
-            item: `${baseUrl}/newsletter`,
-          },
-          {
-            '@type': 'ListItem',
-            position: 3,
             name: topic.title,
             item: `${baseUrl}/topics/${topic.slug}`,
           },
